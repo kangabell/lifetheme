@@ -231,10 +231,10 @@ add_action( 'widgets_init', 'life_widgets_init' );
  * Enqueue scripts and styles.
  */
 function life_scripts() {
-	wp_enqueue_style( 'life-style', get_stylesheet_uri(), array(), LIFE_VERSION );
+	wp_enqueue_style( 'life-style', get_template_directory_uri() . '/library/css/style.css', array(), LIFE_VERSION );
 	wp_style_add_data( 'life-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'life-navigation', get_template_directory_uri() . '/js/navigation.js', array(), LIFE_VERSION, true );
+	wp_enqueue_script( 'life-navigation', get_template_directory_uri() . '/library/js/navigation.js', array(), LIFE_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
