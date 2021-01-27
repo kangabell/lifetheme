@@ -150,33 +150,58 @@ add_action( 'init', 'life_custom_taxonomies', 0 );
  */
 function life_custom_post_types() {
 
-	$labels = array(
-		'name'                  => _x( 'Projects', 'Post type general name', 'life' ),
-		'singular_name'         => _x( 'Project', 'Post type singular name', 'life' ),
-		'menu_name'             => _x( 'Projects', 'Admin Menu text', 'life' ),
-		'name_admin_bar'        => _x( 'Project', 'Add New on Toolbar', 'life' ),
-		'add_new'               => __( 'Add New', 'life' ),
-		'add_new_item'          => __( 'Add New Project', 'life' ),
-		'new_item'              => __( 'New Project', 'life' ),
-		'edit_item'             => __( 'Edit Project', 'life' ),
-		'view_item'             => __( 'View Project', 'life' ),
-		'all_items'             => __( 'All Project', 'life' ),
-		'search_items'          => __( 'Search Projects', 'life' ),
-		'parent_item_colon'     => __( 'Parent Projects:', 'life' ),
-		'not_found'             => __( 'No projects found.', 'life' ),
-		'not_found_in_trash'    => __( 'No projects found in Trash.', 'life' ),
-	);
-
 	register_post_type('project',
 		array(
-			'labels'        => $labels,
+			'labels'        => array(
+				'name'                  => _x( 'Projects', 'Post type general name', 'life' ),
+				'singular_name'         => _x( 'Project', 'Post type singular name', 'life' ),
+				'menu_name'             => _x( 'Projects', 'Admin Menu text', 'life' ),
+				'name_admin_bar'        => _x( 'Project', 'Add New on Toolbar', 'life' ),
+				'add_new'               => __( 'Add New', 'life' ),
+				'add_new_item'          => __( 'Add New Project', 'life' ),
+				'new_item'              => __( 'New Project', 'life' ),
+				'edit_item'             => __( 'Edit Project', 'life' ),
+				'view_item'             => __( 'View Project', 'life' ),
+				'all_items'             => __( 'All Project', 'life' ),
+				'search_items'          => __( 'Search Projects', 'life' ),
+				'parent_item_colon'     => __( 'Parent Projects:', 'life' ),
+				'not_found'             => __( 'No projects found.', 'life' ),
+				'not_found_in_trash'    => __( 'No projects found in Trash.', 'life' ),
+			),
 			'public'        => true,
 			'has_archive'   => true,
 			'menu_position' => 4,
 			'menu_icon'     => 'dashicons-hammer',
-			'supports'	    => array( 'title', 'editor', 'revisions', 'excerpt', 'thumbnail', 'custom-fields' ),
+			'supports'	    => array( 'title', 'editor', 'revisions', 'excerpt', 'thumbnail' ),
 			'show_in_rest'  => true,
 			'taxonomies'    => 'collection',
+		)
+	);
+
+	register_post_type('character',
+		array(
+			'labels'        => array(
+				'name'                  => _x( 'Characters', 'Post type general name', 'life' ),
+				'singular_name'         => _x( 'Character', 'Post type singular name', 'life' ),
+				'menu_name'             => _x( 'Characters', 'Admin Menu text', 'life' ),
+				'name_admin_bar'        => _x( 'Character', 'Add New on Toolbar', 'life' ),
+				'add_new'               => __( 'Add New', 'life' ),
+				'add_new_item'          => __( 'Add New Character', 'life' ),
+				'new_item'              => __( 'New Character', 'life' ),
+				'edit_item'             => __( 'Edit Character', 'life' ),
+				'view_item'             => __( 'View Character', 'life' ),
+				'all_items'             => __( 'All Character', 'life' ),
+				'search_items'          => __( 'Search Characters', 'life' ),
+				'parent_item_colon'     => __( 'Parent Characters:', 'life' ),
+				'not_found'             => __( 'No characters found.', 'life' ),
+				'not_found_in_trash'    => __( 'No characters found in Trash.', 'life' ),
+			),
+			'public'        => true,
+			'has_archive'   => true,
+			'menu_position' => 5,
+			'menu_icon'     => 'dashicons-smiley',
+			'supports'	    => array( 'title', 'editor', 'revisions', 'thumbnail' ),
+			'show_in_rest'  => true,
 		)
 	);
 }
