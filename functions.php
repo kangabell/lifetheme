@@ -113,6 +113,44 @@ function life_content_width() {
 add_action( 'after_setup_theme', 'life_content_width', 0 );
 
 /**
+ * Register custom post types
+ *
+ * @link https://developer.wordpress.org/plugins/post-types/registering-custom-post-types
+ */
+function life_custom_post_types() {
+
+	$labels = array(
+		'name'                  => _x( 'Projects', 'Post type general name', 'life' ),
+		'singular_name'         => _x( 'Project', 'Post type singular name', 'life' ),
+		'menu_name'             => _x( 'Projects', 'Admin Menu text', 'life' ),
+		'name_admin_bar'        => _x( 'Project', 'Add New on Toolbar', 'life' ),
+		'add_new'               => __( 'Add New', 'life' ),
+		'add_new_item'          => __( 'Add New Project', 'life' ),
+		'new_item'              => __( 'New Project', 'life' ),
+		'edit_item'             => __( 'Edit Project', 'life' ),
+		'view_item'             => __( 'View Project', 'life' ),
+		'all_items'             => __( 'All Project', 'life' ),
+		'search_items'          => __( 'Search Projects', 'life' ),
+		'parent_item_colon'     => __( 'Parent Projects:', 'life' ),
+		'not_found'             => __( 'No projects found.', 'life' ),
+		'not_found_in_trash'    => __( 'No projects found in Trash.', 'life' ),
+	);
+
+	register_post_type('project',
+		array(
+			'labels'        => $labels,
+			'public'        => true,
+			'has_archive'   => true,
+			'menu_position' => 4,
+			'menu_icon'     => 'dashicons-hammer',
+			'supports'	    => array( 'title', 'editor', 'revisions', 'excerpt', 'thumbnail', 'custom-fields' ),
+			'show_in_rest'  => true,
+		)
+	);
+}
+add_action('init', 'life_custom_post_types');
+
+/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
