@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package _s
+ * @package Life
  */
 
 if ( ! function_exists( 'life_posted_on' ) ) :

@@ -1,8 +1,8 @@
 <?php
 /**
- * _s Theme Customizer
+ *Life Theme Customizer
  *
- * @package _s
+ * @package Life
  */
 
 /**
