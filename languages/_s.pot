@@ -1,8 +1,8 @@
-# Copyright (C) 2020 Automattic
+# Copyright (C) 2021
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Life 1.0.0\n"
+"Project-Id-Version: Life 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/_s\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,23 +15,19 @@ msgstr ""
 "X-Domain: Life\n"
 
 #. Theme Name of the theme
-msgid "_s"
-msgstr ""
-
-#. Theme URI of the theme
-msgid "https://underscores.me/"
+msgid "Life"
 msgstr ""
 
 #. Description of the theme
-msgid "Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for."
+msgid "Custom theme for Chris Glass."
 msgstr ""
 
 #. Author of the theme
-msgid "Automattic"
+msgid "Kay Belardinelli"
 msgstr ""
 
 #. Author URI of the theme
-msgid "https://automattic.com/"
+msgid "https://kangabell.co/"
 msgstr ""
 
 #: 404.php:18
