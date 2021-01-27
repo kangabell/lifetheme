@@ -112,6 +112,37 @@ function life_content_width() {
 }
 add_action( 'after_setup_theme', 'life_content_width', 0 );
 
+
+/**
+ * Register custom taxonomies
+ *
+ * @link https://developer.wordpress.org/reference/functions/register_taxonomy/
+ */
+function life_custom_taxonomies() {
+
+	register_taxonomy( 'collection', 'project', array(
+		'labels'        => array(
+			'name'              => _x( 'Collections', 'taxonomy general name', 'life' ),
+			'singular_name'     => _x( 'Collection', 'taxonomy singular name', 'life' ),
+			'search_items'      => __( 'Search Collections', 'life' ),
+			'all_items'         => __( 'All Collections', 'life' ),
+			'view_item'         => __( 'View Collection', 'life' ),
+			'parent_item'       => __( 'Parent Collection', 'life' ),
+			'parent_item_colon' => __( 'Parent Collection:', 'life' ),
+			'edit_item'         => __( 'Edit Collection', 'life' ),
+			'update_item'       => __( 'Update Collection', 'life' ),
+			'add_new_item'      => __( 'Add New Collection', 'life' ),
+			'new_item_name'     => __( 'New Collection Name', 'life' ),
+			'not_found'         => __( 'No Collections Found', 'life' ),
+			'back_to_items'     => __( 'Back to Collections', 'life' ),
+			'menu_name'         => __( 'Collections', 'life' ),
+		),
+		'hierarchical' => true,
+		'show_in_rest' => true,
+	) );
+}
+add_action( 'init', 'life_custom_taxonomies', 0 );
+
 /**
  * Register custom post types
  *
@@ -145,6 +176,7 @@ function life_custom_post_types() {
 			'menu_icon'     => 'dashicons-hammer',
 			'supports'	    => array( 'title', 'editor', 'revisions', 'excerpt', 'thumbnail', 'custom-fields' ),
 			'show_in_rest'  => true,
+			'taxonomies'    => 'collection',
 		)
 	);
 }
