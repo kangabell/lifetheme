@@ -181,11 +181,11 @@ if ( ! function_exists( '_s_woocommerce_cart_link' ) ) {
 	 */
 	function _s_woocommerce_cart_link() {
 		?>
-		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', '_s' ); ?>">
+		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'life' ); ?>">
 			<?php
 			$item_count_text = sprintf(
 				/* translators: number of items in the mini cart. */
-				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), '_s' ),
+				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'life' ),
 				WC()->cart->get_cart_contents_count()
 			);
 			?>
