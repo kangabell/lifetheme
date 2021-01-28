@@ -1,60 +1,92 @@
+/*--------------------------------------------------------------
+## Main Nav
+--------------------------------------------------------------*/
+
 .main-navigation {
+	clear: both;
 	display: block;
-	width: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20rem;
 
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
+	a {
+		display: block;
+		text-decoration: none;
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-
-				&:hover > ul,
-				&.focus > ul {
-					display: block;
-					left: auto;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
+		&:hover,
+		&:focus {
 		}
 	}
 
-	li {
-		position: relative;
+	&.toggled {
+		z-index: 9;
+	}
+} // .main-navigation
 
-		&:hover > a,
-		&.focus > a {
+.main-nav-container {
+	background: rgba(black, 0.95);
+	max-height: 100vh;
+	min-width: 16rem;
+	opacity: 0;
+	overflow-y: auto;
+	padding: 1rem;
+	transform: translateX(100%);
+	transition: all 0.25s ease-out;
+
+	// fixed position to prevent overflow issues in iOS
+	position: fixed;
+	top: 0;
+	right: 0;
+
+	.toggled & {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+/*--------------------------------------------------------------
+## Menu Toggle
+--------------------------------------------------------------*/
+
+.menu-toggle {
+	cursor: pointer;
+	display: block;
+	float: right;
+	margin-top: 0.5rem;
+	margin-right: 0.5rem;
+	position: relative;
+	z-index: 9;
+
+	&::after {
+		content: 'Menu';
+		font-size: 0.675rem;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		.toggled & {
+			content: 'Close';
 		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+## Desktop Nav
+--------------------------------------------------------------*/
+
+.desktop-navigation {
+	display: none;
+
+	ul {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
 	}
 
 	a {
@@ -67,24 +99,16 @@
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
 	}
-}
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-
-	.menu-toggle {
-		display: none;
-	}
-
-	.main-navigation ul {
-		display: flex;
+	@media screen and ($medium-up) {
+		display: block;
 	}
 }
+
+
+/*--------------------------------------------------------------
+## Miscellaneous Navigation
+--------------------------------------------------------------*/
 
 .comment-navigation,
 .posts-navigation,
@@ -107,3 +131,4 @@
 		flex: 1 0 50%;
 	}
 }
+

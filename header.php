@@ -28,7 +28,6 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
-			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -38,22 +37,37 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
-			$life_description = get_bloginfo( 'description', 'display' );
-			if ( $life_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $life_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
+			?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'life' ); ?></button>
+		<nav class="desktop-navigation">
 			<?php
 			wp_nav_menu(
 				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
+					'theme_location' => 'menu-2',
+					'menu_id'        => 'desktop-menu',
 				)
 			);
 			?>
+		</nav>
+
+		<nav id="site-navigation" class="main-navigation menu">
+			<button class="icon-button menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<span class="icon"></span>
+				<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'life' ); ?></span>
+			</button>
+			<div class="main-nav-container">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<?php esc_html_e( 'Home', 'life' )?>
+				</a>
+				<?php
+				wp_nav_menu( array(
+					'theme_location'  => 'menu-1',
+					'menu_id'         => 'primary-menu',
+					'container_class' => 'main-menu-container'
+				) );
+				dynamic_sidebar( 'menu-widgets' );
+				?>
+			</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

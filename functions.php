@@ -48,6 +48,7 @@ function life_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'life' ),
+			'menu-2' => esc_html__( 'Secondary', 'life' ),
 		)
 	);
 
@@ -162,7 +163,7 @@ function life_custom_post_types() {
 				'new_item'              => __( 'New Project', 'life' ),
 				'edit_item'             => __( 'Edit Project', 'life' ),
 				'view_item'             => __( 'View Project', 'life' ),
-				'all_items'             => __( 'All Project', 'life' ),
+				'all_items'             => __( 'All Projects', 'life' ),
 				'search_items'          => __( 'Search Projects', 'life' ),
 				'parent_item_colon'     => __( 'Parent Projects:', 'life' ),
 				'not_found'             => __( 'No projects found.', 'life' ),
@@ -190,7 +191,7 @@ function life_custom_post_types() {
 				'new_item'              => __( 'New Character', 'life' ),
 				'edit_item'             => __( 'Edit Character', 'life' ),
 				'view_item'             => __( 'View Character', 'life' ),
-				'all_items'             => __( 'All Character', 'life' ),
+				'all_items'             => __( 'All Characters', 'life' ),
 				'search_items'          => __( 'Search Characters', 'life' ),
 				'parent_item_colon'     => __( 'Parent Characters:', 'life' ),
 				'not_found'             => __( 'No characters found.', 'life' ),
