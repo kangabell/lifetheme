@@ -58,6 +58,23 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php life_entry_footer(); ?>
+		<?php
+		life_entry_footer();
+
+		$characters = get_field('characters_related');
+		if ( $characters ):
+			if ( 'life_project' === get_post_type() ) :
+				echo '<h2>' . esc_html__( 'Cohorts', 'life' ) . '</h2>';
+			else :
+				echo '<h2>' . esc_html__( 'Cast of Characters', 'life' ) . '</h2>';
+			endif;
+			foreach( $characters as $post ):
+				setup_postdata($post);
+				get_template_part('partials/thumbnail');
+			endforeach;
+			wp_reset_postdata();
+		endif;
+
+		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

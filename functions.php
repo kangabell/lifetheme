@@ -107,7 +107,7 @@ add_action( 'after_setup_theme', 'life_content_width', 0 );
  */
 function life_custom_taxonomies() {
 
-	register_taxonomy( 'collection', 'project', array(
+	register_taxonomy( 'life_collection', 'life_project', array(
 		'labels'        => array(
 			'name'              => _x( 'Collections', 'taxonomy general name', 'life' ),
 			'singular_name'     => _x( 'Collection', 'taxonomy singular name', 'life' ),
@@ -137,7 +137,7 @@ add_action( 'init', 'life_custom_taxonomies', 0 );
  */
 function life_custom_post_types() {
 
-	register_post_type('project',
+	register_post_type('life_project',
 		array(
 			'labels'        => array(
 				'name'                  => _x( 'Projects', 'Post type general name', 'life' ),
@@ -157,6 +157,7 @@ function life_custom_post_types() {
 			),
 			'public'        => true,
 			'has_archive'   => true,
+			'rewrite'		=> array( 'slug' => 'projects'),
 			'menu_position' => 4,
 			'menu_icon'     => 'dashicons-hammer',
 			'supports'	    => array( 'title', 'editor', 'revisions', 'excerpt', 'thumbnail' ),
@@ -165,7 +166,7 @@ function life_custom_post_types() {
 		)
 	);
 
-	register_post_type('character',
+	register_post_type('life_character',
 		array(
 			'labels'        => array(
 				'name'                  => _x( 'Characters', 'Post type general name', 'life' ),
@@ -185,6 +186,7 @@ function life_custom_post_types() {
 			),
 			'public'        => true,
 			'has_archive'   => true,
+			'rewrite'		=> array( 'slug' => 'characters'),
 			'menu_position' => 5,
 			'menu_icon'     => 'dashicons-smiley',
 			'supports'	    => array( 'title', 'editor', 'revisions', 'thumbnail' ),
