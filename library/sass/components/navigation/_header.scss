@@ -1,14 +1,19 @@
+
+/*--------------------------------------------------------------
+## Site Header
+--------------------------------------------------------------*/
+
+.site-header {
+	display: flex;
+}
+
+
 /*--------------------------------------------------------------
 ## Main Nav
 --------------------------------------------------------------*/
 
 .main-navigation {
-	clear: both;
-	display: block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 20rem;
+	margin-left: auto;
 
 	a {
 		display: block;
@@ -21,6 +26,10 @@
 
 	&.toggled {
 		z-index: 9;
+	}
+
+	@media screen and ($medium-up) {
+		margin-left: 0;
 	}
 } // .main-navigation
 
@@ -107,6 +116,7 @@
 
 .desktop-search {
 	display: none;
+	margin-left: auto;
 
 	@media screen and ($medium-up) {
 		display: block;
