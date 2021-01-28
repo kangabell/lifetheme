@@ -1,0 +1,30 @@
+.site-footer {
+	background: black;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+
+	.wrap {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	a {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+.footer-navigation ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.site-info {
+	width: 100%;
+}
+
+.back-to-top {
+	margin-left: auto;
+}

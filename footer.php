@@ -12,25 +12,27 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<nav>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-2',
-					'menu_id'        => 'desktop-menu',
-				)
-			);
-			?>
-		</nav>
-		<a href="#masthead"><?php esc_html_e( 'Up', 'life' ); ?></a>
-		<div class="site-info">
-			<?php
-			echo '&copy;' . date('Y') . ' ';
-			bloginfo( 'name' );
-			?>
-			<span class="sep"> / </span>
-			<a href="https://kangabell.co/" target="_blank">Kay Belardinelli</a>
-		</div><!-- .site-info -->
+		<div class="wrap">
+			<nav class="footer-navigation">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-2',
+						'menu_id'        => 'desktop-menu',
+					)
+				);
+				?>
+			</nav>
+			<a class="back-to-top" href="#masthead"><?php esc_html_e( 'Up', 'life' ); ?></a>
+			<div class="site-info">
+				<?php
+				echo '&copy;' . date('Y') . ' ';
+				bloginfo( 'name' );
+				?>
+				<span class="sep"> / </span>
+				<a href="https://kangabell.co/" target="_blank">Kay Belardinelli</a>
+			</div><!-- .site-info -->
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
