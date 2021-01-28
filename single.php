@@ -30,6 +30,10 @@ get_header();
 				)
 			);
 
+			$post_type = get_post_type();
+			$post_type_name = get_post_type_object( $post_type )->labels->name;
+			echo '<a href="' . get_post_type_archive_link( $post_type ) . '">' . esc_html__( 'View All ', 'life' ) . $post_type_name . '</a>';
+
 		endwhile; // End of the loop.
 		?>
 
