@@ -17,7 +17,6 @@
 		<div class="entry-meta">
 			<?php
 			life_posted_on();
-			life_posted_by();
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
