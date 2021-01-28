@@ -42,12 +42,11 @@
 
 		<nav class="desktop-navigation">
 			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-2',
-					'menu_id'        => 'desktop-menu',
-				)
-			);
+			wp_nav_menu( array(
+				'theme_location' => 'menu-2',
+				'menu_id'        => 'desktop-menu',
+				'depth'			  => 1,
+			) );
 			?>
 		</nav>
 
@@ -65,15 +64,11 @@
 			<div class="main-nav-container">
 				<?php
 				get_search_form();
-				?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<?php esc_html_e( 'Home', 'life' )?>
-				</a>
-				<?php
 				wp_nav_menu( array(
 					'theme_location'  => 'menu-1',
 					'menu_id'         => 'primary-menu',
-					'container_class' => 'main-menu-container'
+					'container_class' => 'main-menu-container',
+					'depth'			  => 1,
 				) );
 				?>
 			</div>

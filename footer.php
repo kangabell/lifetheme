@@ -15,12 +15,11 @@
 		<div class="wrap">
 			<nav class="footer-navigation">
 				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-2',
-						'menu_id'        => 'desktop-menu',
-					)
-				);
+				wp_nav_menu( array(
+					'theme_location' => 'menu-3',
+					'menu_id'        => 'footer-menu',
+					'depth'			  => 1,
+				) );
 				?>
 			</nav>
 			<a class="back-to-top" href="#masthead"><?php esc_html_e( 'Up', 'life' ); ?></a>
