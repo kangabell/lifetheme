@@ -12,6 +12,26 @@
 	max-width: $max-width;
 }
 
+// Full-width element that breaks container
+@mixin full-width() {
+	margin-left: -1rem;
+	margin-right: -1rem;
+	width: auto; // reset
+
+	img {
+		width: 100%;
+	}
+
+	@media screen and ($medium-up) {
+		left: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+		position: relative;
+		right: 50%;
+		width: 100vw;
+	}
+}
+
 // Column width with margin
 @mixin column-width($numberColumns: 3) {
 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );

@@ -1,3 +1,7 @@
+.wp-block-image.size-full {
+	@include full-width;
+}
+
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
