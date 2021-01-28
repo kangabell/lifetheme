@@ -1,2 +1,6 @@
-$size__site-main: 100%;
-$size__site-sidebar: 25%;
+$size__site-main: 58rem;
+$size__site-narrow: 46rem;
+
+// breakpoints
+$medium-up: 'min-width: 46rem';
+$large-up: 'min-width: 58rem';
