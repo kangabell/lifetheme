@@ -51,12 +51,21 @@
 			?>
 		</nav>
 
+		<div class="desktop-search">
+			<?php
+			get_search_form();
+			?>
+		</div>
+
 		<nav id="site-navigation" class="main-navigation menu">
 			<button class="icon-button menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 				<span class="icon"></span>
 				<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'life' ); ?></span>
 			</button>
 			<div class="main-nav-container">
+				<?php
+				get_search_form();
+				?>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 					<?php esc_html_e( 'Home', 'life' )?>
 				</a>

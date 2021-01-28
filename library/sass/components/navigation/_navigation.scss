@@ -105,6 +105,14 @@
 	}
 }
 
+.desktop-search {
+	display: none;
+
+	@media screen and ($medium-up) {
+		display: block;
+	}
+}
+
 
 /*--------------------------------------------------------------
 ## Miscellaneous Navigation
