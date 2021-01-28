@@ -1,5 +1,9 @@
-.wp-block-image.size-full {
-	@include full-width;
+.single,
+.page {
+
+	.wp-block-image.size-full img {
+		@include full-width;
+	}
 }
 
 .page-content .wp-smiley,
