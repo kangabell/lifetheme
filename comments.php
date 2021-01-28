@@ -26,25 +26,8 @@ if ( post_password_required() ) {
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
 		?>
-		<h2 class="comments-title">
-			<?php
-			$life_comment_count = get_comments_number();
-			if ( '1' === $life_comment_count ) {
-				printf(
-					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'life' ),
-					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
-				);
-			} else {
-				printf( 
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $life_comment_count, 'comments title', 'life' ) ),
-					number_format_i18n( $life_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
-				);
-			}
-			?>
-		</h2><!-- .comments-title -->
+
+		<h2 class="comments-title"><?php esc_html_e( 'Comments', 'life' ); ?></h2>
 
 		<?php the_comments_navigation(); ?>
 
@@ -52,7 +35,6 @@ if ( post_password_required() ) {
 			<?php
 			wp_list_comments(
 				array(
-					'style'      => 'ol',
 					'short_ping' => true,
 				)
 			);
@@ -71,7 +53,14 @@ if ( post_password_required() ) {
 
 	endif; // Check for have_comments().
 
-	comment_form();
+	$custom_comment_field = '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>';  //label removed for cleaner layout
+
+	comment_form( array(
+		'comment_field'			=> $custom_comment_field,
+		'logged_in_as' 			=> '',
+		'comment_notes_before' 	=> '',
+		'label_submit'			=> esc_html__('Submit Reply', 'life')
+	));
 	?>
 
 </div><!-- #comments -->

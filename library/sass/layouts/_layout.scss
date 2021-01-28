@@ -6,7 +6,8 @@
 }
 
 .entry-header,
-.entry-content p {
+.entry-content p,
+.comments-area {
 	@include wrap($size__site-narrow);
 	margin-left: auto;
 	margin-right: auto;
