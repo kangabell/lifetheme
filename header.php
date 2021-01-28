@@ -75,7 +75,6 @@
 					'menu_id'         => 'primary-menu',
 					'container_class' => 'main-menu-container'
 				) );
-				dynamic_sidebar( 'menu-widgets' );
 				?>
 			</div>
 		</nav><!-- #site-navigation -->
