@@ -12,18 +12,24 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
+		<nav>
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-2',
+					'menu_id'        => 'desktop-menu',
+				)
+			);
+			?>
+		</nav>
+		<a href="#masthead"><?php esc_html_e( 'Up', 'life' ); ?></a>
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'life' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'life' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'life' ), 'life', '<a href="https://automattic.com/">Automattic</a>' );
-				?>
+			<?php
+			echo '&copy;' . date('Y') . ' ';
+			bloginfo( 'name' );
+			?>
+			<span class="sep"> / </span>
+			<a href="https://kangabell.co/" target="_blank">Kay Belardinelli</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
