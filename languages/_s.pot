@@ -140,18 +140,7 @@ msgstr ""
 #: inc/template-tags.php:100
 #: template-parts/content-page.php:39
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr ""
-
-#: inc/woocommerce.php:186
-msgid "View your shopping cart"
-msgstr ""
-
-#. translators: number of items in the mini cart.
-#: inc/woocommerce.php:190
-msgid "%d item"
-msgid_plural "%d items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr """
 
 #. translators: %s: search query.
 #: search.php:22
