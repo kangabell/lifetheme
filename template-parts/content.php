@@ -62,21 +62,27 @@
 		life_entry_footer();
 
 		$related_posts = get_field('characters_posts');
-		if ( $related_posts ):
+
+		if ( $related_posts && is_single() ) :
+
 			if ( 'life_project' === get_post_type() ) :
 				echo '<h2>' . esc_html__( 'Cohorts', 'life' ) . '</h2>';
+
 			elseif ( 'life_character' === get_post_type() ) :
 				echo '<h2>' . esc_html__( 'Posts with ', 'life' ) . get_the_title() . '</h2>';
+
 			else :
 				echo '<h2>' . esc_html__( 'Cast of Characters', 'life' ) . '</h2>';
 			endif;
+
 			foreach( $related_posts as $post ):
 				setup_postdata($post);
 				get_template_part('partials/thumbnail');
 			endforeach;
-			wp_reset_postdata();
-		endif;
 
+			wp_reset_postdata();
+
+		endif;
 		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
