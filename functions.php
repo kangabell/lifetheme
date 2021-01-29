@@ -127,6 +127,26 @@ function life_custom_taxonomies() {
 		'hierarchical' => true,
 		'show_in_rest' => true,
 	) );
+
+	register_taxonomy( 'life_favorite_type', 'life_favorite', array(
+		'labels'        => array(
+			'name'              => _x( 'Types', 'taxonomy general name', 'life' ),
+			'singular_name'     => _x( 'Type', 'taxonomy singular name', 'life' ),
+			'search_items'      => __( 'Search Types', 'life' ),
+			'all_items'         => __( 'All Types', 'life' ),
+			'view_item'         => __( 'View Type', 'life' ),
+			'parent_item'       => __( 'Parent Type', 'life' ),
+			'parent_item_colon' => __( 'Parent Type:', 'life' ),
+			'edit_item'         => __( 'Edit Type', 'life' ),
+			'update_item'       => __( 'Update Type', 'life' ),
+			'add_new_item'      => __( 'Add New Type', 'life' ),
+			'new_item_name'     => __( 'New Type Name', 'life' ),
+			'not_found'         => __( 'No Types Found', 'life' ),
+			'back_to_items'     => __( 'Back to Types', 'life' ),
+			'menu_name'         => __( 'Types', 'life' ),
+		),
+		'show_in_rest' => true,
+	) );
 }
 add_action( 'init', 'life_custom_taxonomies', 0 );
 
@@ -191,6 +211,35 @@ function life_custom_post_types() {
 			'menu_icon'     => 'dashicons-smiley',
 			'supports'	    => array( 'title', 'editor', 'revisions', 'thumbnail' ),
 			'show_in_rest'  => true,
+		)
+	);
+
+	register_post_type('life_favorite',
+		array(
+			'labels'        => array(
+				'name'                  => _x( 'Favorites', 'Post type general name', 'life' ),
+				'singular_name'         => _x( 'Favorite', 'Post type singular name', 'life' ),
+				'menu_name'             => _x( 'Favorites', 'Admin Menu text', 'life' ),
+				'name_admin_bar'        => _x( 'Favorite', 'Add New on Toolbar', 'life' ),
+				'add_new'               => __( 'Add New', 'life' ),
+				'add_new_item'          => __( 'Add New Favorite', 'life' ),
+				'new_item'              => __( 'New Favorite', 'life' ),
+				'edit_item'             => __( 'Edit Favorite', 'life' ),
+				'view_item'             => __( 'View Favorite', 'life' ),
+				'all_items'             => __( 'All Favorites', 'life' ),
+				'search_items'          => __( 'Search Favorites', 'life' ),
+				'parent_item_colon'     => __( 'Parent Favorites:', 'life' ),
+				'not_found'             => __( 'No favorites found.', 'life' ),
+				'not_found_in_trash'    => __( 'No favorites found in Trash.', 'life' ),
+			),
+			'public'        => true,
+			'has_archive'   => true,
+			'rewrite'		=> array( 'slug' => 'favorites'),
+			'menu_position' => 5,
+			'menu_icon'     => 'dashicons-star-filled',
+			'supports'	    => array( 'title', 'editor', 'revisions', 'thumbnail' ),
+			'show_in_rest'  => true,
+			'taxonomies'    => 'favorite_type',
 		)
 	);
 }
