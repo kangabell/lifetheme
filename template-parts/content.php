@@ -61,14 +61,16 @@
 		<?php
 		life_entry_footer();
 
-		$characters = get_field('characters_related');
-		if ( $characters ):
+		$related_posts = get_field('characters_posts');
+		if ( $related_posts ):
 			if ( 'life_project' === get_post_type() ) :
 				echo '<h2>' . esc_html__( 'Cohorts', 'life' ) . '</h2>';
+			elseif ( 'life_character' === get_post_type() ) :
+				echo '<h2>' . esc_html__( 'Posts with ', 'life' ) . get_the_title() . '</h2>';
 			else :
 				echo '<h2>' . esc_html__( 'Cast of Characters', 'life' ) . '</h2>';
 			endif;
-			foreach( $characters as $post ):
+			foreach( $related_posts as $post ):
 				setup_postdata($post);
 				get_template_part('partials/thumbnail');
 			endforeach;
