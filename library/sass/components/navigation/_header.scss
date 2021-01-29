@@ -14,6 +14,9 @@
 
 .main-navigation {
 	margin-left: auto;
+	position: fixed;
+	top: 0;
+	right: 0;
 
 	a {
 		display: block;
@@ -39,14 +42,12 @@
 	min-width: 16rem;
 	opacity: 0;
 	overflow-y: auto;
-	padding: 1rem;
+	padding: 4rem 1rem 1rem;
+	position: absolute;
+	right: 0;
+	top: 0;
 	transform: translateX(100%);
 	transition: all 0.25s ease-out;
-
-	// fixed position to prevent overflow issues in iOS
-	position: fixed;
-	top: 0;
-	right: 0;
 
 	.toggled & {
 		opacity: 1;
@@ -54,34 +55,82 @@
 	}
 }
 
+
 /*--------------------------------------------------------------
 ## Menu Toggle
 --------------------------------------------------------------*/
 
+$button-width: 3rem;
+$bar-thickness: $button-width * 0.0375;
+$transition-duration: 0.15s;
+$bar-color: $black;
+$bar-color-open: $white;
+
 .menu-toggle {
-	cursor: pointer;
 	display: block;
 	float: right;
+	height: $button-width;
 	margin-top: 0.5rem;
 	margin-right: 0.5rem;
 	position: relative;
+	width: $button-width;
 	z-index: 9;
+}
+
+.menu-toggle .icon {
+	background: $bar-color; // middle-bar
+	display: block;
+	height: $bar-thickness;
+	position: absolute;
+	top: 1.5rem;
+	transition: background 0s $transition-duration;
+	left: 0.75rem;
+	right: 0.75rem;
+
+	// top and bottom bars
+	&::before,
+	&::after {
+		background-color: $bar-color;
+		content: '';
+		display: block;
+		height: $bar-thickness;
+		left: 0;
+		position: absolute;
+		transition-duration: $transition-duration, $transition-duration;
+		transition-delay: $transition-duration, 0s;
+		width: 100%;
+	}
+
+	&::before {
+		top: -0.45rem;
+		transition-property: top, transform;
+	}
 
 	&::after {
-		content: 'Menu';
-		font-size: 0.675rem;
-		letter-spacing: 0.05em;
-		text-transform: uppercase;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
+		bottom: -0.45rem;
+		transition-property: bottom, transform;
+	}
 
-		.toggled & {
-			content: 'Close';
+	.toggled & {
+		background: none; // remove middle bar
+
+		&::before {
+			top: 0;
+			transform: rotate(45deg);
+		}
+
+		&::after {
+			bottom: 0;
+			transform: rotate(-45deg);
+		}
+
+		&::before,
+		&::after {
+			background-color: $bar-color-open;
+			transition-delay: 0s, $transition-duration;
 		}
 	}
-}
+} // .menu-toggle .icon
 
 
 /*--------------------------------------------------------------
