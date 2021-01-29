@@ -77,7 +77,12 @@
 
 			foreach( $related_posts as $post ):
 				setup_postdata($post);
-				get_template_part('partials/thumbnail');
+
+				if ( is_singular( 'life_character' ) ) :
+					get_template_part( 'partials/card' );
+				else :
+					get_template_part( 'partials/thumbnail' );
+				endif;
 			endforeach;
 
 			wp_reset_postdata();
