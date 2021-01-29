@@ -91,7 +91,7 @@ if ( ! function_exists( 'life_post_thumbnail' ) ) :
 		if ( is_singular() ) :
 			?>
 
-			<div class="post-thumbnail">
+			<div class="featured-image">
 				<?php the_post_thumbnail(); ?>
 			</div><!-- .post-thumbnail -->
 

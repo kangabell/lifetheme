@@ -2,6 +2,10 @@
 	display: none;
 }
 
-.single-project .wp-post-image {
-	@include full-width;
+.single-life_project,
+.single-life_character {
+
+	.featured-image .wp-post-image {
+		@include full-width;
+	}
 }
