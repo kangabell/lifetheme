@@ -29,9 +29,9 @@ get_header();
 				if ( 'post' === get_post_type() ) :
 					get_template_part( 'template-parts/content' );
 				elseif ( 'life_character' === get_post_type() ) :
-					get_template_part( 'partials/thumbnail' );
+					get_template_part( 'template-parts/thumbnail' );
 				else :
-					get_template_part( 'partials/card' );
+					get_template_part( 'template-parts/card' );
 				endif;
 
 			endwhile;

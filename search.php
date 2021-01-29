@@ -29,7 +29,7 @@ get_header();
 
 				the_post();
 
-				get_template_part( 'partials/card' );
+				get_template_part( 'template-parts/card' );
 
 			endwhile;
 

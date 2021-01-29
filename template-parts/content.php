@@ -79,9 +79,9 @@
 				setup_postdata($post);
 
 				if ( is_singular( 'life_character' ) ) :
-					get_template_part( 'partials/card' );
+					get_template_part( 'template-parts/card' );
 				else :
-					get_template_part( 'partials/thumbnail' );
+					get_template_part( 'template-parts/thumbnail' );
 				endif;
 			endforeach;
 
