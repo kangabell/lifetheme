@@ -4,12 +4,26 @@
 --------------------------------------------------------------*/
 
 .site-header {
+	align-items: center;
 	display: flex;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+
+	a {
+		letter-spacing: 0.05em;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+}
+
+.site-title {
+	font-weight: bold;
+	margin: 0 1rem 0 0;
 }
 
 
 /*--------------------------------------------------------------
-## Main Nav
+## Main Nav (Drawer)
 --------------------------------------------------------------*/
 
 .main-navigation {
@@ -19,12 +33,25 @@
 	right: 0;
 
 	a {
+		color: $white;
 		display: block;
+		padding: 0.5rem 3rem;
 		text-decoration: none;
 
 		&:hover,
 		&:focus {
+			background: $black;
 		}
+	}
+
+	.menu {
+		list-style: none;
+		margin-bottom: 3rem;
+		padding-left: 0;
+	}
+
+	.search-form {
+		margin: 2rem 3rem;
 	}
 
 	&.toggled {
@@ -37,12 +64,13 @@
 } // .main-navigation
 
 .main-nav-container {
-	background: rgba(black, 0.95);
+	background: rgba($black, 0.92);
+	border-bottom-right-radius: 0.5rem;
+	border-bottom-left-radius: 0.5rem;
 	max-height: 100vh;
 	min-width: 16rem;
 	opacity: 0;
 	overflow-y: auto;
-	padding: 4rem 1rem 1rem;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -143,19 +171,23 @@ $bar-color-open: $white;
 	ul {
 		display: flex;
 		list-style: none;
-		margin: 0;
 		padding-left: 0;
 	}
 
 	a {
+		color: $gray-lt;
 		display: block;
+		margin-right: 1rem;
 		text-decoration: none;
 	}
 
+	a:hover,
+	a:focus,
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		color: $black;
 	}
 
 	@media screen and ($medium-up) {
@@ -167,7 +199,7 @@ $bar-color-open: $white;
 	display: none;
 	margin-left: auto;
 
-	@media screen and ($medium-up) {
+	@media screen and ($large-up) {
 		display: block;
 	}
 }

@@ -26,19 +26,17 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'life' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
+		<?php
+		if ( is_front_page() && is_home() ) :
 			?>
-		</div><!-- .site-branding -->
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php
+		else :
+			?>
+			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			<?php
+		endif;
+		?>
 
 		<nav class="desktop-navigation">
 			<?php
@@ -56,7 +54,7 @@
 			?>
 		</div>
 
-		<nav id="site-navigation" class="main-navigation menu">
+		<nav id="site-navigation" class="main-navigation">
 			<button class="icon-button menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 				<span class="icon"></span>
 				<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'life' ); ?></span>
