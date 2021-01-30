@@ -33,14 +33,14 @@
 	right: 0;
 
 	a {
-		color: $white;
+		color: $light;
 		display: block;
 		padding: 0.5rem 3rem;
 		text-decoration: none;
 
 		&:hover,
 		&:focus {
-			background: $black;
+			background: $dark;
 		}
 	}
 
@@ -64,7 +64,7 @@
 } // .main-navigation
 
 .main-nav-container {
-	background: rgba($black, 0.92);
+	background: rgba($dark, 0.92);
 	border-bottom-right-radius: 0.5rem;
 	border-bottom-left-radius: 0.5rem;
 	max-height: 100vh;
@@ -91,8 +91,8 @@
 $button-width: 3rem;
 $bar-thickness: $button-width * 0.0375;
 $transition-duration: 0.15s;
-$bar-color: $black;
-$bar-color-open: $white;
+$bar-color: $dark;
+$bar-color-open: $light;
 
 .menu-toggle {
 	display: block;
@@ -175,7 +175,7 @@ $bar-color-open: $white;
 	}
 
 	a {
-		color: $gray-lt;
+		color: $mediumdark;
 		display: block;
 		margin-right: 1rem;
 		text-decoration: none;
@@ -187,7 +187,7 @@ $bar-color-open: $white;
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-		color: $black;
+		color: $dark;
 	}
 
 	@media screen and ($medium-up) {
