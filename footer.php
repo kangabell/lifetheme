@@ -22,7 +22,10 @@
 				) );
 				?>
 			</nav>
-			<a class="back-to-top" href="#masthead"><?php esc_html_e( 'Up', 'life' ); ?></a>
+			<a class="back-to-top" href="#masthead">
+				<span class="icon-arrow"></span>	
+				<?php esc_html_e( 'Up', 'life' ); ?>
+			</a>
 			<div class="site-info">
 				<?php
 				echo '&copy;' . date('Y') . ' ';
