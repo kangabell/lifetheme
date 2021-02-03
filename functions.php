@@ -101,6 +101,51 @@ add_action( 'after_setup_theme', 'life_content_width', 0 );
 
 
 /**
+ * Register widget area.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
+function life_widgets_init() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Posts Header', 'life' ),
+		'id'            => 'header-posts',
+		'description'   => esc_html__( 'Add widgets here.', 'life' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Projects Header', 'life' ),
+		'id'            => 'header-projects',
+		'description'   => esc_html__( 'Add widgets here.', 'life' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Characters Header', 'life' ),
+		'id'            => 'header-characters',
+		'description'   => esc_html__( 'Add widgets here.', 'life' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Pins Header', 'life' ),
+		'id'            => 'header-pins',
+		'description'   => esc_html__( 'Add widgets here.', 'life' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Favorites Header', 'life' ),
+		'id'            => 'header-favorites',
+		'description'   => esc_html__( 'Add widgets here.', 'life' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+	) );
+}
+add_action( 'widgets_init', 'life_widgets_init' );
+
+
+/**
  * Register custom taxonomies
  *
  * @link https://developer.wordpress.org/reference/functions/register_taxonomy/

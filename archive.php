@@ -18,6 +18,16 @@ get_header();
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
+
+				if ( 'life_project' === get_post_type() ) :
+					dynamic_sidebar( 'header-projects' );
+				elseif ( 'life_character' === get_post_type() ) :
+					dynamic_sidebar( 'header-characters' );
+				elseif ( 'pinboard-bookmark' === get_post_type() ) :
+					dynamic_sidebar( 'header-pins' );
+				elseif ( 'life_favorite' === get_post_type() ) :
+					dynamic_sidebar( 'header-favorites' );
+				endif;
 				?>
 			</header><!-- .page-header -->
 

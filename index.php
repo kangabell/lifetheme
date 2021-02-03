@@ -22,8 +22,10 @@ get_header();
 
 			if ( is_home() && ! is_front_page() ) :
 				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+				<header class="page-header">
+					<?php
+					dynamic_sidebar( 'header-posts' );
+					?>
 				</header>
 				<?php
 			endif;
