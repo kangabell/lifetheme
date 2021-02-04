@@ -39,6 +39,7 @@
 	background: $color__background-button;
 	border: 2px solid;
 	border-color: $color__border-button;
+	border-radius: 3px;
 	color: rgba(0, 0, 0, 0.8);
 	cursor: pointer;
 	line-height: 1;
@@ -68,6 +69,6 @@
 		text-transform: uppercase;
 	} @else {
 		font-weight: bold;
-		padding: 0.6em 1em 0.4em;
+		padding: 0.6em 1em;
 	}
 }

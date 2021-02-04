@@ -2,7 +2,6 @@ input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
-input[type="search"],
 input[type="number"],
 input[type="tel"],
 input[type="range"],
@@ -14,10 +13,11 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: $color__text-input;
-	border: 1px solid $color__border-input;
+	border: 0;
 	border-radius: 3px;
-	padding: 3px;
+	box-shadow: inset 0px 1px 4px rgba($medium, 0.8);
+	color: $color__text-input;
+	padding: 0.5rem;
 
 	&:focus {
 		color: $color__text-input-focus;
@@ -25,13 +25,31 @@ textarea {
 }
 
 select {
-	border: 1px solid $color__border-input;
+	box-shadow: inset 0px 1px 4px rgba($medium, 0.8);
 }
 
 textarea {
 	width: 100%;
 }
 
+label {
+	font-weight: bold;
+	margin-bottom: 0.25rem;
+
+	+ input {
+		display: block;
+	}
+
+	.comment-form-cookies-consent & {
+		font-weight: normal;
+		font-size: 0.85rem;
+	}
+}
+
+input[type="search"],
+.wp-block-search__input {
+	border: 1px solid $color__border-input;
+}
 
 .wp-block-search {
 
@@ -49,6 +67,5 @@ textarea {
 	.wp-block-search__input {
 		flex-grow: 1;
 		min-width: 3em;
-		border: 1px solid $color__border-input;
 	}
 }
