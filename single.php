@@ -25,14 +25,14 @@ get_header();
 
 			the_post_navigation(
 				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'life' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'life' ) . '</span> <span class="nav-title">%title</span>',
+					'prev_text' => '<span class="icon-arrow icon-arrow-left"></span> <span class="nav-title">%title</span>',
+					'next_text' => '<span class="nav-title">%title</span> <span class="icon-arrow"></span>',
 				)
 			);
 
 			$post_type = get_post_type();
 			$post_type_name = get_post_type_object( $post_type )->labels->name;
-			echo '<a href="' . get_post_type_archive_link( $post_type ) . '">' . esc_html__( 'View All ', 'life' ) . $post_type_name . '</a>';
+			echo '<nav class="navigation return-link"><a href="' . get_post_type_archive_link( $post_type ) . '"><span class="icon-arrow icon-arrow-left"></span> <span class="nav-title">' . esc_html__( 'View All ', 'life' ) . $post_type_name . '</span></a></nav>';
 
 		endwhile; // End of the loop.
 		?>

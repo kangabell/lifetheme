@@ -68,6 +68,11 @@ $icon-triangle: "\25b3";
     content: $icon-arrow; 
   }
 }
+.icon-arrow-left:before {
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
 .icon-bookmark,
 .menu-icon.bookmark a {
   &:before {

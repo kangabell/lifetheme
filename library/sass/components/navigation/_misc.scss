@@ -20,6 +20,32 @@
 	}
 }
 
+.nav-title {
+	margin: 0 0.5rem;
+}
+
+.nav-links,
+.return-link {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+
+	a {
+		border: 0;
+		display: inline-flex;
+		font-size: 0.85rem;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+	}
+
+	.icon-arrow {
+		font-size: 1.25rem;
+	}
+}
+
+.post-navigation + .return-link {
+	border-top: 1px solid $color__background-hr;
+}
+
 
 /*--------------------------------------------------------------
 ## Taxonomy Term Links
