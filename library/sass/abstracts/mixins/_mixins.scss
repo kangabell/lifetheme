@@ -33,3 +33,41 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+// Button
+@mixin button($type: null) {
+	background: $color__background-button;
+	border: 2px solid;
+	border-color: $color__border-button;
+	color: rgba(0, 0, 0, 0.8);
+	cursor: pointer;
+	line-height: 1;
+
+	&:hover,
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+		box-shadow: 3px 3px 3px rgba($dark, 0.25), -3px -3px 3px $white;
+	}
+
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		background: $color__background-button-focus;
+		border-color: $color__border-button-focus;
+	}
+
+	@if ($type == 'tag') {
+		font-size: 0.85rem;
+		letter-spacing: 0.05em;
+		margin-right: 0.5rem;
+		padding: 0.25em 0.75em;
+		text-transform: uppercase;
+	} @else {
+		font-weight: bold;
+		padding: 0.6em 1em 0.4em;
+	}
+}

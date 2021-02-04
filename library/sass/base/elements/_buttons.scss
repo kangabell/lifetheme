@@ -2,28 +2,17 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: $color__border-button;
-	border-radius: 3px;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, 0.8);
-	cursor: pointer;
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
-
-	&:hover {
-		border-color: $color__border-button-hover;
-	}
-
-	&:active,
-	&:focus {
-		border-color: $color__border-button-focus;
-	}
+	@include button;
+	transition: all 0.125s;
 }
 
 .icon-button {
 	background: none;
 	border: 0;
+}
+
+.wp-block-button__link {
+	@include button;
 }
 
 .wp-block-buttons .wp-block-button {

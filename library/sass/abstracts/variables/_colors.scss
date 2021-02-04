@@ -9,6 +9,7 @@ $color__background-body: $light;
 $color__background-screen: $mediumlight;
 $color__background-hr: $mediumlight;
 $color__background-button: $light;
+$color__background-button-focus: $mediumlight;
 $color__background-pre: $mediumlight;
 $color__background-ins: $light;
 
@@ -20,8 +21,8 @@ $color__border-link: $mediumlight;
 $color__border-link-hover: $dark;
 $color__text-main: $dark;
 
-$color__border-button: #ccc #ccc #bbb;
-$color__border-button-hover: #ccc #bbb #aaa;
-$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-button: $mediumlight;
+$color__border-button-hover: transparent;
+$color__border-button-focus: $medium transparent transparent $medium;
 $color__border-input: #ccc;
 $color__border-abbr: #666;

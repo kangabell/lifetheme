@@ -1,6 +1,8 @@
 a {
+	border-bottom: 2px solid $color__border-link;
 	color: $color__link;
 	text-decoration: none;
+	transition: all 0.125s;
 
 	&:focus {
 		outline: thin dotted;
@@ -8,16 +10,13 @@ a {
 
 	&:hover,
 	&:active {
+		border-color: $color__border-link-hover;
 		outline: 0;
 	}
 
-	.entry-content & {
-		border-bottom: 2px solid $color__border-link;
-
-		&:hover,
-		&:focus,
-		&:active {
-			border-color: $color__border-link-hover;
-		}
+	.site-header &,
+	.site-footer &,
+	&.thumbnail {
+		border: 0;
 	}
 }

@@ -43,7 +43,7 @@ $icon-triangle: "\25b3";
 
 [class^="icon-"],
 [class*=" icon-"],
-.menu-item a:before {
+.menu-icon a:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: '#{$icomoon-font-family}' !important;
   speak: never;
@@ -58,108 +58,108 @@ $icon-triangle: "\25b3";
   -moz-osx-font-smoothing: grayscale;
 }
 
-.menu-item a:before {
+.menu-icon a:before {
   margin-right: 0.5em;
 }
 
 .icon-arrow,
-.menu-item.arrow a {
+.menu-icon.arrow a {
   &:before {
     content: $icon-arrow; 
   }
 }
 .icon-bookmark,
-.menu-item.bookmark a {
+.menu-icon.bookmark a {
   &:before {
     content: $icon-bookmark; 
   }
 }
 .icon-camera,
-.menu-item.camera a {
+.menu-icon.camera a {
   &:before {
     content: $icon-camera; 
   }
 }
 .icon-clock,
-.menu-item.clock a {
+.menu-icon.clock a {
   &:before {
     content: $icon-clock; 
   }
 }
 .icon-close,
-.menu-item.close a {
+.menu-icon.close a {
   &:before {
     content: $icon-close; 
   }
 }
 .icon-heart,
-.menu-item.heart a {
+.menu-icon.heart a {
   &:before {
     content: $icon-heart; 
   }
 }
 .icon-home,
-.menu-item.home a {
+.menu-icon.home a {
   &:before {
     content: $icon-home; 
   }
 }
 .icon-info,
-.menu-item.info a {
+.menu-icon.info a {
   &:before {
     content: $icon-info; 
   }
 }
 .icon-menu,
-.menu-item.menu a {
+.menu-icon.menu a {
   &:before {
     content: $icon-menu; 
   }
 }
 .icon-moon,
-.menu-item.moon a {
+.menu-icon.moon a {
   &:before {
     content: $icon-moon; 
   }
 }
 .icon-music,
-.menu-item.music a {
+.menu-icon.music a {
   &:before {
     content: $icon-music; 
   }
 }
 .icon-rss,
-.menu-item.rss a {
+.menu-icon.rss a {
   &:before {
     content: $icon-rss; 
   }
 }
 .icon-search,
-.menu-item.search a {
+.menu-icon.search a {
   &:before {
     content: $icon-search; 
   }
 }
 .icon-star,
-.menu-item.star a {
+.menu-icon.star a {
   &:before {
     content: $icon-star; 
   }
 }
 .icon-sun,
-.menu-item.sun a {
+.menu-icon.sun a {
   &:before {
     content: $icon-sun; 
   }
 }
 .icon-talk,
-.menu-item.talk a {
+.menu-icon.talk a {
   &:before {
     content: $icon-talk; 
   }
 }
 .icon-triangle,
-.menu-item.triangle a {
+.menu-icon.triangle a {
   &:before {
     content: $icon-triangle; 
   }

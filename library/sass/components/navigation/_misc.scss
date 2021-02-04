@@ -19,3 +19,26 @@
 		flex: 1 0 50%;
 	}
 }
+
+
+/*--------------------------------------------------------------
+## Taxonomy Term Links
+--------------------------------------------------------------*/
+
+.page-header .menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	&-item {
+		display: inline-block;
+
+		a {
+			@include button('tag');
+		}
+	}
+}
+
+.tags-links a {
+	@include button('tag');
+}
