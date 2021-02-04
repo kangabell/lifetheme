@@ -306,6 +306,15 @@ function life_scripts() {
 add_action( 'wp_enqueue_scripts', 'life_scripts' );
 
 /**
+ * Remove block editor css.
+ * src: https://stackoverflow.com/a/52280110
+ */
+function life_deregister_styles() {
+	wp_dequeue_style( 'wp-block-library' );
+}
+add_action( 'wp_print_styles', 'life_deregister_styles', 100 );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

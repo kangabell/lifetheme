@@ -31,3 +31,24 @@ select {
 textarea {
 	width: 100%;
 }
+
+
+.wp-block-search {
+
+	.wp-block-search__inside-wrapper {
+		display: flex;
+		flex: auto;
+		flex-wrap: nowrap;
+		max-width: 100%;
+	}
+
+	.wp-block-search__label {
+		width: 100%;
+	}
+
+	.wp-block-search__input {
+		flex-grow: 1;
+		min-width: 3em;
+		border: 1px solid $color__border-input;
+	}
+}
