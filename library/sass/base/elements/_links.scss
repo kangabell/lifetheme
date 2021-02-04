@@ -16,7 +16,8 @@ a {
 
 	.site-header &,
 	.site-footer &,
-	&.thumbnail {
+	&.thumbnail,
+	&.post-thumbnail {
 		border: 0;
 	}
 }

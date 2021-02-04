@@ -95,6 +95,8 @@ $bar-color: $dark;
 $bar-color-open: $light;
 
 .menu-toggle {
+	background: transparent;
+	box-shadow: 0;
 	display: block;
 	float: right;
 	height: $button-width;
@@ -103,6 +105,13 @@ $bar-color-open: $light;
 	position: relative;
 	width: $button-width;
 	z-index: 9;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background: transparent;
+		box-shadow: none;
+	}
 }
 
 .menu-toggle .icon {
