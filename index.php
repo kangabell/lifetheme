@@ -43,7 +43,10 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
+			the_posts_navigation( array(
+				'prev_text' => __( '<span class="icon-arrow icon-arrow-left"></span><span class="screen-reader-text">Older Posts</span>' ),
+				'next_text' => __( '<span class="screen-reader-text">Newer Posts</span><span class="icon-arrow"></span>' ),
+			));
 
 		else :
 
