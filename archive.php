@@ -30,21 +30,27 @@ get_header();
 				?>
 			</header><!-- .page-header -->
 
+			<div class="grid-container">
+
+				<?php
+				/* Start the Loop */
+				while ( have_posts() ) :
+					the_post();
+
+					if ( is_home() ) :
+						get_template_part( 'template-parts/content' );
+					elseif ( ( 'life_character' === get_post_type() ) || ( 'life_favorite' === get_post_type() ) ) :
+						get_template_part( 'template-parts/thumbnail' );
+					else :
+						get_template_part( 'template-parts/card' );
+					endif;
+
+				endwhile;
+				?>
+
+			</div>
+
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				if ( 'post' === get_post_type() ) :
-					get_template_part( 'template-parts/content' );
-				elseif ( 'life_character' || 'life_favorite' === get_post_type() ) :
-					get_template_part( 'template-parts/thumbnail' );
-				else :
-					get_template_part( 'template-parts/card' );
-				endif;
-
-			endwhile;
-
 			the_posts_navigation( array(
 				'prev_text' => __( '<span class="icon-arrow icon-arrow-left"></span><span class="screen-reader-text">Older Posts</span>' ),
 				'next_text' => __( '<span class="screen-reader-text">Newer Posts</span><span class="icon-arrow"></span>' ),
