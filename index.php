@@ -20,7 +20,7 @@ get_header();
 		<?php
 		if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) :
+			if ( is_home() ) :
 				?>
 				<header class="page-header">
 					<?php
@@ -55,7 +55,7 @@ get_header();
 		endif;
 		?>
 
-	</main><!-- #main -->
+	</main><!-- .site-main -->
 
 <?php
 get_footer();

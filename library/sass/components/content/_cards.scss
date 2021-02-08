@@ -1,6 +1,7 @@
 .card {
 	background: $white;
 	border-radius: $radius;
+	display: block;
 	overflow: hidden;
 
 	.text {
