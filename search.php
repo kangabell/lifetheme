@@ -23,16 +23,20 @@ get_header();
 				</h1>
 			</header><!-- .page-header -->
 
+			<div class="grid-container">
+				<?php
+				/* Start the Loop */
+				while ( have_posts() ) :
+
+					the_post();
+
+					get_template_part( 'template-parts/card' );
+
+				endwhile;
+				?>
+			</div>
+
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-
-				the_post();
-
-				get_template_part( 'template-parts/card' );
-
-			endwhile;
-
 			the_posts_navigation( array(
 				'prev_text' => __( '<span class="icon-arrow icon-arrow-left"></span><span class="screen-reader-text">Older Posts</span>' ),
 				'next_text' => __( '<span class="screen-reader-text">Newer Posts</span><span class="icon-arrow"></span>' ),

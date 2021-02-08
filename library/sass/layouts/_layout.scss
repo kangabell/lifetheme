@@ -31,3 +31,17 @@ body,
 html {
 	overflow-x: hidden;
 }
+
+.grid-container {
+	column-gap: 2rem;
+	display: grid;
+	row-gap: 2rem;
+
+	@media screen and ($small-up) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@media screen and ($medium-up) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
