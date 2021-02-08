@@ -74,17 +74,23 @@
 			else :
 				echo '<h2>' . esc_html__( 'Cast of Characters', 'life' ) . '</h2>';
 			endif;
+			?>
 
-			foreach( $related_posts as $post ):
-				setup_postdata($post);
+			<div class="grid-container">
+				<?php
+				foreach( $related_posts as $post ):
+					setup_postdata($post);
 
-				if ( is_singular( 'life_character' ) ) :
-					get_template_part( 'template-parts/card' );
-				else :
-					get_template_part( 'template-parts/thumbnail' );
-				endif;
-			endforeach;
+					if ( is_singular( 'life_character' ) ) :
+						get_template_part( 'template-parts/card' );
+					else :
+						get_template_part( 'template-parts/thumbnail' );
+					endif;
+				endforeach;
+				?>
+			</div>
 
+			<?php
 			wp_reset_postdata();
 
 		endif;
