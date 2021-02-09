@@ -197,6 +197,7 @@ function life_custom_taxonomies() {
 			'back_to_items'     => __( 'Back to Types', 'life' ),
 			'menu_name'         => __( 'Types', 'life' ),
 		),
+		'hierarchical' => true,
 		'show_in_rest' => true,
 	) );
 }
