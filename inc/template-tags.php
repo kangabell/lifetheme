@@ -55,9 +55,13 @@ if ( ! function_exists( 'life_entry_footer' ) ) :
 				echo '<p>' . esc_html__( 'Currently Listening', 'life' ) . ' "<a class="button" href="' . esc_url( $song_url ) . '" target="' . esc_attr( $song_target ) . '">' . esc_html( $song_title ) . '</a>" ' . $artist . '</p>';
 			endif;
 
-		} elseif ( 'life_project' === get_post_type() ) {
+		} else {
 
-			$terms = get_terms( 'life_collection' );
+			if ( 'life_project' === get_post_type() ) :
+				$terms = get_terms( 'life_collection' );
+			elseif ( 'life_favorite' === get_post_type() ) :
+				$terms = get_terms( 'life_favorite_type' );
+			endif;
 
 			if ( $terms ) {
 				foreach( $terms as $term ) {
