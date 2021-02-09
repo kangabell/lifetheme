@@ -323,6 +323,17 @@ function life_deregister_styles() {
 add_action( 'wp_print_styles', 'life_deregister_styles', 100 );
 
 /**
+ * Show only 12 posts for the blog page
+ */
+function life_home_pagesize( $query ) {
+	if ( ! is_admin() && $query->is_main_query() && is_home() ) {
+		$query->set( 'posts_per_page', 12 );
+		return;
+	}
+}
+add_action( 'pre_get_posts', 'life_home_pagesize', 1 );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
