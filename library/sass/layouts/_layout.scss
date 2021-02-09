@@ -33,15 +33,10 @@ html {
 }
 
 .grid-container {
-	column-gap: 2rem;
-	display: grid;
-	row-gap: 2rem;
+	@include grid;
+}
 
-	@media screen and ($small-up) {
-		grid-template-columns: 1fr 1fr;
-	}
-
-	@media screen and ($medium-up) {
-		grid-template-columns: 1fr 1fr 1fr;
-	}
+.post-type-archive-life_character .grid-container,
+.post-type-archive-life_favorite .grid-container {
+	@include grid('mixed');
 }

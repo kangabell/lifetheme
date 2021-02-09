@@ -8,3 +8,10 @@
 		padding: 1rem;
 	}
 }
+
+// account for non-square images
+.thumbnail img {
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}

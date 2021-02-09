@@ -34,6 +34,127 @@
 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
 
+// Grid Layouts
+@mixin grid($style: null, $itemClass: '.thumbnail') {
+	display: grid;
+
+	@if ($style == 'mixed') {
+		grid-gap: 0.25rem;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-areas:
+			"big1 big1 reg2 reg4 big6 big6"
+			"big1 big1 reg3 reg5 big6 big6"
+			"reg7 reg9 reg11 big13 big13 reg14"
+			"reg8 reg10 reg12 big13 big13 reg15"
+			"big16 big16 reg17 reg19 big21 big21"
+			"big16 big16 reg18 reg20 big21 big21"
+			"reg22 reg24 reg26 big28 big28 reg29"
+			"reg23 reg25 reg27 big28 big28 reg30";
+
+		#{$itemClass}:nth-child(1) {
+		  grid-area: big1;
+		}
+		#{$itemClass}:nth-child(2) {
+		  grid-area: reg2;
+		}
+		#{$itemClass}:nth-child(3) {
+		  grid-area: reg3;
+		}
+		#{$itemClass}:nth-child(4) {
+		  grid-area: reg4;
+		}
+		#{$itemClass}:nth-child(5) {
+		  grid-area: reg5;
+		}
+		#{$itemClass}:nth-child(6) {
+		  grid-area: big6;
+		}
+		#{$itemClass}:nth-child(7) {
+		  grid-area: reg7;
+		}
+		#{$itemClass}:nth-child(8) {
+		  grid-area: reg8;
+		}
+		#{$itemClass}:nth-child(9) {
+		  grid-area: reg9;
+		}
+		#{$itemClass}:nth-child(10) {
+		  grid-area: reg10;
+		}
+		#{$itemClass}:nth-child(11) {
+		  grid-area: reg11;
+		}
+		#{$itemClass}:nth-child(12) {
+		  grid-area: reg12;
+		}
+		#{$itemClass}:nth-child(13) {
+		  grid-area: big13;
+		}
+		#{$itemClass}:nth-child(14) {
+		  grid-area: reg14;
+		}
+		#{$itemClass}:nth-child(15) {
+		  grid-area: reg15;
+		}
+		#{$itemClass}:nth-child(16) {
+		  grid-area: big16;
+		}
+		#{$itemClass}:nth-child(17) {
+		  grid-area: reg17;
+		}
+		#{$itemClass}:nth-child(18) {
+		  grid-area: reg18;
+		}
+		#{$itemClass}:nth-child(19) {
+		  grid-area: reg19;
+		}
+		#{$itemClass}:nth-child(20) {
+		  grid-area: reg20;
+		}
+		#{$itemClass}:nth-child(21) {
+		  grid-area: big21;
+		}
+		#{$itemClass}:nth-child(22) {
+		  grid-area: reg22;
+		}
+		#{$itemClass}:nth-child(23) {
+		  grid-area: reg23;
+		}
+		#{$itemClass}:nth-child(24) {
+		  grid-area: reg24;
+		}
+		#{$itemClass}:nth-child(25) {
+		  grid-area: reg25;
+		}
+		#{$itemClass}:nth-child(26) {
+		  grid-area: reg26;
+		}
+		#{$itemClass}:nth-child(27) {
+		  grid-area: reg27;
+		}
+		#{$itemClass}:nth-child(28) {
+		  grid-area: big28;
+		}
+		#{$itemClass}:nth-child(29) {
+		  grid-area: reg29;
+		}
+		#{$itemClass}:nth-child(30) {
+		  grid-area: reg30;
+		}
+	} @else {
+		grid-gap: 2rem;
+
+		@media screen and ($small-up) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media screen and ($medium-up) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+}
+
 // Button
 @mixin button($type: null) {
 	background: $color__background-button;
