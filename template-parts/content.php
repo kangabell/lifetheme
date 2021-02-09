@@ -63,7 +63,7 @@
 
 		$related_posts = get_field('characters_posts');
 
-		if ( $related_posts && is_single() ) :
+		if ( $related_posts ) :
 
 			if ( 'life_project' === get_post_type() ) :
 				echo '<h2>' . esc_html__( 'Cohorts', 'life' ) . '</h2>';
