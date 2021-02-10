@@ -235,7 +235,6 @@ function life_custom_post_types() {
 			'menu_icon'     => 'dashicons-hammer',
 			'supports'	    => array( 'title', 'editor', 'revisions', 'excerpt', 'thumbnail' ),
 			'show_in_rest'  => true,
-			'taxonomies'    => 'collection',
 		)
 	);
 
@@ -292,7 +291,6 @@ function life_custom_post_types() {
 			'menu_icon'     => 'dashicons-star-filled',
 			'supports'	    => array( 'title', 'editor', 'revisions', 'thumbnail' ),
 			'show_in_rest'  => true,
-			'taxonomies'    => 'favorite_type',
 		)
 	);
 }
