@@ -1,4 +1,12 @@
-<a class="card" href="<?php echo get_permalink(); ?>">
+<?php
+if ( 'pinboard-bookmark' === get_post_type() ) :
+	$url = get_post_meta( get_the_ID(), 'url', true );
+else :
+	$url = get_permalink();
+endif;
+?>
+
+<a class="card" href="<?php echo $url; ?>" <?php if ( 'pinboard-bookmark' === get_post_type() ) { echo 'target="_blank"'; } ?>>
 	<?php
 	if ( has_post_thumbnail() ) :
 		the_post_thumbnail( 'medium_square', array( 'alt' => get_the_title() ) );
