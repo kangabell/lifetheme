@@ -21,7 +21,11 @@ endif;
 		<?php
 		the_title( '<h3>', '</h3>' );
 
-		if ( 'pinboard-bookmark' === get_post_type() ) :
+		if ( 'life_project' === get_post_type() ) :
+
+			the_excerpt();
+
+		elseif ( 'pinboard-bookmark' === get_post_type() ) :
 
 			the_content();
 
