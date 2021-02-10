@@ -20,7 +20,13 @@ endif;
 	<div class="text">
 		<?php
 		the_title( '<h3>', '</h3>' );
-		the_date('F j, Y', '<p>', '</p>');
+
+		if ( 'pinboard-bookmark' === get_post_type() ) :
+			$domain = str_ireplace('www.', '', parse_url($url, PHP_URL_HOST));
+			echo $domain;
+		else :
+			the_date('F j, Y', '<p>', '</p>');
+		endif;
 		?>
 	</div>
 </a>
