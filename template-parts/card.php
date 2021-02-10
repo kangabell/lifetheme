@@ -22,10 +22,16 @@ endif;
 		the_title( '<h3>', '</h3>' );
 
 		if ( 'pinboard-bookmark' === get_post_type() ) :
+
+			the_content();
+
 			$domain = str_ireplace('www.', '', parse_url($url, PHP_URL_HOST));
 			echo $domain;
+
 		else :
+
 			the_date('F j, Y', '<p>', '</p>');
+
 		endif;
 		?>
 	</div>
