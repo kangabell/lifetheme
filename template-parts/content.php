@@ -23,11 +23,11 @@
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
+			<div class="meta">
 				<?php
 				life_posted_on();
 				?>
-			</div><!-- .entry-meta -->
+			</div><!-- .meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
@@ -69,10 +69,10 @@
 				echo '<h2>' . esc_html__( 'Cohorts', 'life' ) . '</h2>';
 
 			elseif ( 'life_character' === get_post_type() ) :
-				echo '<h2>' . esc_html__( 'Posts with ', 'life' ) . get_the_title() . '</h2>';
+				echo '<h2 class="heading-alt">' . esc_html__( 'Posts with ', 'life' ) . get_the_title() . '</h2>';
 
 			else :
-				echo '<h2>' . esc_html__( 'Cast of Characters', 'life' ) . '</h2>';
+				echo '<h2 class="heading-alt">' . esc_html__( 'Cast of Characters', 'life' ) . '</h2>';
 			endif;
 			?>
 

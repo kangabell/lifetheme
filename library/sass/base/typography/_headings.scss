@@ -2,6 +2,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 	letter-spacing: 0.0125em;
 	line-height: 1.125em;
+	margin-bottom: 0.025em;
 
 	.site-footer & {
 		font-size: $typesize__small;
@@ -17,6 +18,14 @@ h1 {
 
 h2 {
 	font-size: $typesize__h2;
+
+	&.heading-alt {
+		font-family: $font__alt;
+		font-size: $typesize__normal;
+		letter-spacing: 0.075em;
+		margin-bottom: 1rem;
+		text-transform: uppercase;
+	}
 }
 
 h3 {

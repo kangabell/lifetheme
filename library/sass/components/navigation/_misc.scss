@@ -1,7 +1,6 @@
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-	font-family: $font__alt;
 
 	.site-main & {
 		margin: 0 0 1.5em;
@@ -22,6 +21,7 @@
 }
 
 .nav-title {
+	font-family: $font__alt;
 	margin: 0 0.5rem;
 }
 

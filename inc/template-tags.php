@@ -25,7 +25,7 @@ if ( ! function_exists( 'life_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
-		echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $time_string;
 
 	}
 endif;

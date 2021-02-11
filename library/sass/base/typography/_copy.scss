@@ -92,3 +92,17 @@ small,
 .has-text-align-right {
 	text-align: right;
 }
+
+.meta {
+	color: $medium;
+	font-family: $font__alt;
+	letter-spacing: 0.05em;
+	margin-top: 0.5rem;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+
+::selection {
+	background-color: $mediumdark;
+	color: $light;
+}

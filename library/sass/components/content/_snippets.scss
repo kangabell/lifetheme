@@ -7,6 +7,16 @@
 	.text {
 		padding: 1rem;
 	}
+
+	h3 {
+		font-size: $typesize__h5;
+		margin: 0;
+	}
+
+	p {
+		font-size: $typesize__small;
+		margin-bottom: 0;
+	}
 }
 
 // account for non-square images

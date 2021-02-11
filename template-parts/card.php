@@ -30,7 +30,7 @@ endif;
 			the_content();
 
 			$domain = str_ireplace('www.', '', parse_url($url, PHP_URL_HOST));
-			echo $domain;
+			echo '<p class="meta">' . $domain . '</p>';
 
 		else :
 

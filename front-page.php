@@ -23,7 +23,7 @@ get_header();
 
 		<div class="grid-container">
 			<div>
-				<h3><?php esc_html_e( 'Recent Snapshot', 'life' ); ?></h3>
+				<h2 class="heading-alt"><?php esc_html_e( 'Recent Snapshot', 'life' ); ?></h2>
 				<?php
 				$query = new WP_Query( array(
 					'post_type' => 'post',
@@ -41,7 +41,7 @@ get_header();
 				?>
 			</div>
 			<div>
-				<h3><?php esc_html_e( 'Select Project', 'life' ); ?></h3>
+				<h2 class="heading-alt"><?php esc_html_e( 'Select Project', 'life' ); ?></h2>
 				<?php
 				$query = new WP_Query( array(
 					'post_type' => 'life_project',
@@ -59,7 +59,7 @@ get_header();
 				?>
 			</div>
 			<div>
-				<h3><?php esc_html_e( 'Currently Digging', 'life' ); ?></h3>
+				<h2 class="heading-alt"><?php esc_html_e( 'Currently Digging', 'life' ); ?></h2>
 				<?php
 				$query = new WP_Query( array(
 					'post_type' => 'life_favorite',

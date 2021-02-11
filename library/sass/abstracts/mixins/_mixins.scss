@@ -181,8 +181,10 @@
 	border-radius: $radius;
 	color: rgba(0, 0, 0, 0.8);
 	cursor: pointer;
+	display: inline-block;
 	font-family: $font__alt;
 	line-height: 1;
+	white-space: nowrap;
 
 	&:hover,
 	&:active,
@@ -205,6 +207,7 @@
 		font-size: $typesize__small;
 		letter-spacing: 0.05em;
 		margin-right: 0.5rem;
+		margin-bottom: 0.5rem;
 		padding: 0.25em 0.75em;
 		text-transform: uppercase;
 	} @else {
