@@ -1,8 +1,42 @@
-h1,
-h2,
-h3,
-h4,
-h5,
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	letter-spacing: 0.0125em;
+	line-height: 1.125em;
+
+	.site-footer & {
+		font-size: $typesize__small;
+		font-family: $font__alt;
+		letter-spacing: 0.075em;
+		text-transform: uppercase;
+	}
+}
+
+h1 {
+	font-size: $typesize__h1;
+}
+
+h2 {
+	font-size: $typesize__h2;
+}
+
+h3 {
+	font-size: $typesize__h3;
+}
+
+h4 {
+	font-size: $typesize__h4;
+	font-family: $font__alt;
+	letter-spacing: 0.075em;
+	text-transform: uppercase;
+}
+
+h5 {
+	font-size: $typesize__h5;
+}
+
 h6 {
-	clear: both;
+	font-size: $typesize__h6;
+	font-family: $font__alt;
+	letter-spacing: 0.075em;
+	text-transform: uppercase;
 }

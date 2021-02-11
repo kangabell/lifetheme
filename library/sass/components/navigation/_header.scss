@@ -6,6 +6,7 @@
 .site-header {
 	align-items: center;
 	display: flex;
+	font-family: $font__alt;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 
@@ -188,6 +189,7 @@ $bar-color-open: $light;
 		display: block;
 		margin-right: 1rem;
 		text-decoration: none;
+		font-size: $typesize__small;
 	}
 
 	a:hover,

@@ -181,6 +181,7 @@
 	border-radius: $radius;
 	color: rgba(0, 0, 0, 0.8);
 	cursor: pointer;
+	font-family: $font__alt;
 	line-height: 1;
 
 	&:hover,
@@ -201,7 +202,7 @@
 	}
 
 	@if ($type == 'tag') {
-		font-size: 0.85rem;
+		font-size: $typesize__small;
 		letter-spacing: 0.05em;
 		margin-right: 0.5rem;
 		padding: 0.25em 0.75em;

@@ -9,8 +9,16 @@ i {
 	font-style: italic;
 }
 
-blockquote {
-	margin: 0 1.5em;
+blockquote,
+.wp-blockquote {
+	border-left: 5px solid $color__background-hr;
+	margin: 2rem 0;
+	padding-left: 1rem;
+
+	p {
+		font-size: $typesize__large;
+		margin-bottom: 0;
+	}
 }
 
 address {
@@ -50,21 +58,27 @@ big {
 	font-size: 125%;
 }
 
-.has-small-font-size {
+.has-huge-font-size,
+.has-larger-font-size {
+	font-size: $typesize__huge;
+}
+
+big,
+.has-large-font-size {
+	font-size: $typesize__large;
+}
+
+.has-medium-font-size {
+	font-size: $typesize__medium;
 }
 
 .has-normal-font-size,
 .has-regular-font-size {
 }
 
-.has-medium-font-size {
-}
-
-.has-large-font-size {
-}
-
-.has-huge-font-size,
-.has-larger-font-size {
+small,
+.has-small-font-size {
+	font-size: $typesize__small;
 }
 
 .has-text-align-center {

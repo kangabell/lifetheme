@@ -33,6 +33,7 @@ textarea {
 }
 
 label {
+	font-family: $font__alt;
 	font-weight: bold;
 	margin-bottom: 0.25rem;
 
@@ -42,7 +43,7 @@ label {
 
 	.comment-form-cookies-consent & {
 		font-weight: normal;
-		font-size: 0.85rem;
+		font-size: $typesize__small;
 	}
 }
 
