@@ -19,7 +19,6 @@
 		</header><!-- .entry-header -->
 		<?php
 	endif;
-	life_post_thumbnail();
 	?>
 
 	<div class="entry-content">

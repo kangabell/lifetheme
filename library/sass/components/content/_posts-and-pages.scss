@@ -2,9 +2,7 @@
 	display: none;
 }
 
-.single-life_project,
-.single-life_character,
-.single-life_favorite {
+.single {
 
 	.featured-image .wp-post-image {
 		@include full-width;
