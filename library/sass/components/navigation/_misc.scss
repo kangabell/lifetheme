@@ -21,8 +21,16 @@
 }
 
 .nav-title {
+	border-bottom: 2px solid transparent;
 	font-family: $font__alt;
 	margin: 0 0.5rem;
+	padding-top: 0.025em;
+	transition: all 0.125s;
+
+	&:hover,
+	&:focus {
+		border-color: $medium;
+	}
 }
 
 .nav-links,
@@ -63,6 +71,11 @@
 		a {
 			@include button('tag');
 		}
+	}
+
+	.current-menu-item a {
+		background: white;
+		border-color: transparent;
 	}
 }
 

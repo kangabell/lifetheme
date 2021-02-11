@@ -11,12 +11,18 @@
 	}
 
 	a {
+		border-bottom: 2px solid transparent;
 		color: $mediumlight;
 		text-decoration: none;
 	}
 
 	.menu-item {
 		margin-right: 1rem;
+
+		a:hover,
+		a:focus {
+			border-color: $mediumdark;
+		}
 	}
 
 	.menu-item a:before {
@@ -50,7 +56,13 @@
 	margin-left: auto;
 
 	.icon-arrow {
-		transform: rotate(-90deg);
 		display: inline-block;
+		transform: rotate(-90deg);
+		transition: all 0.125s;
+	}
+
+	&:hover .icon-arrow,
+	&:focus .icon-arrow {
+		transform: translateY(-0.25rem) rotate(-90deg);
 	}
 }

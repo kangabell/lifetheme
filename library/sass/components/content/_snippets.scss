@@ -1,6 +1,7 @@
 .card {
 	background: $white;
 	border-radius: $radius;
+	border-bottom: 2px solid transparent;
 	display: block;
 	overflow: hidden;
 
@@ -17,11 +18,24 @@
 		font-size: $typesize__small;
 		margin-bottom: 0;
 	}
+
+	&:hover,
+	&:focus {
+		border-color: $dark;
+	}
 }
 
-// account for non-square images
-.thumbnail img {
-	height: 100%;
-	object-fit: cover;
-	width: 100%;
+.thumbnail {
+
+	// account for non-square images
+	img {
+		height: 100%;
+		object-fit: cover;
+		width: 100%;
+	}
+
+	&:hover,
+	&:focus {
+		transform: scale(106%);
+	}
 }
