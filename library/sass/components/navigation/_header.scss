@@ -78,26 +78,46 @@
 .main-navigation {
 	margin-left: auto;
 
-	a {
-		color: $light;
-		display: block;
-		padding: 0.5rem 3rem;
-		text-decoration: none;
-
-		&:hover,
-		&:focus {
-			background: $dark;
-		}
-	}
-
 	.menu {
 		list-style: none;
 		margin-bottom: 3rem;
 		padding-left: 0;
+
+		&-item {
+			font-size: $typesize__small;
+		}
+	}
+
+	a {
+		color: $light;
+		display: block;
+		padding: 0.75rem 2rem;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			background: $black;
+		}
+	}
+
+	.menu-item a::before {
+		display: inline-block;
+		font-size: $typesize__normal;
+		text-align: center;
+		vertical-align: -0.25em;
+		width: 1.5rem;
 	}
 
 	.search-form {
-		margin: 2rem 3rem;
+		margin: 1rem 4rem 2rem 2rem;
+
+		@media screen and ($large-up) {
+			display: none;
+		}
+	}
+
+	.search-field {
+		background: $white;
 	}
 
 	&.toggled {
@@ -114,20 +134,31 @@
 }
 
 .main-nav-container {
-	background: rgba($dark, 0.92);
+	background: rgba($dark, 0.94);
 	border-bottom-right-radius: 0.5rem;
 	border-bottom-left-radius: 0.5rem;
 	max-height: 100vh;
 	min-width: 16rem;
 	opacity: 0;
 	overflow-y: auto;
+	pointer-events: none;
 	position: absolute;
 	right: 0;
 	top: 0;
 	transition: all 0.25s ease-out;
+	width: 100%;
 
 	.toggled & {
 		opacity: 1;
+		pointer-events: all;
+	}
+
+	@media screen and ($small-up) {
+		width: 20rem;
+	}
+
+	@media screen and ($large-up) {
+		padding-top: 3rem;
 	}
 }
 
@@ -141,6 +172,7 @@ $bar-thickness: $button-width * 0.0375;
 $transition-duration: 0.15s;
 $bar-color: $dark;
 $bar-color-open: $light;
+$icon-padding: 0.75rem;
 
 .menu-toggle {
 	background: transparent;
@@ -148,6 +180,7 @@ $bar-color-open: $light;
 	display: block;
 	float: right;
 	height: $button-width;
+	margin-right: -$icon-padding;
 	position: relative;
 	width: $button-width;
 	z-index: 9;
@@ -165,10 +198,10 @@ $bar-color-open: $light;
 	display: block;
 	height: $bar-thickness;
 	position: absolute;
-	top: 1.5rem;
+	top: 1.375rem;
 	transition: background 0s $transition-duration;
-	left: 0.75rem;
-	right: 0.75rem;
+	left: $icon-padding;
+	right: $icon-padding;
 
 	// top and bottom bars
 	&::before,
