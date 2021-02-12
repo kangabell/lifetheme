@@ -9,6 +9,10 @@ input[type="submit"] {
 .icon-button {
 	background: none;
 	border: 0;
+
+	&:hover {
+		box-shadow: none;
+	}
 }
 
 .wp-block-button__link {
