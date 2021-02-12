@@ -2,6 +2,7 @@
 	background: $dark;
 	color: $mediumdark;
 	font-family: $font__alt;
+	font-size: $typesize__small;
 	padding-top: 3rem;
 	padding-bottom: 4rem;
 
@@ -25,8 +26,11 @@
 		}
 	}
 
-	.menu-item a:before {
-		display: none; // don't display icons
+	.menu-item.rss a::after {
+		@include icon-style;
+		content: $icon-rss;
+		margin-left: 0.5em;
+		vertical-align: -0.05em;
 	}
 }
 

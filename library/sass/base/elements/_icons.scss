@@ -24,6 +24,21 @@ $icon-sun: "\1f31e";
 $icon-talk: "\260f";
 $icon-triangle: "\25b3";
 
+@mixin icon-style() {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 
 /*--------------------------------------------------------------
 ## Icon Font
@@ -43,19 +58,8 @@ $icon-triangle: "\25b3";
 
 [class^="icon-"],
 [class*=" icon-"],
-.menu-icon a:before {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: '#{$icomoon-font-family}' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.menu-icon a::before {
+  @include icon-style;
 }
 
 .menu-icon a:before {
