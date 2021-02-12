@@ -4,22 +4,27 @@
 --------------------------------------------------------------*/
 
 .site-header {
-	align-items: center;
-	display: flex;
+	background: $white;
 	font-family: $font__alt;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 
+	.wrap {
+		align-items: center;
+		display: flex;
+	}
+
 	a {
-		letter-spacing: 0.05em;
+		letter-spacing: $font__letter-spacing;
 		text-decoration: none;
 		text-transform: uppercase;
 	}
 }
 
 .site-title {
-	font-weight: bold;
-	margin: 0 1rem 0 0;
+	font-size: $typesize__small;
+	letter-spacing: $font__letter-spacing;
+	margin: 0 1.25rem 0 0;
 }
 
 
@@ -178,16 +183,19 @@ $bar-color-open: $light;
 .desktop-navigation {
 	display: none;
 
-	ul {
+	.menu {
 		display: flex;
 		list-style: none;
 		padding-left: 0;
 	}
 
+	.menu-item {
+		margin-right: 1.25rem;
+	}
+
 	a {
 		color: $mediumdark;
 		display: block;
-		margin-right: 1rem;
 		text-decoration: none;
 		font-size: $typesize__small;
 	}

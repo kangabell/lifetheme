@@ -204,8 +204,8 @@
 	}
 
 	@if ($type == 'tag') {
-		font-size: $typesize__small;
-		letter-spacing: 0.05em;
+		font-size: $typesize__tiny;
+		letter-spacing: $font__letter-spacing;
 		margin-right: 0.5rem;
 		margin-bottom: 0.5rem;
 		padding: 0.25em 0.75em;

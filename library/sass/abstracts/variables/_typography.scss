@@ -44,6 +44,7 @@ $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+$font__letter-spacing: 0.075em;
 
 
 // Type scale = Major Third
@@ -60,3 +61,4 @@ $typesize__large: $typesize__h3;
 $typesize__medium: $typesize__h4;
 $typesize__normal: $typesize__h5;
 $typesize__small: 0.8rem;
+$typesize__tiny: 0.64rem;

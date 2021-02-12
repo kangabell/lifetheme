@@ -1,11 +1,12 @@
-.site-header,
+
+.site-header .wrap,
 .site-main {
-	@include wrap;
 	padding-left: 1rem;
 	padding-right: 1rem;
 }
 
 .site-main {
+	@include wrap;
 	padding-bottom: 4rem;
 }
 

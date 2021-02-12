@@ -26,49 +26,51 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'life' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<?php
-		if ( is_front_page() && is_home() ) :
-			?>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<div class="wrap">
 			<?php
-		else :
-			?>
-			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-		endif;
-		?>
-
-		<nav class="desktop-navigation">
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-2',
-				'menu_id'        => 'desktop-menu',
-				'depth'			  => 1,
-			) );
-			?>
-		</nav>
-
-		<div class="desktop-search">
-			<?php
-			get_search_form();
-			?>
-		</div>
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="icon-button menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-				<span class="icon"></span>
-				<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'life' ); ?></span>
-			</button>
-			<div class="main-nav-container">
+			if ( is_front_page() && is_home() ) :
+				?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php
-				get_search_form();
+			else :
+				?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php
+			endif;
+			?>
+
+			<nav class="desktop-navigation">
+				<?php
 				wp_nav_menu( array(
-					'theme_location'  => 'menu-1',
-					'menu_id'         => 'primary-menu',
-					'container_class' => 'main-menu-container',
+					'theme_location' => 'menu-2',
+					'menu_id'        => 'desktop-menu',
 					'depth'			  => 1,
 				) );
 				?>
+			</nav>
+
+			<div class="desktop-search">
+				<?php
+				get_search_form();
+				?>
 			</div>
-		</nav><!-- #site-navigation -->
+
+			<nav id="site-navigation" class="main-navigation">
+				<button class="icon-button menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<span class="icon"></span>
+					<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'life' ); ?></span>
+				</button>
+				<div class="main-nav-container">
+					<?php
+					get_search_form();
+					wp_nav_menu( array(
+						'theme_location'  => 'menu-1',
+						'menu_id'         => 'primary-menu',
+						'container_class' => 'main-menu-container',
+						'depth'			  => 1,
+					) );
+					?>
+				</div>
+			</nav><!-- #site-navigation -->
+		</div>
 	</header><!-- #masthead -->

@@ -42,7 +42,7 @@
 		border: 0;
 		display: inline-flex;
 		font-size: $typesize__small;
-		letter-spacing: 0.05em;
+		letter-spacing: $font__letter-spacing;
 		text-transform: uppercase;
 	}
 

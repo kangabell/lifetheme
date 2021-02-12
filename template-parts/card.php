@@ -34,7 +34,7 @@ endif;
 
 		else :
 
-			the_date('F j, Y', '<p>', '</p>');
+			the_date('F j, Y', '<p class="meta">', '</p>');
 
 		endif;
 		?>
