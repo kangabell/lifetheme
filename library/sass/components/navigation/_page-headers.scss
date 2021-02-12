@@ -1,0 +1,57 @@
+
+/*--------------------------------------------------------------
+## Page Header Title & Description
+--------------------------------------------------------------*/
+
+.page-header {
+	padding-top: 3rem;
+	margin-bottom: 2rem;
+
+	@media screen and ($large-up) {
+
+		.page-title,
+		p {
+			margin-top: 0;
+		}
+
+		.page-title {
+			margin-right: 2rem;
+		}
+
+		.widget_text {
+			display: flex;
+		}
+
+		.textwidget {
+			flex: 1;
+		}
+	}
+} // .page-header
+
+
+/*--------------------------------------------------------------
+## Taxonomy Term Links
+--------------------------------------------------------------*/
+
+.page-header .menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	&-item {
+		display: inline-block;
+
+		a {
+			@include button('tag');
+		}
+	}
+
+	.current-menu-item a {
+		background: white;
+		border-color: transparent;
+	}
+}
+
+.tags-links a {
+	@include button('tag');
+}

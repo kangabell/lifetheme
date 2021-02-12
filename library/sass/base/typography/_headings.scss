@@ -1,7 +1,7 @@
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 	letter-spacing: 0.0125em;
-	line-height: 1.125em;
+	line-height: $font__line-height-heading;
 	margin-bottom: 0.025em;
 
 	.site-footer & {

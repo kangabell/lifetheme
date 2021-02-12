@@ -54,31 +54,3 @@
 .post-navigation + .return-link {
 	border-top: 1px solid $color__background-hr;
 }
-
-
-/*--------------------------------------------------------------
-## Taxonomy Term Links
---------------------------------------------------------------*/
-
-.page-header .menu {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-
-	&-item {
-		display: inline-block;
-
-		a {
-			@include button('tag');
-		}
-	}
-
-	.current-menu-item a {
-		background: white;
-		border-color: transparent;
-	}
-}
-
-.tags-links a {
-	@include button('tag');
-}

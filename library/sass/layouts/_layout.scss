@@ -1,4 +1,8 @@
 
+/*--------------------------------------------------------------
+## Containers / Wrapping
+--------------------------------------------------------------*/
+
 .site-header .wrap,
 .site-main {
 	padding-left: 1rem;
@@ -17,6 +21,26 @@
 	margin-right: auto;
 }
 
+.wrap {
+	@include wrap;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.full-width {
+	@include full-width;
+}
+
+body,
+html {
+	overflow-x: hidden;
+}
+
+
+/*--------------------------------------------------------------
+## Body Copy
+--------------------------------------------------------------*/
+
 .entry-content {
 	p,
 	ul,
@@ -34,20 +58,10 @@
 	}
 }
 
-.wrap {
-	@include wrap;
-	padding-left: 1rem;
-	padding-right: 1rem;
-}
 
-.full-width {
-	@include full-width;
-}
-
-body,
-html {
-	overflow-x: hidden;
-}
+/*--------------------------------------------------------------
+## Grids
+--------------------------------------------------------------*/
 
 .grid-container {
 	@include grid;
