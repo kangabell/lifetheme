@@ -1,9 +1,12 @@
 $size__site-main: 60rem;
 $size__site-narrow: 46rem;
+$size__site-wide: 80rem;
 
 // breakpoints
 $small-up: 'min-width: 30rem';
 $medium-up: 'min-width: 46rem';
 $large-up: 'min-width: 64rem';
+$large-down: 'max-width: 87.9rem';
+$xlarge-up: 'min-width: 88rem';
 
 $radius: 0.25rem;

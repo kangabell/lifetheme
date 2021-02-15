@@ -18,7 +18,7 @@
 	margin-right: -1rem;
 	width: auto; // reset
 
-	@media screen and ($medium-up) {
+	@media screen and ($large-down) {
 		left: 50%;
 		margin-left: -50vw;
 		margin-right: -50vw;
@@ -26,6 +26,11 @@
 		position: relative;
 		right: 50%;
 		width: 100vw;
+	}
+
+	@media screen and ($xlarge-up) {
+		margin-left: -($size__site-wide - $size__site-main) / 2;
+		max-width: $size__site-wide;
 	}
 }
 
