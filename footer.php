@@ -22,7 +22,7 @@
 				) );
 				?>
 			</nav>
-			<a class="back-to-top" href="#masthead">
+			<a class="back-to-top" href="#page">
 				<span class="icon-arrow"></span>	
 				<?php esc_html_e( 'Up', 'life' ); ?>
 			</a>
