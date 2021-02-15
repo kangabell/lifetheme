@@ -5,7 +5,7 @@
 .single {
 
 	.featured-image .wp-post-image {
-		@include full-width;
+		@include full-width($size__site-main);
 	}
 }
 

@@ -13,7 +13,7 @@
 }
 
 // Full-width element that breaks container
-@mixin full-width() {
+@mixin full-width($container: $size__site-narrow) {
 	margin-left: -1rem;
 	margin-right: -1rem;
 	width: auto; // reset
@@ -29,7 +29,7 @@
 	}
 
 	@media screen and ($xlarge-up) {
-		margin-left: -($size__site-wide - $size__site-main) / 2;
+		margin-left: -($size__site-wide - $container) / 2;
 		max-width: $size__site-wide;
 	}
 }
