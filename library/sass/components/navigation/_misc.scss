@@ -54,3 +54,12 @@
 .post-navigation + .return-link {
 	border-top: 1px solid $color__background-hr;
 }
+
+
+/*--------------------------------------------------------------
+## Taxonomy Term Links
+--------------------------------------------------------------*/
+
+.tags-links a {
+	@include button('tag');
+}

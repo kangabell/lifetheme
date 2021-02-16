@@ -15,7 +15,8 @@
 }
 
 .entry-header,
-.comments-area {
+.comments-area,
+.entry-footer {
 	@include wrap($size__site-narrow);
 	margin-left: auto;
 	margin-right: auto;

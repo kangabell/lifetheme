@@ -1,6 +1,7 @@
-.updated:not(.published) {
-	display: none;
-}
+
+/*--------------------------------------------------------------
+## Entry Header
+--------------------------------------------------------------*/
 
 .single {
 
@@ -14,7 +15,48 @@
 	margin-top: 3rem;
 }
 
+
+/*--------------------------------------------------------------
+## Entry Footer
+--------------------------------------------------------------*/
+
 .entry-footer {
 	margin-top: 4rem;
 	margin-bottom: 4rem;
+
+	.tags-links {
+		margin-bottom: 2rem;
+	}
+}
+
+.song-link {
+	font-family: $font__alt;
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+
+	.icon-music {
+		margin-left: 0.25em;
+		margin-right: 0.5em;
+		vertical-align: middle;
+	}
+
+	.label {
+		font-size: $typesize__tiny;
+		letter-spacing: $font__letter-spacing;
+		text-transform: uppercase;
+	}
+
+	.content {
+		font-size: $typesize__small;
+		font-style: italic;
+	}
+}
+
+
+/*--------------------------------------------------------------
+## Miscellaneous
+--------------------------------------------------------------*/
+
+.updated:not(.published) {
+	display: none;
 }

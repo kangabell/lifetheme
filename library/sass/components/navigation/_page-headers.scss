@@ -30,7 +30,7 @@
 
 
 /*--------------------------------------------------------------
-## Taxonomy Term Links
+## Taxonomy Term Links Nav
 --------------------------------------------------------------*/
 
 .page-header .menu {
@@ -50,8 +50,4 @@
 		background: white;
 		border-color: transparent;
 	}
-}
-
-.tags-links a {
-	@include button('tag');
 }

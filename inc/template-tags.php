@@ -52,7 +52,7 @@ if ( ! function_exists( 'life_entry_footer' ) ) :
 			$song_target = $song['target'] ? $song['target'] : '_self';
 
 			if( $song ):
-				echo '<p>' . esc_html__( 'Currently Listening', 'life' ) . ' "<a class="button" href="' . esc_url( $song_url ) . '" target="' . esc_attr( $song_target ) . '">' . esc_html( $song_title ) . '</a>" ' . $artist . '</p>';
+				echo '<p class="song-link"><span class="label">' . esc_html__( 'Currently Listening', 'life' ) . ' </span><span class="icon-music"></span><span class="content">“<a class="button" href="' . esc_url( $song_url ) . '" target="' . esc_attr( $song_target ) . '">' . esc_html( $song_title ) . '</a>” ' . $artist . '<span></p>';
 			endif;
 
 		} else {
