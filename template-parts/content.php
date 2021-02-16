@@ -64,31 +64,45 @@
 		$related_posts = get_field('characters_posts');
 
 		if ( $related_posts ) :
+		?>
+			<div class="related-posts">
 
-			if ( 'life_project' === get_post_type() ) :
-				echo '<h2>' . esc_html__( 'Cohorts', 'life' ) . '</h2>';
-
-			elseif ( 'life_character' === get_post_type() ) :
-				echo '<h2 class="heading-alt">' . esc_html__( 'Posts with ', 'life' ) . get_the_title() . '</h2>';
-
-			else :
-				echo '<h2 class="heading-alt">' . esc_html__( 'Cast of Characters', 'life' ) . '</h2>';
-			endif;
-			?>
-
-			<div class="grid-container">
 				<?php
-				foreach( $related_posts as $post ):
-					setup_postdata($post);
-
-					if ( is_singular( 'life_character' ) ) :
-						get_template_part( 'template-parts/card' );
-					else :
-						get_template_part( 'template-parts/thumbnail' );
-					endif;
-				endforeach;
+				if ( 'life_character' === get_post_type() ) :
+					echo '<h2 class="heading-alt">' . esc_html__( 'Posts with ', 'life' ) . get_the_title() . '</h2>';
 				?>
-			</div>
+
+					<div class="grid-container">
+						<?php
+						foreach( $related_posts as $post ):
+							setup_postdata($post);
+							get_template_part( 'template-parts/card' );
+						endforeach;
+						?>
+					</div>
+
+				<?php
+				else :
+
+					if ( 'life_project' === get_post_type() ) :
+						echo '<h2 class="heading-alt">' . esc_html__( 'Cohorts', 'life' ) . '</h2>';
+					else :
+						echo '<h2 class="heading-alt">' . esc_html__( 'Cast of Characters', 'life' ) . '</h2>';
+					endif;
+				?>
+					<div class="flex-container">
+						<?php
+						foreach( $related_posts as $post ):
+							setup_postdata($post);
+							get_template_part( 'template-parts/thumbnail' );
+						endforeach;
+						?>
+					</div>
+				<?php
+				endif;
+				?>
+
+			</div> <!-- .related-posts -->
 
 			<?php
 			wp_reset_postdata();

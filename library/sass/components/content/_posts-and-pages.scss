@@ -52,6 +52,32 @@
 	}
 }
 
+.related-posts {
+	margin-top: 3rem;
+
+	.heading-alt {
+		text-align: center;
+	}
+
+	.thumbnail {
+		border-radius: 50%;
+		height: 4rem;
+		margin: 0.5rem;
+		overflow: hidden;
+		width: 4rem;
+	}
+
+	.flex-container,
+	.flex-container {
+		display: flex;
+		justify-content: center;
+	}
+
+	.grid-container {
+		margin-top: 2rem;
+	}
+}
+
 
 /*--------------------------------------------------------------
 ## Miscellaneous
