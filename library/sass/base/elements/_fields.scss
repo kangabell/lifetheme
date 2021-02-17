@@ -39,7 +39,9 @@ textarea {
 
 label {
 	font-family: $font__alt;
-	font-weight: bold;
+	font-size: $typesize__small;
+	letter-spacing: $font__letter-spacing;
+	text-transform: uppercase;
 	margin-bottom: 0.25rem;
 
 	+ input {
@@ -47,8 +49,8 @@ label {
 	}
 
 	.comment-form-cookies-consent & {
-		font-weight: normal;
-		font-size: $typesize__small;
+		letter-spacing: 0;
+		text-transform: none;
 	}
 }
 
