@@ -3,11 +3,8 @@
 ## Entry Header
 --------------------------------------------------------------*/
 
-.single {
-
-	.featured-image .wp-post-image {
-		@include full-width($size__site-main);
-	}
+.single .featured-image {
+	@include full-width;
 }
 
 .entry-header {

@@ -7,7 +7,7 @@
 .single,
 .page {
 
-	.wp-block-image.size-full img {
+	.wp-block-image.size-full {
 		@include full-width;
 	}
 }
