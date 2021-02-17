@@ -1,13 +1,57 @@
+.comments-title {
+	font-family: $font__alt;
+	font-size: $typesize__h4;
+	letter-spacing: $font__letter-spacing;
+	margin-bottom: 2rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
 .comment-list {
 	list-style: none;
-	margin: 0;
+	margin: 0 0 2rem;
 	padding: 0;
 }
 
-.comment-content a {
-	word-wrap: break-word;
-}
+.comment {
+	border-bottom: 1px solid $color__background-hr;
+	margin-bottom: 2rem;
+	padding-bottom: 1rem;
+
+	&-author .says {
+		display: none;
+	}
+
+	&-content {
+		font-family: $font__alt;
+		font-size: $typesize__small;
+
+		a {
+			word-wrap: break-word;
+		}
+	}
+
+	&-metadata {
+		font-family: $font__alt;
+		font-size: $typesize__tiny;
+		letter-spacing: $font__letter-spacing;
+		margin-top: 0.25rem;
+		text-transform: uppercase;
+	}
+
+	&-awaiting-moderation {
+		display: block;
+		font-size: $typesize__small;
+		font-style: normal;
+		font-weight: bold;
+		margin: 0.5rem 0;
+	}
+} // .comment
 
 .bypostauthor {
 	display: block;
+}
+
+.comment-reply-title {
+	font-size: $typesize__h5;
 }
