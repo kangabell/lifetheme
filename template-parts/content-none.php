@@ -34,17 +34,15 @@
 		elseif ( is_search() ) :
 			?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'life' ); ?></p>
-			<?php
-			get_search_form();
+			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again!', 'life' ); ?></p>
 
+			<?php
 		else :
 			?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'life' ); ?></p>
-			<?php
-			get_search_form();
+			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for.', 'life' ); ?></p>
 
+			<?php
 		endif;
 		?>
 	</div><!-- .page-content -->
