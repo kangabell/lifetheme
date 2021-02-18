@@ -69,13 +69,18 @@ $icon-triangle: "\25b3";
 
 .icon-arrow,
 .menu-icon.arrow a {
+  display: inline-block;
   &:before {
     content: $icon-arrow; 
   }
 }
-.icon-arrow-left:before {
-  display: inline-block;
+
+.icon-arrow-left {
   transform: rotate(180deg);
+}
+
+.icon-arrow-up {
+  transform: rotate(-90deg);
 }
 
 .icon-bookmark,
@@ -172,5 +177,28 @@ $icon-triangle: "\25b3";
 .menu-icon.triangle a {
   &:before {
     content: $icon-triangle; 
+  }
+}
+
+
+/*--------------------------------------------------------------
+## Arrow Hovers
+--------------------------------------------------------------*/
+
+a .icon-arrow {
+  display: inline-block;
+  transition: all 0.125s;
+}
+
+a:hover .icon-arrow,
+a:focus .icon-arrow {
+  transform: translateX(0.25rem);
+
+  &-left {
+    transform: translateX(-0.25rem) rotate(180deg);
+  }
+
+  &-up {
+    transform: translateY(-0.25rem) rotate(-90deg);
   }
 }

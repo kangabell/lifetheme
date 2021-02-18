@@ -59,15 +59,4 @@
 
 .back-to-top {
 	margin-left: auto;
-
-	.icon-arrow {
-		display: inline-block;
-		transform: rotate(-90deg);
-		transition: all 0.125s;
-	}
-
-	&:hover .icon-arrow,
-	&:focus .icon-arrow {
-		transform: translateY(-0.25rem) rotate(-90deg);
-	}
 }

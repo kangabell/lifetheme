@@ -1,14 +1,15 @@
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-
-	.site-main & {
-		margin: 0 0 1.5em;
-	}
+	margin: 0 0 1.5em;
 
 	.nav-links {
 		display: flex;
 	}
+}
+
+.comment-navigation,
+.post-navigation {
 
 	.nav-previous {
 		flex: 1 0 50%;
@@ -17,6 +18,17 @@
 	.nav-next {
 		text-align: end;
 		flex: 1 0 50%;
+	}
+}
+
+.posts-navigation {
+
+	.nav-links {
+		justify-content: flex-end;
+	}
+
+	.nav-next {
+		margin-left: 1rem;
 	}
 }
 
