@@ -14,10 +14,14 @@
 		margin: 0;
 	}
 
-	p {
+	.excerpt {
 		font-family: $font__alt;
 		font-size: $typesize__small;
-		margin-bottom: 0;
+		margin-top: 1em;
+
+		p {
+			margin-bottom: 0;
+		}
 	}
 
 	.meta {

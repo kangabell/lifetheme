@@ -22,14 +22,14 @@ endif;
 		the_title( '<h3>', '</h3>' );
 
 		if ( 'life_project' === get_post_type() ) :
-
-			the_excerpt();
-
+		?>
+			<div class="excerpt"><?php the_excerpt(); ?></div>
+		<?php
 		elseif ( 'pinboard-bookmark' === get_post_type() ) :
 
 			$content = get_the_content();
 			$content_clean = preg_replace('#<a.*?>(.*?)</a>#i', '\1', $content);
-			echo $content_clean;
+			echo '<div class="excerpt">' . $content_clean . '</div>';
 
 			$domain = str_ireplace('www.', '', parse_url($url, PHP_URL_HOST));
 			echo '<p class="meta">' . $domain . '</p>';
