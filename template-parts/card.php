@@ -27,7 +27,9 @@ endif;
 
 		elseif ( 'pinboard-bookmark' === get_post_type() ) :
 
-			the_content();
+			$content = get_the_content();
+			$content_clean = preg_replace('#<a.*?>(.*?)</a>#i', '\1', $content);
+			echo $content_clean;
 
 			$domain = str_ireplace('www.', '', parse_url($url, PHP_URL_HOST));
 			echo '<p class="meta">' . $domain . '</p>';
