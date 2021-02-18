@@ -8,7 +8,7 @@ $white: #ffffff;
 
 $color__background-body: $light;
 $color__background-screen: $mediumlight;
-$color__background-hr: $medium;
+$color__background-hr: mix($medium, $mediumlight);
 $color__background-button: $light;
 $color__background-button-focus: $mediumlight;
 $color__background-pre: $mediumlight;

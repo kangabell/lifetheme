@@ -15,8 +15,13 @@
 	}
 
 	p {
-		font-size: $typesize__tiny;
+		font-family: $font__alt;
+		font-size: $typesize__small;
 		margin-bottom: 0;
+	}
+
+	.meta {
+		font-size: $typesize__tiny;
 	}
 
 	&:hover,
