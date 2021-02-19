@@ -35,6 +35,9 @@
 }
 
 .thumbnail {
+	border-radius: $radius;
+	display: -webkit-flex; // Safari
+	overflow: hidden;
 
 	// account for non-square images
 	img {
