@@ -85,9 +85,16 @@
 ## Blog Page
 --------------------------------------------------------------*/
 
-.blog .post {
-	border-bottom: 1px solid $color__background-hr;
-	margin-bottom: 3rem;
+.blog {
+
+	.post {
+		border-bottom: 1px solid $color__background-hr;
+		margin-bottom: 3rem;
+	}
+
+	.entry-title a {
+		text-decoration: none;
+	}
 }
 
 
