@@ -4,14 +4,17 @@
 ## Entry Header
 --------------------------------------------------------------*/
 
-.single .featured-image {
-	@include full-width;
-}
+.single,
+.page {
 
-.single .entry-header,
-.page .entry-header {
-	margin-bottom: 4rem;
-	margin-top: 4rem;
+	.featured-image {
+		@include full-width;
+	}
+
+	.entry-header {
+		margin-bottom: 4rem;
+		margin-top: 4rem;
+	}
 }
 
 
