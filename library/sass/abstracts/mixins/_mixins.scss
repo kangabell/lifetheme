@@ -194,7 +194,9 @@
 	cursor: pointer;
 	display: inline-block;
 	font-family: $font__alt;
+	font-weight: normal;
 	line-height: 1;
+	text-decoration: none;
 	white-space: nowrap;
 
 	&:hover,

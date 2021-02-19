@@ -39,8 +39,8 @@
 	padding-top: 0.025em;
 	transition: all 0.125s;
 
-	&:hover,
-	&:focus {
+	a &:hover,
+	a &:focus {
 		border-color: $medium;
 	}
 }
@@ -51,10 +51,10 @@
 	padding-bottom: 2rem;
 
 	a {
-		border: 0;
 		display: inline-flex;
 		font-size: $typesize__small;
 		letter-spacing: $font__letter-spacing;
+		text-decoration: none;
 		text-transform: uppercase;
 	}
 

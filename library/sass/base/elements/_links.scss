@@ -1,7 +1,8 @@
 a {
-	border-bottom: 2px solid $color__border-link;
 	color: $color__link;
-	text-decoration: none;
+	text-decoration-color: $color__border-link;
+	text-decoration-thickness: 0.125em;
+	text-underline-offset: 0.285em;
 	transition: all 0.125s;
 
 	&:focus {
@@ -10,14 +11,11 @@ a {
 
 	&:hover,
 	&:active {
-		border-color: $color__border-link-hover;
+		text-decoration-color: $color__border-link-hover;
 		outline: 0;
 	}
 
-	.site-header &,
-	.site-footer &,
-	&.thumbnail,
-	&.post-thumbnail {
-		border: 0;
+	.hentry & {
+		font-weight: bold;
 	}
 }

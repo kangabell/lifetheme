@@ -12,9 +12,8 @@
 	}
 
 	a {
-		border-bottom: 2px solid transparent;
 		color: $mediumlight;
-		text-decoration: none;
+		text-decoration-color: transparent;
 	}
 
 	.menu-item {
@@ -23,7 +22,7 @@
 
 		a:hover,
 		a:focus {
-			border-color: $mediumdark;
+			text-decoration-color: $mediumdark;
 		}
 	}
 
@@ -47,12 +46,12 @@
 	width: 100%;
 
 	a {
-		border-bottom: 2px solid rgba($mediumdark, 0.25);
 		color: $mediumdark;
+		text-decoration-color: rgba($mediumdark, 0.25);
 
 		&:hover,
 		&:focus {
-			border-color: rgba($mediumdark, 0.75);
+			text-decoration-color: rgba($mediumdark, 0.75);
 		}
 	}
 }
