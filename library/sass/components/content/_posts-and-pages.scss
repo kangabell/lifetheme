@@ -96,6 +96,41 @@
 	padding-top: 2rem;
 }
 
+.home .site-main {
+	padding-bottom: 0;
+}
+
+.secondary-content {
+	margin-top: 3rem;
+
+	.widget {
+		margin-bottom: 0;
+	}
+
+	p {
+		margin-bottom: 1em;
+	}
+
+	.image {
+		display: block;
+		margin-left: auto;
+		margin-right: -5rem;
+	}
+
+	@media screen and ($medium-up) {
+		display: flex;
+		flex-direction: row-reverse;
+
+		.widget_text {
+			flex: 1;
+		}
+
+		.image {
+			margin-right: 0;
+		}
+	}
+}
+
 
 /*--------------------------------------------------------------
 ## Blog Page

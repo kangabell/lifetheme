@@ -114,6 +114,15 @@ add_action( 'after_setup_theme', 'life_content_width', 0 );
  */
 function life_widgets_init() {
 	register_sidebar( array(
+		'name'          => esc_html__( 'Homepage Secondary Content', 'life' ),
+		'id'            => 'home-secondary',
+		'description'   => esc_html__( 'Add widgets here.', 'life' ),
+		'before_title'  => '',
+		'after_title'   => '',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+	) );
+	register_sidebar( array(
 		'name'          => esc_html__( 'Posts Header', 'life' ),
 		'id'            => 'header-posts',
 		'description'   => esc_html__( 'Add widgets here.', 'life' ),

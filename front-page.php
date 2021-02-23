@@ -78,6 +78,10 @@ get_header();
 			</div>
 		</div> <!-- .latest-content -->
 
+		<div class="secondary-content">
+			<?php dynamic_sidebar( 'home-secondary' ); ?>
+		</div>
+
 	</main><!-- #main -->
 
 <?php

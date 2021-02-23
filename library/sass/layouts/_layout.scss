@@ -17,7 +17,8 @@
 .entry-header,
 .comments-area,
 .entry-footer,
-.latest-content {
+.latest-content,
+.secondary-content {
 	@include wrap($size__site-narrow);
 	margin-left: auto;
 	margin-right: auto;
