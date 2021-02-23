@@ -202,18 +202,11 @@
 	&:hover,
 	&:active,
 	&:focus {
-		border-color: $color__border-button-focus;
 		box-shadow: 3px 3px 3px rgba($dark, 0.25), -3px -3px 3px $white;
 	}
 
 	&:hover {
 		border-color: $color__border-button-hover;
-	}
-
-	&:active,
-	&:focus {
-		background: $color__background-button-focus;
-		border-color: $color__border-button-focus;
 	}
 
 	@if ($type == 'tag') {
