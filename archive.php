@@ -24,6 +24,8 @@ get_header();
 					dynamic_sidebar( 'header-pins' );
 				elseif ( 'life_favorite' === get_post_type() ) :
 					dynamic_sidebar( 'header-favorites' );
+				elseif ( is_tag() ) :
+					single_term_title( '<h1 class="page-title">', '</h1>' );
 				else :
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 				endif;
