@@ -16,7 +16,8 @@
 
 .entry-header,
 .comments-area,
-.entry-footer {
+.entry-footer,
+.latest-content {
 	@include wrap($size__site-narrow);
 	margin-left: auto;
 	margin-right: auto;
@@ -70,4 +71,8 @@ html {
 .post-type-archive-life_character .grid-container,
 .post-type-archive-life_favorite .grid-container {
 	@include grid('mixed');
+}
+
+.latest-content {
+	@include grid('three');
 }

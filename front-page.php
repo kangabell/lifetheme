@@ -21,7 +21,7 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-		<div class="grid-container">
+		<div class="latest-content">
 			<div>
 				<h2 class="heading-alt"><?php esc_html_e( 'Recent Snapshot', 'life' ); ?></h2>
 				<?php
@@ -76,7 +76,7 @@ get_header();
 				wp_reset_query();
 				?>
 			</div>
-		</div>
+		</div> <!-- .latest-content -->
 
 	</main><!-- #main -->
 

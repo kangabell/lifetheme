@@ -171,6 +171,12 @@
 				"reg22 reg24 reg26 big28 big28 reg29"
 				"reg23 reg25 reg27 big28 big28 reg30";
 		}
+	} @else if ($style == 'three')  {
+		grid-gap: 2rem;
+
+		@media screen and ($medium-up) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
 	} @else {
 		grid-gap: 2rem;
 
