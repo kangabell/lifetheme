@@ -1,5 +1,9 @@
 html {
-	font-size: 131.25%; // bump average base size from 16 to 21px
+	font-size: 112.5%; // bump average base size from 16 to 18px
+
+	@media screen and ($large-up) {
+		font-size: 131.25%; // bump average base size from 16 to 21px
+	}
 }
 
 body,

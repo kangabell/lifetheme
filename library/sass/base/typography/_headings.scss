@@ -13,11 +13,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: $typesize__h1;
+	font-size: $typesize__h2;
+
+	@media screen and ($medium-up) {
+		font-size: $typesize__h1;
+	}
 }
 
 h2 {
-	font-size: $typesize__h2;
+	font-size: $typesize__h3;
 
 	&.heading-alt {
 		font-family: $font__alt;
@@ -26,17 +30,29 @@ h2 {
 		margin-bottom: 1rem;
 		text-transform: uppercase;
 	}
+
+	@media screen and ($medium-up) {
+		font-size: $typesize__h2;
+	}
 }
 
 h3 {
-	font-size: $typesize__h3;
+	font-size: $typesize__h4;
+
+	@media screen and ($medium-up) {
+		font-size: $typesize__h3;
+	}
 }
 
 h4 {
-	font-size: $typesize__h4;
+	font-size: $typesize__h5;
 	font-family: $font__alt;
 	letter-spacing: $font__letter-spacing;
 	text-transform: uppercase;
+
+	@media screen and ($medium-up) {
+		font-size: $typesize__h4;
+	}
 }
 
 h5 {

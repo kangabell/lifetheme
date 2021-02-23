@@ -61,12 +61,20 @@ big {
 
 .has-huge-font-size,
 .has-larger-font-size {
-	font-size: $typesize__huge;
+	font-size: $typesize__large;
+
+	@media screen and ($medium-up) {
+		font-size: $typesize__huge;
+	}
 }
 
 big,
 .has-large-font-size {
-	font-size: $typesize__large;
+	font-size: $typesize__medium;
+
+	@media screen and ($medium-up) {
+		font-size: $typesize__huge;
+	}
 }
 
 .has-medium-font-size {
