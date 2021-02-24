@@ -41,10 +41,10 @@ get_header();
 				?>
 			</div>
 			<div>
-				<h2 class="heading-alt"><?php esc_html_e( 'Select Project', 'life' ); ?></h2>
+				<h2 class="heading-alt"><?php esc_html_e( 'Latest Link', 'life' ); ?></h2>
 				<?php
 				$query = new WP_Query( array(
-					'post_type' => 'life_project',
+					'post_type' => 'pinboard-bookmark',
 					'posts_per_page' => 1,
 				) );
 				?>
