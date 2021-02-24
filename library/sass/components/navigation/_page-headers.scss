@@ -4,10 +4,11 @@
 --------------------------------------------------------------*/
 
 .page-header {
-	padding-top: 4rem;
+	padding-top: 3rem;
 	margin-bottom: 2rem;
 
 	@media screen and ($large-up) {
+		padding-top: 4rem;
 
 		.page-title,
 		p {

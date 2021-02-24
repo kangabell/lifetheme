@@ -12,8 +12,13 @@
 	}
 
 	.entry-header {
-		margin-bottom: 4rem;
-		margin-top: 4rem;
+		margin-bottom: 3rem;
+		margin-top: 3rem;
+
+		@media screen and ($large-up) {
+			margin-bottom: 4rem;
+			margin-top: 4rem;
+		}
 	}
 }
 
@@ -69,9 +74,9 @@
 		width: 4rem;
 	}
 
-	.flex-container,
 	.flex-container {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 	}
 
@@ -111,6 +116,11 @@
 		margin-bottom: 1em;
 	}
 
+	.widget_media_image {
+		margin-right: -1rem; // compensate for container padding
+		overflow: hidden;
+	}
+
 	.image {
 		display: block;
 		margin-left: auto;
@@ -123,6 +133,10 @@
 
 		.widget_text {
 			flex: 1;
+		}
+
+		.widget_media_image {
+			margin-right: 0;
 		}
 
 		.image {

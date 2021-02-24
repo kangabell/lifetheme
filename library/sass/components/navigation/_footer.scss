@@ -34,6 +34,22 @@
 	}
 }
 
+@media screen and ($small-down) {
+
+	.back-to-top {
+		margin-bottom: 1rem;
+		order: 1;
+	}
+
+	.footer-navigation {
+		order: 2;
+	}
+
+	.site-info {
+		order: 3;
+	}
+}
+
 .footer-navigation .menu {
 	display: flex;
 	flex-wrap: wrap;
