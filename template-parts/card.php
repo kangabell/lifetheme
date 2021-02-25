@@ -9,7 +9,7 @@ endif;
 <a class="card" href="<?php echo $url; ?>" <?php if ( 'pinboard-bookmark' === get_post_type() ) { echo 'target="_blank"'; } ?>>
 	<?php
 	if ( has_post_thumbnail() ) :
-		the_post_thumbnail( 'medium_square', array( 'alt' => get_the_title() ) );
+		the_post_thumbnail( 'medium_square' );
 	else :
 	?>
 		<img src="<?php echo get_template_directory_uri() . '/library/missing.png'; ?>" alt="<?php esc_html__( 'Image Missing', 'life' ); ?>" />
