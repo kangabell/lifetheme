@@ -39,6 +39,7 @@
 	margin: 0;
 	padding: 0;
 
+
 	&-item {
 		display: inline-block;
 
@@ -50,5 +51,14 @@
 	.current-menu-item a {
 		background: white;
 		border-color: transparent;
+	}
+
+	@media screen and ($large-down) {
+		display: flex;
+		margin-right: -1rem;
+		overflow-x: auto;
+		padding-bottom: 0.5rem;
+		scroll-behavior: smooth;
+		-webkit-overflow-scrolling: touch;
 	}
 }
