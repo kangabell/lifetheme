@@ -23,7 +23,7 @@
 				?>
 			</nav>
 			<a class="back-to-top" href="#page">
-				<span class="icon-arrow icon-arrow-up"></span>
+				<span class="icon-arrow icon-arrow-up" aria-hidden="true"></span>
 				<?php esc_html_e( 'Up', 'life' ); ?>
 			</a>
 			<div class="site-info">

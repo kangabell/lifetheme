@@ -57,7 +57,7 @@
 
 			<nav id="site-navigation" class="main-navigation">
 				<button class="icon-button menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-					<span class="icon"></span>
+					<span class="icon" aria-hidden="true"></span>
 					<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'life' ); ?></span>
 				</button>
 				<div class="main-nav-container">
