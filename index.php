@@ -20,7 +20,7 @@ get_header();
 		<?php
 		if ( have_posts() ) :
 
-			if ( is_home() ) :
+			if ( (is_home()) && (! is_paged()) ) :
 				?>
 				<header class="page-header">
 					<?php
