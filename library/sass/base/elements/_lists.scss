@@ -2,8 +2,11 @@ ul,
 ol {
 	margin: 0;
 
-	.entry-content & {
-		font-size: $typesize__normal;
+	@media screen and ($medium-up) {
+
+		.entry-content & {
+			font-size: $typesize__normal;
+		}
 	}
 }
 

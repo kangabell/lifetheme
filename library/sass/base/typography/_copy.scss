@@ -1,7 +1,10 @@
 p {
-	font-size: $typesize__normal;
 	margin-top: 1em;
 	margin-bottom: 1.5em;
+
+	@media screen and ($medium-up) {
+		font-size: $typesize__normal;
+	}
 }
 
 dfn,
