@@ -1,6 +1,6 @@
 .site-footer {
 	background: $dark;
-	color: $mediumdark;
+	color: $medium;
 	font-family: $font__alt;
 	font-size: $typesize__small;
 	padding-top: 3rem;
@@ -62,12 +62,12 @@
 	width: 100%;
 
 	a {
-		color: $mediumdark;
-		text-decoration-color: rgba($mediumdark, 0.25);
+		color: $medium;
+		text-decoration-color: rgba($medium, 0.25);
 
 		&:hover,
 		&:focus {
-			text-decoration-color: rgba($mediumdark, 0.75);
+			text-decoration-color: rgba($medium, 0.75);
 		}
 	}
 }
