@@ -50,6 +50,7 @@ function life_setup() {
 	* @link https://developer.wordpress.org/reference/functions/add_image_size/
 	*/
 	add_image_size( 'medium_square', 570, 570, true );
+	add_image_size( 'small_square', 345, 345, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
