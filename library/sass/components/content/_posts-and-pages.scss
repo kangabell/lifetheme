@@ -8,7 +8,7 @@
 .page {
 
 	.featured-image {
-		@include full-width;
+		@include full-width($style: 'alt');
 	}
 
 	.entry-header {

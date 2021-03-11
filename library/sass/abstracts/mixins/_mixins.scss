@@ -13,13 +13,19 @@
 }
 
 // Full-width element that breaks container
-@mixin full-width($container: $size__site-main) {
+@mixin full-width($container: $size__site-main, $style: null) {
+
 	margin-left: -1rem;
 	margin-right: -1rem;
 	width: auto; // reset
 
 	img {
 		width: 100%;
+
+		@if ($style == 'alt') {
+			object-fit: cover;
+			min-height: 21rem;
+		}
 	}
 
 	@media screen and ($medium-up) and ($large-down) {
