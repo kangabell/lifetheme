@@ -17,10 +17,10 @@
 
 	.excerpt {
 		font-family: $font__alt;
-		font-size: $typesize__small;
 		margin-top: 1em;
 
 		p {
+			font-size: $typesize__small;
 			margin-bottom: 0;
 		}
 	}
