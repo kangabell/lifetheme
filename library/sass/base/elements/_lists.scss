@@ -1,6 +1,10 @@
 ul,
 ol {
 	margin: 0;
+
+	.entry-content & {
+		font-size: $typesize__normal;
+	}
 }
 
 ul {
