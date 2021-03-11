@@ -22,7 +22,7 @@
 		width: 100%;
 	}
 
-	@media screen and ($large-down) {
+	@media screen and ($medium-up) and ($large-down) {
 		left: 50%;
 		margin-left: -50vw;
 		margin-right: -50vw;
