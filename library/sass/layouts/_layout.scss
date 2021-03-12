@@ -53,10 +53,13 @@ html {
 	h4,
 	h5,
 	h6,
-	[class^='wp-block'] {
+	[class^='wp-block'],
+	.more-link {
 		@include wrap($size__site-narrow);
-		margin-left: auto;
-		margin-right: auto;
+	}
+
+	.more-link {
+		display: block;
 	}
 }
 
