@@ -25,7 +25,7 @@ endif;
 		?>
 			<div class="excerpt"><?php the_excerpt(); ?></div>
 		<?php
-		elseif ( 'pinboard-bookmark' === get_post_type() ) :
+		elseif ( ('pinboard-bookmark' === get_post_type()) && (! is_front_page()) ) :
 
 			$content = get_the_content();
 			$content_clean = preg_replace('#<a.*?>(.*?)</a>#i', '\1', $content);
