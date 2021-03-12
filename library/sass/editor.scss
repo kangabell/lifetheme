@@ -1,0 +1,13 @@
+
+@import "abstracts/abstracts";
+
+.editor-styles-wrapper {
+	background-color: $color__background-body;
+}
+
+.wp-block-group.is-style-memo {
+	background-color: $white;
+	box-shadow: 0 0.25rem 1rem rgba($mediumlight, 0.8);
+	font-family: $font__pre;
+	padding: 2rem;
+}

@@ -336,6 +336,8 @@ add_action( 'wp_enqueue_scripts', 'life_scripts' );
  */
 function life_gutenberg_scripts() {
 
+	wp_enqueue_style( 'life-editor-style', get_template_directory_uri() . '/library/css/editor.css' );
+
 	wp_enqueue_script(
 		'life-editor-script',
 		get_template_directory_uri() . '/library/js/editor.js',
