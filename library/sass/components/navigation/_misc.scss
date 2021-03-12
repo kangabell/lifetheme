@@ -50,18 +50,23 @@
 	}
 }
 
+.nav-links a,
+.return-link a,
+.archive-link a {
+	align-items: center;
+	display: inline-flex;
+	letter-spacing: $font__letter-spacing;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
 .nav-links,
 .return-link {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 
 	a {
-		align-items: center;
-		display: inline-flex;
 		font-size: $typesize__small;
-		letter-spacing: $font__letter-spacing;
-		text-decoration: none;
-		text-transform: uppercase;
 	}
 
 	.icon-arrow {
@@ -71,6 +76,11 @@
 
 .post-navigation + .return-link {
 	border-top: 1px solid $color__background-hr;
+}
+
+.archive-link {
+	font-size: $typesize__tiny;
+	margin-top: 1rem;
 }
 
 
