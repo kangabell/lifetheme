@@ -55,15 +55,6 @@ if ( ! function_exists( 'life_entry_footer' ) ) :
 				echo '<p class="song-link"><span class="label">' . esc_html__( 'Currently Listening', 'life' ) . ' </span><span class="icon-music" aria-hidden="true"></span><span class="content">“<a class="button" href="' . esc_url( $song_url ) . '" target="' . esc_attr( $song_target ) . '">' . esc_html( $song_title ) . '</a>” ' . $artist . '<span></p>';
 			endif;
 
-		} elseif ( 'life_project' === get_post_type() ) {
-
-			$terms = get_terms( 'life_collection' );
-
-			if ( $terms ) {
-				foreach( $terms as $term ) {
-					echo '<span class="tags-links"><a href="'. get_term_link( $term ) .'">'. $term->name .'</a></span>';
-				}
-			}
 		}
 
 		edit_post_link(
