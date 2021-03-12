@@ -32,6 +32,7 @@
 	&:hover,
 	&:focus {
 		box-shadow: 0 0.25rem 1rem rgba($mediumlight, 1);
+		transform: scale(1.04);
 	}
 }
 
