@@ -1,7 +1,7 @@
 .card {
 	background: $white;
 	border-radius: $radius;
-	box-shadow: 0.25rem 0.25rem 0.5rem rgba($mediumlight, 0.3);
+	box-shadow: 0 0.25rem 1rem rgba($mediumlight, 0.3);
 	display: block;
 	overflow: hidden;
 	text-decoration: none;
@@ -31,7 +31,7 @@
 
 	&:hover,
 	&:focus {
-		box-shadow: 0.25rem 0.25rem 0.5rem rgba($mediumlight, 1);
+		box-shadow: 0 0.25rem 1rem rgba($mediumlight, 1);
 	}
 }
 
