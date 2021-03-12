@@ -21,11 +21,6 @@
 
 	img {
 		width: 100%;
-
-		@if ($style == 'alt') {
-			object-fit: cover;
-			min-height: 21rem;
-		}
 	}
 
 	@media screen and ($medium-up) and ($large-down) {
@@ -43,6 +38,15 @@
 		margin-right: -($size__site-wide - $container) / 2;
 		max-width: $size__site-wide;
 		text-align: center;
+	}
+}
+
+// Image is square-ish on mobile, when combined with full-width()
+%square-ish {
+
+	img {
+		min-height: 21rem;
+		object-fit: cover;
 	}
 }
 

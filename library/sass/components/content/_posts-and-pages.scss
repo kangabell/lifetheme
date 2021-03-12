@@ -8,7 +8,8 @@
 .page {
 
 	.featured-image {
-		@include full-width($style: 'alt');
+		@include full-width;
+		@extend %square-ish;
 	}
 
 	.entry-header {
@@ -90,8 +91,9 @@
 ## Front Page
 --------------------------------------------------------------*/
 
-// remove top margin when an image is first
+// when an image is first, it behaves like a featured image
 .home .wp-block-image:first-child {
+	@extend %square-ish;
 	margin-top: 0;
 }
 
