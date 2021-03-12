@@ -332,6 +332,21 @@ function life_scripts() {
 add_action( 'wp_enqueue_scripts', 'life_scripts' );
 
 /**
+ * Add block editor scripts and styles
+ */
+function life_gutenberg_scripts() {
+
+	wp_enqueue_script(
+		'life-editor-script',
+		get_template_directory_uri() . '/library/js/editor.js',
+		array( 'wp-blocks', 'wp-dom' ),
+		filemtime( get_template_directory() . '/library/js/editor.js' ),
+		true
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'life_gutenberg_scripts' );
+
+/**
  * Remove block editor css.
  * src: https://stackoverflow.com/a/52280110
  */
