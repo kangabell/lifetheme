@@ -21,7 +21,7 @@ endif;
 		<?php
 		the_title( '<h3>', '</h3>' );
 
-		if ( 'life_project' === get_post_type() ) :
+		if ( ('life_project' === get_post_type()) && (! is_singular('life_character')) ) :
 		?>
 			<div class="excerpt"><?php the_excerpt(); ?></div>
 		<?php
