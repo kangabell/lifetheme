@@ -1,0 +1,24 @@
+.dark {
+	background: $black;
+	color: $white;
+
+	.site-header {
+		background: $dark;
+		color: $white;
+
+		a {
+			color: $white;
+		}
+
+		.search-field {
+			background: $mediumdark;
+			border-color: $mediumdark;
+		}
+	}
+
+	.menu-toggle .icon,
+	.menu-toggle .icon::before,
+	.menu-toggle .icon::after {
+		background-color: $white;
+	}
+} // .dark
