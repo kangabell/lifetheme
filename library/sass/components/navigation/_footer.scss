@@ -36,7 +36,7 @@
 
 @media screen and ($small-down) {
 
-	.back-to-top {
+	.buttons {
 		margin-bottom: 1rem;
 		order: 1;
 	}
@@ -72,6 +72,17 @@
 	}
 }
 
-.back-to-top {
+.buttons {
 	margin-left: auto;
+}
+
+.toggle-mode {
+	background: $mediumdark;
+	border: 0;
+	color: $light;
+
+	&:hover,
+	&:focus {
+		box-shadow: none;
+	}
 }

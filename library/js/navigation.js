@@ -1,9 +1,13 @@
 /**
  * File navigation.js.
- *
- * Handles toggling the navigation menu for small screens and enables TAB key
- * navigation support for dropdown menus.
  */
+
+ /*--------------------------------------------------------------
+ ## Navigation Menu
+ ** Handles toggling the navigation menu for small screens and enables TAB key
+ ** navigation support for dropdown menus.
+ --------------------------------------------------------------*/
+
 ( function() {
 	var html, container, button, menu, links, i, len;
 
@@ -116,8 +120,29 @@
 
 } )();
 
+/*--------------------------------------------------------------
+# Dark Mode toggle
+--------------------------------------------------------------*/
+
 jQuery(document).ready( function($) {
 
-	
+	$( 'body' ).toggleClass( localStorage.toggled );
+
+	$( '.toggle-mode' ).click( function() {
+
+		if ( localStorage.toggled != 'dark' ) {
+			$( 'body' ).toggleClass( 'dark', true );
+			localStorage.toggled = 'dark';
+		} else {
+			$( 'body' ).toggleClass( 'dark', false );
+			localStorage.toggled = '';
+		}
+	});
+
+	if ( $(' body' ).hasClass( 'dark' ) ) {
+		$( '.toggle-mode' ).prop( 'aria-checked', true );
+	} else {
+		$( '.toggle-mode' ).prop( 'aria-checked', false );
+	}
 
 } );

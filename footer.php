@@ -22,10 +22,16 @@
 				) );
 				?>
 			</nav>
-			<a class="back-to-top" href="#page">
-				<span class="icon-arrow icon-arrow-up" aria-hidden="true"></span>
-				<?php esc_html_e( 'Up', 'life' ); ?>
-			</a>
+			<div class="buttons">
+				<button type="button" data-action="aria-switch" aria-label="Toggle Dark Mode" aria-checked="true" role="switch" class="toggle-mode">
+					<span class="icon-moon"></span>
+					<span class="icon-sun"></span>
+				</button>
+				<a class="back-to-top" href="#page">
+					<span class="icon-arrow icon-arrow-up" aria-hidden="true"></span>
+					<?php esc_html_e( 'Up', 'life' ); ?>
+				</a>
+			</div>
 			<div class="site-info">
 				<?php
 				echo '&copy;' . date('Y') . ' ';
