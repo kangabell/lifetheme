@@ -1,0 +1,16 @@
+.dark {
+	filter: invert(1);
+
+	// flip some elements back to normal
+	.site-footer,
+	img {
+		filter: invert(1);
+	}
+}
+
+// allow transition to be smooth
+body,
+img {
+	transition: filter 0.125s;
+	will-change: filter;
+}
