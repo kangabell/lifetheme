@@ -2,14 +2,14 @@
 
 	.site-header,
 	.site-main {
-		filter: invert(1);
+		filter: invert(1) hue-rotate(180deg);
 	}
 
 	// flip images, embeds, and other media back to normal
 	img,
 	iframe,
 	video {
-		filter: invert(1);
+		filter: invert(1) hue-rotate(180deg);
 	}
 }
 
