@@ -1,10 +1,24 @@
 .dark {
 	filter: invert(1) hue-rotate(180deg);
 
+	// tweak color on some elements
+	.site-header,
+	.card {
+		background-color: $mediumlight;
+	}
+
 	// flip some elements back to normal
 	.site-footer,
-	img {
+	.main-nav-container,
+	.toggled .menu-toggle,
+	img,
+	iframe,
+	video {
 		filter: invert(1) hue-rotate(180deg);
+	}
+
+	::selection {
+		background-color: $medium;
 	}
 }
 

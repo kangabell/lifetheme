@@ -77,12 +77,26 @@
 }
 
 .toggle-mode {
-	background: $mediumdark;
+	background: darken($mediumdark, 8);
 	border: 0;
+	border-radius: 2em;
 	color: $light;
+	padding: 0.3em 0.5em;
 
 	&:hover,
 	&:focus {
 		box-shadow: none;
+	}
+
+	.icon-sun,
+	.icon-moon {
+	    width: 1em;
+	    height: 1em;
+	    border-radius: 1rem;
+	    padding: 0.25em;
+	}
+
+	.icon-sun {
+		background: $mediumdark;
 	}
 }
