@@ -1,3 +1,7 @@
 body {
+	background: $color__background-footer; // allow footer to look infinite
+}
+
+.site-main {
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
 }

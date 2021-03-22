@@ -1,24 +1,20 @@
 .dark {
-	background: $black;
-	color: $white;
 
-	.site-header {
-		background: $dark;
-		color: $white;
-
-		a {
-			color: $white;
-		}
-
-		.search-field {
-			background: $mediumdark;
-			border-color: $mediumdark;
-		}
+	.site-header,
+	.site-main {
+		filter: invert(1);
 	}
 
-	.menu-toggle .icon,
-	.menu-toggle .icon::before,
-	.menu-toggle .icon::after {
-		background-color: $white;
+	// flip images back to normal
+	img {
+		filter: invert(1);
 	}
-} // .dark
+}
+
+// allow transition to be smooth
+.site-header,
+.site-main,
+img {
+	transition: filter 0.125s;
+	will-change: filter;
+}
