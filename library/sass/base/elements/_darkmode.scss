@@ -11,6 +11,10 @@
 		background-color: $mediumlight;
 	}
 
+	::selection {
+		background-color: $medium;
+	}
+
 	// flip media and drawer nav back to normal
 	img,
 	iframe,
@@ -19,8 +23,14 @@
 		filter: invert(1) hue-rotate(180deg);
 	}
 
-	::selection {
-		background-color: $medium;
+	.toggle-mode .icon-sun {
+		background: transparent;
+		color: $black;
+	}
+
+	.toggle-mode .icon-moon {
+		background: $dark;
+		color: $white;
 	}
 }
 
