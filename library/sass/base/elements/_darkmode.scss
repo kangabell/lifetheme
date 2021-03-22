@@ -1,10 +1,10 @@
 .dark {
-	filter: invert(1);
+	filter: invert(1) hue-rotate(180deg);
 
 	// flip some elements back to normal
 	.site-footer,
 	img {
-		filter: invert(1);
+		filter: invert(1) hue-rotate(180deg);
 	}
 }
 
