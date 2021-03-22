@@ -5,11 +5,22 @@
 		filter: invert(1) hue-rotate(180deg);
 	}
 
-	// flip images, embeds, and other media back to normal
+	// tweak color on some elements
+	.site-header,
+	.card {
+		background-color: $mediumlight;
+	}
+
+	// flip media and drawer nav back to normal
 	img,
 	iframe,
-	video {
+	video,
+	.main-nav-container {
 		filter: invert(1) hue-rotate(180deg);
+	}
+
+	::selection {
+		background-color: $medium;
 	}
 }
 
