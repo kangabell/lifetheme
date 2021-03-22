@@ -7,6 +7,10 @@
 		background-color: $mediumlight;
 	}
 
+	::selection {
+		background-color: $medium;
+	}
+
 	// flip some elements back to normal
 	.site-footer,
 	.main-nav-container,
@@ -17,8 +21,14 @@
 		filter: invert(1) hue-rotate(180deg);
 	}
 
-	::selection {
-		background-color: $medium;
+	.toggle-mode .icon-sun {
+		background: transparent;
+		color: $black;
+	}
+
+	.toggle-mode .icon-moon {
+		background: $dark;
+		color: $white;
 	}
 }
 
