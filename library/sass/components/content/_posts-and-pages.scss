@@ -13,12 +13,12 @@
 	}
 
 	.entry-header {
-		margin-bottom: 3rem;
-		margin-top: 3rem;
+		padding-bottom: 3rem;
+		padding-top: 3rem;
 
 		@media screen and ($large-up) {
-			margin-bottom: 4rem;
-			margin-top: 4rem;
+			padding-bottom: 4rem;
+			padding-top: 4rem;
 		}
 	}
 }
