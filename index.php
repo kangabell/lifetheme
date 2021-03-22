@@ -16,45 +16,47 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<div class="wrap">
 
-		<?php
-		if ( have_posts() ) :
+			<?php
+			if ( have_posts() ) :
 
-			if ( (is_home()) && (! is_paged()) ) :
-				?>
-				<header class="page-header">
-					<?php
-					dynamic_sidebar( 'header-posts' );
+				if ( (is_home()) && (! is_paged()) ) :
 					?>
-				</header>
-				<?php
+					<header class="page-header">
+						<?php
+						dynamic_sidebar( 'header-posts' );
+						?>
+					</header>
+					<?php
+				endif;
+
+				/* Start the Loop */
+				while ( have_posts() ) :
+					the_post();
+
+					/*
+					 * Include the Post-Type-specific template for the content.
+					 * If you want to override this in a child theme, then include a file
+					 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+					 */
+					get_template_part( 'template-parts/content', get_post_type() );
+
+				endwhile;
+
+				the_posts_navigation( array(
+					'prev_text' => __( '<span class="icon-arrow icon-arrow-left" aria-hidden="true"></span><span class="screen-reader-text">Older Posts</span>' ),
+					'next_text' => __( '<span class="screen-reader-text">Newer Posts</span><span class="icon-arrow" aria-hidden="true"></span>' ),
+				));
+
+			else :
+
+				get_template_part( 'template-parts/content', 'none' );
+
 			endif;
+			?>
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation( array(
-				'prev_text' => __( '<span class="icon-arrow icon-arrow-left" aria-hidden="true"></span><span class="screen-reader-text">Older Posts</span>' ),
-				'next_text' => __( '<span class="screen-reader-text">Newer Posts</span><span class="icon-arrow" aria-hidden="true"></span>' ),
-			));
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
+		</div>
 	</main><!-- .site-main -->
 
 <?php

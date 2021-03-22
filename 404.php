@@ -11,22 +11,24 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<div class="wrap">
 
-		<section class="error-404 not-found">
+			<section class="error-404 not-found">
 
-			<div class="featured-image">
-				<img src="<?php echo get_template_directory_uri() . '/library/404.jpg'; ?>" alt="404 Error" />
-			</div>
+				<div class="featured-image">
+					<img src="<?php echo get_template_directory_uri() . '/library/404.jpg'; ?>" alt="404 Error" />
+				</div>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'This is unfortunate.', 'life' ); ?></h1>
-			</header><!-- .page-header -->
+				<header class="page-header">
+					<h1 class="page-title"><?php esc_html_e( 'This is unfortunate.', 'life' ); ?></h1>
+				</header><!-- .page-header -->
 
-			<div class="page-content">
-				<p><?php esc_html_e( 'The page you are looking for is not in service. You might try using the search box. Additionally you can drop a note and let me know where things went wrong!', 'life' ); ?></p>
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
+				<div class="page-content">
+					<p><?php esc_html_e( 'The page you are looking for is not in service. You might try using the search box. Additionally you can drop a note and let me know where things went wrong!', 'life' ); ?></p>
+				</div><!-- .page-content -->
+			</section><!-- .error-404 -->
 
+		</div>
 	</main><!-- #main -->
 
 <?php

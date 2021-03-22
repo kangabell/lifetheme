@@ -11,60 +11,62 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<div class="wrap">
 
-		<?php if ( have_posts() ) : ?>
+			<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<?php
-				if ( 'life_project' === get_post_type() ) :
-					dynamic_sidebar( 'header-projects' );
-				elseif ( 'life_character' === get_post_type() ) :
-					dynamic_sidebar( 'header-characters' );
-				elseif ( 'pinboard-bookmark' === get_post_type() ) :
-					dynamic_sidebar( 'header-pins' );
-				elseif ( 'life_favorite' === get_post_type() ) :
-					dynamic_sidebar( 'header-favorites' );
-				elseif ( is_tag() ) :
-					single_term_title( '<h1 class="page-title">', '</h1>' );
-				else :
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-				endif;
-				?>
-			</header><!-- .page-header -->
-
-			<div class="grid-container">
-
-				<?php
-				/* Start the Loop */
-				while ( have_posts() ) :
-					the_post();
-
-					if ( is_home() ) :
-						get_template_part( 'template-parts/content' );
-					elseif ( ( 'life_character' === get_post_type() ) || ( 'life_favorite' === get_post_type() ) ) :
-						get_template_part( 'template-parts/thumbnail' );
+				<header class="page-header">
+					<?php
+					if ( 'life_project' === get_post_type() ) :
+						dynamic_sidebar( 'header-projects' );
+					elseif ( 'life_character' === get_post_type() ) :
+						dynamic_sidebar( 'header-characters' );
+					elseif ( 'pinboard-bookmark' === get_post_type() ) :
+						dynamic_sidebar( 'header-pins' );
+					elseif ( 'life_favorite' === get_post_type() ) :
+						dynamic_sidebar( 'header-favorites' );
+					elseif ( is_tag() ) :
+						single_term_title( '<h1 class="page-title">', '</h1>' );
 					else :
-						get_template_part( 'template-parts/card' );
+						the_archive_title( '<h1 class="page-title">', '</h1>' );
 					endif;
+					?>
+				</header><!-- .page-header -->
 
-				endwhile;
-				?>
+				<div class="grid-container">
 
-			</div>
+					<?php
+					/* Start the Loop */
+					while ( have_posts() ) :
+						the_post();
 
-			<?php
-			the_posts_navigation( array(
-				'prev_text' => __( '<span class="icon-arrow icon-arrow-left" aria-hidden="true"></span><span class="screen-reader-text">Older Posts</span>' ),
-				'next_text' => __( '<span class="screen-reader-text" aria-hidden="true">Newer Posts</span><span class="icon-arrow"></span>' ),
-			));
+						if ( is_home() ) :
+							get_template_part( 'template-parts/content' );
+						elseif ( ( 'life_character' === get_post_type() ) || ( 'life_favorite' === get_post_type() ) ) :
+							get_template_part( 'template-parts/thumbnail' );
+						else :
+							get_template_part( 'template-parts/card' );
+						endif;
 
-		else :
+					endwhile;
+					?>
 
-			get_template_part( 'template-parts/content', 'none' );
+				</div>
 
-		endif;
-		?>
+				<?php
+				the_posts_navigation( array(
+					'prev_text' => __( '<span class="icon-arrow icon-arrow-left" aria-hidden="true"></span><span class="screen-reader-text">Older Posts</span>' ),
+					'next_text' => __( '<span class="screen-reader-text" aria-hidden="true">Newer Posts</span><span class="icon-arrow"></span>' ),
+				));
 
+			else :
+
+				get_template_part( 'template-parts/content', 'none' );
+
+			endif;
+			?>
+
+		</div>
 	</main><!-- #main -->
 
 <?php

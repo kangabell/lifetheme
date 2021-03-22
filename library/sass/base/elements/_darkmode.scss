@@ -5,8 +5,10 @@
 		filter: invert(1);
 	}
 
-	// flip images back to normal
-	img {
+	// flip images, embeds, and other media back to normal
+	img,
+	iframe,
+	video {
 		filter: invert(1);
 	}
 }
@@ -14,7 +16,9 @@
 // allow transition to be smooth
 .site-header,
 .site-main,
-img {
+img,
+iframe,
+video {
 	transition: filter 0.125s;
 	will-change: filter;
 }

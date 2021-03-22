@@ -11,43 +11,45 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<div class="wrap">
 
-		<?php if ( have_posts() ) : ?>
+			<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title">
+				<header class="page-header">
+					<h1 class="page-title">
+						<?php
+						the_search_query();
+						?>
+					</h1>
+				</header><!-- .page-header -->
+
+				<div class="grid-container">
 					<?php
-					the_search_query();
+					/* Start the Loop */
+					while ( have_posts() ) :
+
+						the_post();
+
+						get_template_part( 'template-parts/card' );
+
+					endwhile;
 					?>
-				</h1>
-			</header><!-- .page-header -->
+				</div>
 
-			<div class="grid-container">
 				<?php
-				/* Start the Loop */
-				while ( have_posts() ) :
+				the_posts_navigation( array(
+					'prev_text' => __( '<span class="icon-arrow icon-arrow-left"></span><span class="screen-reader-text">Older Posts</span>' ),
+					'next_text' => __( '<span class="screen-reader-text">Newer Posts</span><span class="icon-arrow"></span>' ),
+				));
 
-					the_post();
+			else :
 
-					get_template_part( 'template-parts/card' );
+				get_template_part( 'template-parts/content', 'none' );
 
-				endwhile;
-				?>
-			</div>
+			endif;
+			?>
 
-			<?php
-			the_posts_navigation( array(
-				'prev_text' => __( '<span class="icon-arrow icon-arrow-left"></span><span class="screen-reader-text">Older Posts</span>' ),
-				'next_text' => __( '<span class="screen-reader-text">Newer Posts</span><span class="icon-arrow"></span>' ),
-			));
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
+		</div>
 	</main><!-- #main -->
 
 <?php
