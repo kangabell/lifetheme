@@ -33,13 +33,8 @@
 				</a>
 			</div>
 			<div class="site-info">
-				<?php
-				echo '&copy;' . date('Y') . ' ';
-				bloginfo( 'name' );
-				?>
-				<span class="sep"> / </span>
-				<a href="https://kangabell.co/" target="_blank">Kay Belardinelli</a>
-			</div><!-- .site-info -->
+				<?php echo wp_kses_post( get_theme_mod('life_subfooter') ); ?>
+			</div>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

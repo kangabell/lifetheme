@@ -19,7 +19,7 @@ msgid "Life"
 msgstr ""
 
 #. Description of the theme
-msgid "Custom theme for Chris Glass."
+msgid "Minimalist WordPress theme"
 msgstr ""
 
 #. Author of the theme
