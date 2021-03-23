@@ -41,5 +41,12 @@ img,
 iframe,
 video {
 	transition: filter 0.125s;
+}
+
+// improve performance on large areas
+// (excluding img in particular, which caused a weird bug in Safari)
+body,
+.site-footer,
+.main-nav-container {
 	will-change: filter;
 }
