@@ -61,7 +61,9 @@
 		<?php
 		life_entry_footer();
 
-		$related_posts = get_field('characters_posts');
+		if ( function_exists( 'get_field' ) ) {
+			$related_posts = get_field('characters_posts');
+		}
 
 		if ( $related_posts ) :
 		?>
