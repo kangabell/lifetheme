@@ -36,7 +36,7 @@
 
 @media screen and ($small-down) {
 
-	.back-to-top {
+	.buttons {
 		margin-bottom: 1rem;
 		order: 1;
 	}
@@ -72,6 +72,40 @@
 	}
 }
 
-.back-to-top {
+.buttons {
 	margin-left: auto;
+}
+
+.toggle-mode {
+	background: $mediumdark;
+	border: 0;
+	border-radius: 2em;
+	color: $light;
+	display: inline-flex;
+	margin-right: 1rem;
+	padding: 0.25em 0.25em;
+
+	&:hover,
+	&:focus {
+		box-shadow: none;
+	}
+
+	.icon-sun,
+	.icon-moon {
+		align-items: center;
+		border-radius: 1rem;
+		display: flex;
+		height: 2em;
+		justify-content: center;
+		padding: 0.05em;
+		width: 2em;
+	}
+
+	.icon-sun {
+		background: $dark;
+	}
+
+	.icon-moon {
+		color: $black;
+	}
 }

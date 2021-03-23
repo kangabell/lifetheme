@@ -1,0 +1,52 @@
+.dark {
+	filter: invert(1) hue-rotate(180deg);
+
+	// tweak color on some elements
+	.site-header,
+	.card {
+		background-color: $mediumlight;
+	}
+
+	::selection {
+		background-color: $medium;
+	}
+
+	// flip some elements back to normal
+	.site-footer,
+	.main-nav-container,
+	.toggled .menu-toggle,
+	img,
+	iframe,
+	video {
+		filter: invert(1) hue-rotate(180deg);
+	}
+
+	.toggle-mode .icon-sun {
+		background: transparent;
+		color: $black;
+	}
+
+	.toggle-mode .icon-moon {
+		background: $dark;
+		color: $white;
+	}
+}
+
+// allow transition to be smooth
+body,
+.site-footer,
+.main-nav-container,
+.toggled .menu-toggle,
+img,
+iframe,
+video {
+	transition: filter 0.125s;
+}
+
+// improve performance on large areas
+// (excluding img in particular, which caused a weird bug in Safari)
+body,
+.site-footer,
+.main-nav-container {
+	will-change: filter;
+}
