@@ -34,7 +34,12 @@
 
 // allow transition to be smooth
 body,
-img {
+.site-footer,
+.main-nav-container,
+.toggled .menu-toggle,
+img,
+iframe,
+video {
 	transition: filter 0.125s;
 	will-change: filter;
 }
