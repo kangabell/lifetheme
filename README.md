@@ -1,6 +1,6 @@
 Life Theme
 ===
 
-Custom WordPress theme by Kay Belardinelli for Chris Glass.
+Minimalist WordPress theme by Kay Belardinelli.
 
 ![Website Branding](screenshot.png)
