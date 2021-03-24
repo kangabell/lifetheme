@@ -9,35 +9,22 @@
 	}
 }
 
-.comment-navigation,
-.post-navigation {
-
-	.nav-previous {
-		flex: 1 0 50%;
-	}
-
-	.nav-next {
-		text-align: end;
-		flex: 1 0 50%;
-	}
+.nav-previous,
+.nav-next {
+	flex: 1 0 50%;
+	display: flex;
+	align-content: center;
 }
 
-.posts-navigation {
-
-	.nav-links {
-		justify-content: flex-end;
-	}
-
-	.nav-next {
-		margin-left: 1rem;
-	}
+.nav-next {
+	justify-content: end;
 }
 
 .nav-title {
 	border-bottom: 2px solid transparent;
 	font-family: $font__alt;
 	margin: 0 0.5rem;
-	padding-top: 0.025em;
+	padding-top: 0.25em;
 	transition: all 0.125s;
 
 	a &:hover,
