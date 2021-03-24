@@ -9,10 +9,10 @@ $icomoon-font-path: "../icons" !default;
 $icon-arrow-down: "\2b07";
 $icon-arrow-left: "\2b05";
 $icon-arrow-up: "\2b08";
-$icon-double-down-arrow: "\2913";
-$icon-double-left-arrow: "\2906";
-$icon-double-right-arrow: "\2907";
-$icon-double-up-arrow: "\290a";
+$icon-arrow-down-double: "\2913";
+$icon-arrow-left-double: "\2906";
+$icon-arrow-right-double: "\2907";
+$icon-arrow-up-double: "\290a";
 $icon-home: "\2302";
 $icon-person: "\2364";
 $icon-project: "\2318";
@@ -104,32 +104,31 @@ $icon-triangle: "\25b4";
   }
 }
 
-.icon-double-down-arrow,
-.menu-icon.double-down-arrow a {
+.icon-arrow-down-double,
+.menu-icon.arrow-down-double a {
   &:before {
-    content: $icon-double-down-arrow; 
+    content: $icon-arrow-down-double;
   }
 }
 
-.icon-double-left-arrow,
-.menu-icon.double-left-arrow a {
+.icon-arrow-left-double,
+.menu-icon.arrow-left-double a {
   &:before {
-    content: $icon-double-left-arrow; 
+    content: $icon-arrow-left-double;
   }
 }
 
-.icon-double-right-arrow,
-.menu-icon.double-right-arrow a {
+.icon-arrow-right-double,
+.menu-icon.arrow-right-double a {
   &:before {
-    content: $icon-double-right-arrow; 
+    content: $icon-arrow-right-double;
   }
 }
 
-.icon-double-up-arrow,
-.meni-icon.double-up-arrow
- {
+.icon-arrow-up-double,
+.menu-icon.arrow-up-double a {
   &:before {
-    content: $icon-double-up-arrow; 
+    content: $icon-arrow-up-double;
   }
 }
 
@@ -292,13 +291,24 @@ a .icon-arrow {
 
 a:hover .icon-arrow,
 a:focus .icon-arrow {
-  transform: translateX(0.25rem);
 
-  &-left {
-    transform: translateX(-0.25rem) rotate(180deg);
+  &-up,
+  &-up-double {
+    transform: translateY(-0.25rem);
   }
 
-  &-up {
-    transform: translateY(-0.25rem) rotate(-90deg);
+  &-right,
+  &-right-double {
+    transform: translateX(0.25rem);
+  }
+
+  &-down,
+  &-down-double {
+    transform: translateY(0.25rem);
+  }
+
+  &-left,
+  &-left-double {
+    transform: translateX(-0.25rem);
   }
 }

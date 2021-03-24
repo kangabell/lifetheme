@@ -39,7 +39,7 @@ get_header();
 				endif;
 				wp_reset_query();
 
-				echo '<nav class="navigation archive-link"><a href="' . get_post_type_archive_link( 'post' ) . '"><span class="nav-title">' . esc_html__( 'View Posts', 'life' ) . '</span> <span class="icon-arrow" aria-hidden="true"></span></a></nav>';
+				echo '<nav class="navigation archive-link"><a href="' . get_post_type_archive_link( 'post' ) . '"><span class="nav-title">' . esc_html__( 'View Posts', 'life' ) . '</span> <span class="icon-arrow icon-arrow-right" aria-hidden="true"></span></a></nav>';
 				?>
 			</div>
 			<div>
@@ -59,7 +59,7 @@ get_header();
 				endif;
 				wp_reset_query();
 
-				echo '<nav class="navigation archive-link"><a href="' . get_post_type_archive_link( 'pinboard-bookmark' ) . '"><span class="nav-title">' . esc_html__( 'View Links', 'life' ) . '</span> <span class="icon-arrow" aria-hidden="true"></span></a></nav>';
+				echo '<nav class="navigation archive-link"><a href="' . get_post_type_archive_link( 'pinboard-bookmark' ) . '"><span class="nav-title">' . esc_html__( 'View Links', 'life' ) . '</span> <span class="icon-arrow icon-arrow-right" aria-hidden="true"></span></a></nav>';
 				?>
 			</div>
 			<div>
@@ -79,7 +79,7 @@ get_header();
 				endif;
 				wp_reset_query();
 
-				echo '<nav class="navigation archive-link"><a href="' . get_post_type_archive_link( 'life_favorite' ) . '"><span class="nav-title">' . esc_html__( 'View Favorites', 'life' ) . '</span> <span class="icon-arrow" aria-hidden="true"></span></a></nav>';
+				echo '<nav class="navigation archive-link"><a href="' . get_post_type_archive_link( 'life_favorite' ) . '"><span class="nav-title">' . esc_html__( 'View Favorites', 'life' ) . '</span> <span class="icon-arrow icon-arrow-right" aria-hidden="true"></span></a></nav>';
 				?>
 			</div>
 		</div> <!-- .latest-content -->
