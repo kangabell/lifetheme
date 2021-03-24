@@ -6,23 +6,35 @@
 $icomoon-font-family: "lifetheme-icons" !default;
 $icomoon-font-path: "../icons" !default;
 
-$icon-arrow: "\2794";
+$icon-arrow-down: "\2b07";
+$icon-arrow-left: "\2b05";
+$icon-arrow-up: "\2b08";
+$icon-double-down-arrow: "\2913";
+$icon-double-left-arrow: "\2906";
+$icon-double-right-arrow: "\2907";
+$icon-double-up-arrow: "\290a";
+$icon-home: "\2302";
+$icon-person: "\2364";
+$icon-project: "\2318";
+$icon-circle: "\25ef";
+$icon-exit: "\2794";
+$icon-globe: "\1f311";
+$icon-arrow-right: "\25b7";
+$icon-new-window: "\25f1";
 $icon-bookmark: "\273b";
 $icon-camera: "\26ad";
-$icon-clock: "\2609";
-$icon-close: "\e903";
+$icon-clock: "\23f2";
 $icon-heart: "\2661";
-$icon-home: "\2610";
+$icon-circle-arrow-up: "\25b2";
 $icon-info: "\260a";
-$icon-menu: "\2630";
 $icon-moon: "\1f319";
-$icon-music: "\266b";
+$icon-music: "\266c";
 $icon-rss: "\2726";
-$icon-search: "\e90b";
-$icon-star: "\2605";
+$icon-search: "\1f50e";
+$icon-star: "\2729";
 $icon-sun: "\1f31e";
 $icon-talk: "\260f";
-$icon-triangle: "\25b3";
+$icon-triangle: "\25b4";
 
 @mixin icon-style() {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -63,20 +75,62 @@ $icon-triangle: "\25b3";
   vertical-align: -0.05em;
 }
 
-.icon-arrow,
-.menu-icon.arrow a {
+.icon-arrow-right,
+.menu-icon.arrow-right a {
   display: inline-block;
   &:before {
-    content: $icon-arrow; 
+    content: $icon-arrow-right; 
   }
 }
 
-.icon-arrow-left {
-  transform: rotate(180deg);
+.icon-arrow-down,
+.menu-icon.arrow-down a {
+  &:before {
+    content: $icon-arrow-down; 
+  }
 }
 
-.icon-arrow-up {
-  transform: rotate(-90deg);
+.icon-arrow-left,
+.menu-icon.arrow-left a {
+  &:before {
+    content: $icon-arrow-left; 
+  }
+}
+
+.icon-arrow-up,
+.menu-icon.arrow-up a {
+  &:before {
+    content: $icon-arrow-up; 
+  }
+}
+
+.icon-double-down-arrow,
+.menu-icon.double-down-arrow a {
+  &:before {
+    content: $icon-double-down-arrow; 
+  }
+}
+
+.icon-double-left-arrow,
+.menu-icon.double-left-arrow a {
+  &:before {
+    content: $icon-double-left-arrow; 
+  }
+}
+
+.icon-double-right-arrow,
+.menu-icon.double-right-arrow a {
+  &:before {
+    content: $icon-double-right-arrow; 
+  }
+}
+
+.icon-double-up-arrow,
+.meni-icon.double-up-arrow
+ {
+  &:before {
+    content: $icon-double-up-arrow; 
+  }
 }
 
 .icon-bookmark,
@@ -85,94 +139,144 @@ $icon-triangle: "\25b3";
     content: $icon-bookmark; 
   }
 }
+
 .icon-camera,
 .menu-icon.camera a {
   &:before {
     content: $icon-camera; 
   }
 }
+
 .icon-clock,
 .menu-icon.clock a {
   &:before {
     content: $icon-clock; 
   }
 }
-.icon-close,
-.menu-icon.close a {
-  &:before {
-    content: $icon-close; 
-  }
-}
+
 .icon-heart,
 .menu-icon.heart a {
   &:before {
     content: $icon-heart; 
   }
 }
+
 .icon-home,
 .menu-icon.home a {
   &:before {
     content: $icon-home; 
   }
 }
+
+.icon-person,
+.menu-icon.person a {
+  &:before {
+    content: $icon-person; 
+  }
+}
+
+.icon-project,
+.menu-icon.project a {
+  &:before {
+    content: $icon-project; 
+  }
+}
+
+.icon-circle,
+.menu-icon.circle a {
+  &:before {
+    content: $icon-circle; 
+  }
+}
+
+.icon-exit,
+.menu-icon.exit a {
+  &:before {
+    content: $icon-exit; 
+  }
+}
+
 .icon-info,
 .menu-icon.info a {
   &:before {
     content: $icon-info; 
   }
 }
-.icon-menu,
-.menu-icon.menu a {
-  &:before {
-    content: $icon-menu; 
-  }
-}
+
 .icon-moon,
 .menu-icon.moon a {
   &:before {
     content: $icon-moon; 
   }
 }
+
 .icon-music,
 .menu-icon.music a {
   &:before {
     content: $icon-music; 
   }
 }
+
 .icon-rss,
 .menu-icon.rss a {
   &:before {
     content: $icon-rss; 
   }
 }
+
 .icon-search,
 .menu-icon.search a {
   &:before {
     content: $icon-search; 
   }
 }
+
 .icon-star,
 .menu-icon.star a {
   &:before {
     content: $icon-star; 
   }
 }
+
 .icon-sun,
 .menu-icon.sun a {
   &:before {
     content: $icon-sun; 
   }
 }
+
 .icon-talk,
 .menu-icon.talk a {
   &:before {
     content: $icon-talk; 
   }
 }
+
 .icon-triangle,
 .menu-icon.triangle a {
   &:before {
     content: $icon-triangle; 
+  }
+}
+
+.icon-globe,
+.menu-icon.globe a {
+  &:before {
+    content: $icon-globe; 
+  }
+}
+
+.icon-new-window,
+.menu-icon.new-window a {
+  &:before {
+    content: $icon-new-window; 
+  }
+}
+
+.icon-circle-arrow-up,
+.menu-icon.circle-arrow-up a {
+  &:before {
+    content: $icon-circle-arrow-up; 
   }
 }
 
