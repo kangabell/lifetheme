@@ -1,3 +1,13 @@
+.card,
+.thumbnail {
+
+	@each $key, $color in $rainbow {
+		&:nth-of-type(12n + #{$key}) img {
+			background-color:$color;
+		}
+	}
+}
+
 .card {
 	background: $white;
 	border-radius: $radius;

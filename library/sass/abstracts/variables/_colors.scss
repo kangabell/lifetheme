@@ -7,6 +7,22 @@ $light: #f7f7f7;
 $white: #ffffff;
 $yellow: #f9f3b3;
 
+$rainbow : (
+	0: #9E23A5,
+	1: #AF2F5B,
+	2: #C23F23,
+	3: #D65F27,
+	4: #EE8A32,
+	5: #E4B83E,
+	6: #B7B83A,
+	7: #A0B438,
+	8: #6FAC33,
+	9: #4DA698,
+	10: #3E87AD,
+	11: #265ACC,
+	12: #413ACC
+);
+
 $color__background-body: $light;
 $color__background-screen: $mediumlight;
 $color__background-hr: mix($medium, $mediumlight);
