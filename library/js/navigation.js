@@ -126,20 +126,20 @@
 
 jQuery(document).ready( function($) {
 
-	$( 'body' ).toggleClass( localStorage.toggled );
+	$( 'html' ).toggleClass( localStorage.toggled );
 
 	$( '.toggle-mode' ).click( function() {
 
 		if ( localStorage.toggled != 'dark' ) {
-			$( 'body' ).toggleClass( 'dark', true );
+			$( 'html' ).toggleClass( 'dark', true );
 			localStorage.toggled = 'dark';
 		} else {
-			$( 'body' ).toggleClass( 'dark', false );
+			$( 'html' ).toggleClass( 'dark', false );
 			localStorage.toggled = '';
 		}
 	});
 
-	if ( $(' body' ).hasClass( 'dark' ) ) {
+	if ( $(' html' ).hasClass( 'dark' ) ) {
 		$( '.toggle-mode' ).prop( 'aria-checked', true );
 	} else {
 		$( '.toggle-mode' ).prop( 'aria-checked', false );
