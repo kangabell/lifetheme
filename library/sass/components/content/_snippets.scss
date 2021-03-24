@@ -4,6 +4,7 @@
 	box-shadow: 0 0.25rem 1rem rgba($mediumlight, 0.3);
 	display: block;
 	overflow: hidden;
+	position: relative;
 	text-decoration: none;
 
 	.text {
@@ -27,6 +28,18 @@
 
 	.meta {
 		font-size: $typesize__tiny;
+
+		// show an ellipsis if it doesn't fit
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.icon-exit {
+		color: $medium;
+		position: absolute;
+		right: 0.5rem;
+		bottom: 0.5rem;
 	}
 
 	&:hover,

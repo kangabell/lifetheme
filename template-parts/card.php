@@ -41,4 +41,10 @@ endif;
 		endif;
 		?>
 	</div>
+
+	<?php if ( 'pinboard-bookmark' === get_post_type() ) : ?>
+		<span class="icon-exit"></span>
+	<?php
+	endif;
+	?>
 </a>
