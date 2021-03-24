@@ -36,9 +36,10 @@ get_header();
 			</div>
 
 			<?php
+			/* 'Previous' and 'Next' are swapped, to be more intuitive */
 			the_posts_navigation( array(
-				'prev_text' => __( '<span class="icon-arrow icon-arrow-left"></span><span class="nav-title">Previous</span>' ),
-				'next_text' => __( '<span class="nav-title">Next</span><span class="icon-arrow icon-arrow-right"></span>' ),
+				'prev_text' => __( '<span class="nav-title">Next</span><span class="icon-arrow icon-arrow-right" aria-hidden="true"></span>' ),
+				'next_text' => __( '<span class="icon-arrow icon-arrow-left" aria-hidden="true"></span><span class="nav-title">Previous</span>' ),
 			));
 
 		else :

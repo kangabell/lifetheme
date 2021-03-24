@@ -23,10 +23,11 @@ get_header();
 				comments_template();
 			endif;
 
+			/* 'Previous' and 'Next' are swapped, to be more intuitive */
 			the_post_navigation(
 				array(
-					'prev_text' => '<span class="icon-arrow icon-arrow-left" aria-hidden="true"></span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-title">%title</span> <span class="icon-arrow icon-arrow-right" aria-hidden="true"></span>',
+					'prev_text' => '<span class="nav-title">%title</span> <span class="icon-arrow icon-arrow-right" aria-hidden="true"></span>',
+					'next_text' => '<span class="icon-arrow icon-arrow-left" aria-hidden="true"></span> <span class="nav-title">%title</span>',
 				)
 			);
 

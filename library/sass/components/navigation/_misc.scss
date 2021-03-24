@@ -1,3 +1,7 @@
+
+
+// note: the nav links are swapped in order from the WP default
+
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
@@ -6,18 +10,21 @@
 	.nav-links {
 		align-items: center;
 		display: flex;
+		flex-direction: row-reverse;
 	}
 }
 
-.nav-previous,
-.nav-next {
-	flex: 1 0 50%;
-	display: flex;
-	align-content: center;
-}
+.nav {
+	&-previous,
+	&-next {
+		flex: 1 0 50%;
+		display: flex;
+		align-content: center;
+	}
 
-.nav-next {
-	justify-content: end;
+	&-previous {
+		justify-content: end;
+	}
 }
 
 .nav-title {
