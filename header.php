@@ -39,15 +39,19 @@
 			endif;
 			?>
 
-			<nav class="desktop-navigation">
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-2',
-					'menu_id'        => 'desktop-menu',
-					'depth'			  => 1,
-				) );
-				?>
-			</nav>
+			<?php
+			$menu_desktop = wp_nav_menu( array(
+				'theme_location' => 'menu-2',
+				'menu_id'        => 'desktop-menu',
+				'depth'			 => 1,
+				'echo'           => FALSE,
+				'fallback_cb'    => '__return_false'
+			) );
+
+			if ( ! empty ( $menu_desktop ) ) :
+				echo '<nav class="desktop-navigation">' . $menu_desktop . '</nav>';
+			endif;
+			?>
 
 			<div class="desktop-search">
 				<?php
