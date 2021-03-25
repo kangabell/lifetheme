@@ -40,6 +40,12 @@
 			?>
 
 			<?php
+			$post_type = get_post_type();
+			$post_type_name = get_post_type_object( $post_type )->labels->name;
+			if ( ( ! is_page() ) && ( ! is_search() ) && ( ! is_404() ) ) :
+				echo '<p class="breadcrumb"><a href="' . get_post_type_archive_link( $post_type ) . '">' . $post_type_name . '</a></p>';
+			endif;
+
 			$menu_desktop = wp_nav_menu( array(
 				'theme_location' => 'menu-2',
 				'menu_id'        => 'desktop-menu',

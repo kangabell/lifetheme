@@ -33,10 +33,20 @@
 	}
 } // .site-header
 
-.site-title {
+.site-title,
+.breadcrumb {
 	font-size: $typesize__small;
 	letter-spacing: $font__letter-spacing;
 	margin: 0 1.25rem 0 0;
+}
+
+.breadcrumb a {
+	color: lighten($mediumdark, 10);
+
+	&:hover,
+	&:focus {
+		color: $dark;
+	}
 }
 
 
@@ -278,6 +288,8 @@ $icon-padding: 0.75rem;
 
 .desktop-navigation {
 	display: none;
+	border-left: 1px solid $color__background-hr;
+	padding-left: 1rem;
 
 	.menu {
 		display: flex;
