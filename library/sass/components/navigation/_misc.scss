@@ -24,6 +24,10 @@
 
 	&-previous {
 		justify-content: end;
+
+		a {
+			margin-left: auto; // safari
+		}
 	}
 }
 
