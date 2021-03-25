@@ -14,3 +14,23 @@ function life_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'life_pingback_header' );
+
+
+/**
+ * Prepend your WordPress RSS feed content with the featured image
+ */
+function life_rss_feed_img( $content ) {
+
+	global $post;
+
+	if ( is_feed() ) {
+		if ( has_post_thumbnail( $post->ID ) ){
+			$prepend = '<div>' . get_the_post_thumbnail( $post->ID, 'medium', array( 'style' => 'margin-bottom: 1rem;' ) ) . '</div>';
+			$content = $prepend . $content;
+		}
+	}
+
+	return $content;
+
+}
+add_filter('the_content', 'life_rss_feed_img');
