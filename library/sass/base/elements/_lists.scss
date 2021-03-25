@@ -1,6 +1,7 @@
 ul,
 ol {
 	margin: 0;
+	padding-left: 1.125rem;
 
 	@media screen and ($medium-up) {
 
@@ -11,11 +12,15 @@ ol {
 }
 
 ul {
-	list-style: disc;
+	list-style: square;
 }
 
 ol {
 	list-style: decimal;
+}
+
+.entry-content li {
+	margin-bottom: 1rem;
 }
 
 li > ul,
