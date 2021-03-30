@@ -27,17 +27,26 @@
 
 	<header id="masthead" class="site-header">
 		<div class="wrap">
-			<?php
-			if ( is_front_page() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<div class="site-identity">
 				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				if ( is_front_page() ) :
+					?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php
+				else :
+					?>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<?php
+				endif;
+
+				$life_description = get_bloginfo( 'description', 'display' );
+				if ( $life_description || is_customize_preview() ) :
+					?>
+					<p class="site-description"><?php echo $life_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 				<?php
-			endif;
-			?>
+				endif;
+				?>
+			</div> <!-- .site-identity -->
 
 			<?php
 			$post_type = get_post_type();
