@@ -76,3 +76,20 @@ if ( ! function_exists( 'life_header_style' ) ) :
 		<?php
 	}
 endif;
+
+/**
+ * Styles the link text color
+ *
+ * @see life_customize_register().
+ */
+function life_custom_colors() {
+	$link_color = get_option('link_color');
+	?>
+	<style type="text/css">
+		a {
+			color: <?php echo esc_attr( $link_color ); ?>;
+		}
+	</style>
+	<?php
+}
+add_action('wp_head', 'life_custom_colors');

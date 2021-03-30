@@ -52,6 +52,19 @@ function life_customize_register( $wp_customize ) {
 			'type'	   => 'text',
 		)
 	) );
+
+	// add custom link color option
+	$wp_customize->add_setting( 'link_color', array(
+		'default' => '#191919',
+		'type' => 'option',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_hex_color'
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+		'label' => __( 'Link Color', 'life' ),
+		'section' => 'colors',
+		'settings' => 'link_color'
+	)));
 }
 add_action( 'customize_register', 'life_customize_register' );
 
