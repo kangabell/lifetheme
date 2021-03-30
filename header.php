@@ -86,7 +86,7 @@
 						'theme_location'  => 'menu-1',
 						'menu_id'         => 'primary-menu',
 						'container_class' => 'main-menu-container',
-						'depth'			  => 1,
+						'depth'			  => 2,
 					) );
 					?>
 				</div>

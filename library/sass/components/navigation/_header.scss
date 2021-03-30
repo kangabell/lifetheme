@@ -153,6 +153,16 @@
 		z-index: 9;
 	}
 
+	.sub-menu {
+		margin-left: 0;
+		padding-left: 0;
+
+		a {
+			color: $medium;
+			padding-left: 4rem;
+		}
+	}
+
 	@media screen and ($large-up) {
 		margin-left: 1rem;
 	}
