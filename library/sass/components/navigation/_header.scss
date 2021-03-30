@@ -34,11 +34,17 @@
 } // .site-header
 
 .site-title,
-.site-description,
 .breadcrumb {
 	font-size: $typesize__small;
 	letter-spacing: $font__letter-spacing;
 	margin: 0 1.25rem 0 0;
+}
+
+.site-description {
+	font-size: $typesize__tiny;
+	letter-spacing: $font__letter-spacing;
+	margin: 0 1.25rem 0 0;
+	text-transform: uppercase;
 }
 
 .breadcrumb a {
