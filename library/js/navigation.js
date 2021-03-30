@@ -1,9 +1,13 @@
 /**
  * File navigation.js.
- *
- * Handles toggling the navigation menu for small screens and enables TAB key
- * navigation support for dropdown menus.
  */
+
+ /*--------------------------------------------------------------
+ ## Navigation Menu
+ ** Handles toggling the navigation menu for small screens and enables TAB key
+ ** navigation support for dropdown menus.
+ --------------------------------------------------------------*/
+
 ( function() {
 	var html, container, button, menu, links, i, len;
 
@@ -116,30 +120,29 @@
 
 } )();
 
+/*--------------------------------------------------------------
+# Dark Mode toggle
+--------------------------------------------------------------*/
+
 jQuery(document).ready( function($) {
 
-	/**
-	 * Open and close menu items with submenu's
-	 */
+	$( 'html' ).toggleClass( localStorage.toggled );
 
-	// submenu's are hidden on load
-	$('.main-navigation .sub-menu').hide();
+	$( '.toggle-mode' ).click( function() {
 
-	// // submenu opens on click
-	$('.main-navigation .menu-item-has-children').click(function(e) {
-
-		var $el = $('.sub-menu',this);
-
-	// 	// toggle element
-		$el.closest('.menu-item-has-children').toggleClass('open');
-		$el.stop(true, true).slideToggle(125);
-
-		return false;
+		if ( localStorage.toggled != 'dark' ) {
+			$( 'html' ).toggleClass( 'dark', true );
+			localStorage.toggled = 'dark';
+		} else {
+			$( 'html' ).toggleClass( 'dark', false );
+			localStorage.toggled = '';
+		}
 	});
 
-	// // stop events from bubbling from submenu clicks
-	$('.main-navigation .sub-menu > li').click(function(e) {
-		e.stopPropagation();
-	});
+	if ( $(' html' ).hasClass( 'dark' ) ) {
+		$( '.toggle-mode' ).prop( 'aria-checked', true );
+	} else {
+		$( '.toggle-mode' ).prop( 'aria-checked', false );
+	}
 
 } );

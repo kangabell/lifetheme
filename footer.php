@@ -22,18 +22,19 @@
 				) );
 				?>
 			</nav>
-			<a class="back-to-top" href="#page">
-				<span class="icon-arrow icon-arrow-up" aria-hidden="true"></span>
-				<?php esc_html_e( 'Up', 'life' ); ?>
-			</a>
+			<div class="buttons">
+				<button type="button" data-action="aria-switch" aria-label="Toggle Dark Mode" aria-checked="true" role="switch" class="toggle-mode">
+					<span class="icon-sun"></span>
+					<span class="icon-moon"></span>
+				</button>
+				<a class="back-to-top" href="#page">
+					<span class="icon-arrow icon-arrow-up" aria-hidden="true"></span>
+					<?php esc_html_e( 'Up', 'life' ); ?>
+				</a>
+			</div>
 			<div class="site-info">
-				<?php
-				echo '&copy;' . date('Y') . ' ';
-				bloginfo( 'name' );
-				?>
-				<span class="sep"> / </span>
-				<a href="https://kangabell.co/" target="_blank">Kay Belardinelli</a>
-			</div><!-- .site-info -->
+				<?php echo wp_kses_post( get_theme_mod('life_subfooter') ); ?>
+			</div>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

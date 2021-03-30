@@ -1,9 +1,20 @@
+.card,
+.thumbnail {
+
+	@each $key, $color in $rainbow {
+		&:nth-of-type(12n + #{$key}) img {
+			background-color:$color;
+		}
+	}
+}
+
 .card {
 	background: $white;
 	border-radius: $radius;
-	box-shadow: 0.25rem 0.25rem 0.5rem rgba($mediumlight, 0.3);
+	box-shadow: 0 0.25rem 1rem rgba($mediumlight, 0.3);
 	display: block;
 	overflow: hidden;
+	position: relative;
 	text-decoration: none;
 
 	.text {
@@ -21,17 +32,31 @@
 		margin-top: 1em;
 
 		p {
+			font-size: $typesize__small;
 			margin-bottom: 0;
 		}
 	}
 
 	.meta {
 		font-size: $typesize__tiny;
+
+		// show an ellipsis if it doesn't fit
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.icon-exit {
+		color: $medium;
+		position: absolute;
+		right: 0.5rem;
+		bottom: 0.5rem;
 	}
 
 	&:hover,
 	&:focus {
-		box-shadow: 0.25rem 0.25rem 0.5rem rgba($mediumlight, 1);
+		box-shadow: 0 0.25rem 1rem rgba($mediumlight, 1);
+		transform: scale(1.04);
 	}
 }
 

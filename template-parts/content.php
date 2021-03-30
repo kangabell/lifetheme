@@ -33,6 +33,15 @@
 
 	<div class="entry-content">
 		<?php
+
+		if ( function_exists( 'get_field' ) ) {
+			$note_sticky = get_field('note_sticky');
+		}
+
+		if ( $note_sticky ) :
+			echo '<div class="note-sticky">' . $note_sticky . '</div>';
+		endif;
+
 		the_content(
 			sprintf(
 				wp_kses(
@@ -61,7 +70,9 @@
 		<?php
 		life_entry_footer();
 
-		$related_posts = get_field('characters_posts');
+		if ( function_exists( 'get_field' ) ) {
+			$related_posts = get_field('characters_posts');
+		}
 
 		if ( $related_posts ) :
 		?>

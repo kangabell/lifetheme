@@ -39,15 +39,25 @@
 			endif;
 			?>
 
-			<nav class="desktop-navigation">
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-2',
-					'menu_id'        => 'desktop-menu',
-					'depth'			  => 1,
-				) );
-				?>
-			</nav>
+			<?php
+			$post_type = get_post_type();
+			$post_type_name = get_post_type_object( $post_type )->labels->name;
+			if ( ( ! is_page() ) && ( ! is_search() ) && ( ! is_404() ) ) :
+				echo '<p class="breadcrumb"><a href="' . get_post_type_archive_link( $post_type ) . '">' . $post_type_name . '</a></p>';
+			endif;
+
+			$menu_desktop = wp_nav_menu( array(
+				'theme_location' => 'menu-2',
+				'menu_id'        => 'desktop-menu',
+				'depth'			 => 1,
+				'echo'           => FALSE,
+				'fallback_cb'    => '__return_false'
+			) );
+
+			if ( ! empty ( $menu_desktop ) ) :
+				echo '<nav class="desktop-navigation">' . $menu_desktop . '</nav>';
+			endif;
+			?>
 
 			<div class="desktop-search">
 				<?php

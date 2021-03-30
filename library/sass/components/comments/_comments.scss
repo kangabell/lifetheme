@@ -24,7 +24,10 @@
 
 	&-content {
 		font-family: $font__alt;
-		font-size: $typesize__small;
+
+		p {
+			font-size: $typesize__small;
+		}
 
 		a {
 			word-wrap: break-word;

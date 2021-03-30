@@ -38,6 +38,18 @@ if ( ! function_exists( 'life_entry_footer' ) ) :
 
 		if ( 'post' === get_post_type() ) {
 
+			if ( function_exists( 'get_field' ) ) {
+				$artist = get_field('song_artist');
+				$song = get_field('song_link');
+				$song_url = $song['url'];
+				$song_title = $song['title'];
+				$song_target = $song['target'] ? $song['target'] : '_self';
+
+				if ( $song ):
+					echo '<p class="song-link"><span class="label">' . esc_html__( 'Currently Listening', 'life' ) . ' </span><span class="icon-music" aria-hidden="true"></span><span class="content">“<a class="button" href="' . esc_url( $song_url ) . '" target="' . esc_attr( $song_target ) . '">' . esc_html( $song_title ) . '</a>” ' . $artist . '<span></p>';
+				endif;
+			}
+
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list();
 			if ( $tags_list ) {
@@ -45,25 +57,6 @@ if ( ! function_exists( 'life_entry_footer' ) ) :
 				printf( '<span class="tags-links">' . esc_html__( '%1$s', 'life' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 
-			$artist = get_field('song_artist');
-			$song = get_field('song_link');
-			$song_url = $song['url'];
-			$song_title = $song['title'];
-			$song_target = $song['target'] ? $song['target'] : '_self';
-
-			if( $song ):
-				echo '<p class="song-link"><span class="label">' . esc_html__( 'Currently Listening', 'life' ) . ' </span><span class="icon-music" aria-hidden="true"></span><span class="content">“<a class="button" href="' . esc_url( $song_url ) . '" target="' . esc_attr( $song_target ) . '">' . esc_html( $song_title ) . '</a>” ' . $artist . '<span></p>';
-			endif;
-
-		} elseif ( 'life_project' === get_post_type() ) {
-
-			$terms = get_terms( 'life_collection' );
-
-			if ( $terms ) {
-				foreach( $terms as $term ) {
-					echo '<span class="tags-links"><a href="'. get_term_link( $term ) .'">'. $term->name .'</a></span>';
-				}
-			}
 		}
 
 		edit_post_link(

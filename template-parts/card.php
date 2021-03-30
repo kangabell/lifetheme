@@ -21,11 +21,11 @@ endif;
 		<?php
 		the_title( '<h3>', '</h3>' );
 
-		if ( 'life_project' === get_post_type() ) :
+		if ( ('life_project' === get_post_type()) && (! is_singular('life_character')) ) :
 		?>
 			<div class="excerpt"><?php the_excerpt(); ?></div>
 		<?php
-		elseif ( 'pinboard-bookmark' === get_post_type() ) :
+		elseif ( ('pinboard-bookmark' === get_post_type()) && (! is_front_page()) ) :
 
 			$content = get_the_content();
 			$content_clean = preg_replace('#<a.*?>(.*?)</a>#i', '\1', $content);
@@ -41,4 +41,10 @@ endif;
 		endif;
 		?>
 	</div>
+
+	<?php if ( 'pinboard-bookmark' === get_post_type() ) : ?>
+		<span class="icon-exit"></span>
+	<?php
+	endif;
+	?>
 </a>

@@ -43,7 +43,7 @@ $font__alt: Avenir, sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
-$font__line-height-heading: 1;
+$font__line-height-heading: 1.125;
 $font__line-height-pre: 1.6;
 $font__letter-spacing: 0.1em;
 
@@ -61,5 +61,6 @@ $typesize__huge: $typesize__h2;
 $typesize__large: $typesize__h3;
 $typesize__medium: $typesize__h4;
 $typesize__normal: $typesize__h5;
+$typesize__base: $typesize__h6;
 $typesize__small: 0.833rem;
 $typesize__tiny: 0.694rem;

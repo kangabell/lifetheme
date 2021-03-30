@@ -50,6 +50,7 @@ function life_setup() {
 	* @link https://developer.wordpress.org/reference/functions/add_image_size/
 	*/
 	add_image_size( 'medium_square', 570, 570, true );
+	add_image_size( 'small_square', 345, 345, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
@@ -329,6 +330,23 @@ function life_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'life_scripts' );
+
+/**
+ * Add block editor scripts and styles
+ */
+function life_gutenberg_scripts() {
+
+	wp_enqueue_style( 'life-editor-style', get_template_directory_uri() . '/library/css/editor.css' );
+
+	wp_enqueue_script(
+		'life-editor-script',
+		get_template_directory_uri() . '/library/js/editor.js',
+		array( 'wp-blocks', 'wp-dom' ),
+		filemtime( get_template_directory() . '/library/js/editor.js' ),
+		true
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'life_gutenberg_scripts' );
 
 /**
  * Remove block editor css.

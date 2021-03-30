@@ -1,3 +1,7 @@
+
+
+// note: the nav links are swapped in order from the WP default
+
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
@@ -6,30 +10,24 @@
 	.nav-links {
 		align-items: center;
 		display: flex;
+		flex-direction: row-reverse;
 	}
 }
 
-.comment-navigation,
-.post-navigation {
-
-	.nav-previous {
+.nav {
+	&-previous,
+	&-next {
 		flex: 1 0 50%;
+		display: flex;
+		align-content: center;
 	}
 
-	.nav-next {
-		text-align: end;
-		flex: 1 0 50%;
-	}
-}
+	&-previous {
+		justify-content: end;
 
-.posts-navigation {
-
-	.nav-links {
-		justify-content: flex-end;
-	}
-
-	.nav-next {
-		margin-left: 1rem;
+		a {
+			margin-left: auto; // safari
+		}
 	}
 }
 
@@ -37,7 +35,7 @@
 	border-bottom: 2px solid transparent;
 	font-family: $font__alt;
 	margin: 0 0.5rem;
-	padding-top: 0.025em;
+	padding-top: 0.25em;
 	transition: all 0.125s;
 
 	a &:hover,
@@ -50,18 +48,23 @@
 	}
 }
 
+.nav-links a,
+.return-link a,
+.archive-link a {
+	align-items: center;
+	display: inline-flex;
+	letter-spacing: $font__letter-spacing;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
 .nav-links,
 .return-link {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 
 	a {
-		align-items: center;
-		display: inline-flex;
 		font-size: $typesize__small;
-		letter-spacing: $font__letter-spacing;
-		text-decoration: none;
-		text-transform: uppercase;
 	}
 
 	.icon-arrow {
@@ -71,6 +74,11 @@
 
 .post-navigation + .return-link {
 	border-top: 1px solid $color__background-hr;
+}
+
+.archive-link {
+	font-size: $typesize__tiny;
+	margin-top: 1rem;
 }
 
 

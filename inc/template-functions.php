@@ -6,22 +6,6 @@
  */
 
 /**
- * Adds custom classes to the array of body classes.
- *
- * @param array $classes Classes for the body element.
- * @return array
- */
-function life_body_classes( $classes ) {
-	// Adds a class of hfeed to non-singular pages.
-	if ( ! is_singular() ) {
-		$classes[] = 'hfeed';
-	}
-
-	return $classes;
-}
-add_filter( 'body_class', 'life_body_classes' );
-
-/**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
 function life_pingback_header() {
@@ -30,3 +14,23 @@ function life_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'life_pingback_header' );
+
+
+/**
+ * Prepend your WordPress RSS feed content with the featured image
+ */
+function life_rss_feed_img( $content ) {
+
+	global $post;
+
+	if ( is_feed() ) {
+		if ( has_post_thumbnail( $post->ID ) ){
+			$prepend = '<div>' . get_the_post_thumbnail( $post->ID, 'medium', array( 'style' => 'margin-bottom: 1rem;' ) ) . '</div>';
+			$content = $prepend . $content;
+		}
+	}
+
+	return $content;
+
+}
+add_filter('the_content', 'life_rss_feed_img');

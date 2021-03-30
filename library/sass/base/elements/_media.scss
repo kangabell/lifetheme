@@ -5,6 +5,22 @@ object {
 	max-width: 100%;
 }
 
+// responsive embed
+.wp-block-embed__wrapper {
+	overflow: hidden;
+	padding-top: 56.25%;
+	position: relative;
+
+	iframe {
+		border: 0;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}
+
 img {
 	height: auto; // Make sure images are scaled correctly.
 	max-width: 100%; // Adhere to container width.

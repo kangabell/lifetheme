@@ -31,6 +31,27 @@ function life_customize_register( $wp_customize ) {
 			)
 		);
 	}
+
+	// add subfooter section
+	$wp_customize->add_setting(
+		'life_subfooter',
+		array(
+			'default' 			=> 'Copyright 2021',
+			'type'				=> 'theme_mod',
+			'sanitize_callback' => 'wp_kses_post'
+		)
+	);
+	$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'life_subfooter',
+		array(
+			'label'	   => __( 'Subfooter', 'life' ),
+			'settings' => 'life_subfooter',
+			'priority' => 10,
+			'section'  => 'title_tagline',
+			'type'	   => 'text',
+		)
+	) );
 }
 add_action( 'customize_register', 'life_customize_register' );
 
