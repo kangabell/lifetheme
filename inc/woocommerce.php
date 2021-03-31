@@ -51,24 +51,6 @@ function life_woocommerce_active_body_class( $classes ) {
 add_filter( 'body_class', 'life_woocommerce_active_body_class' );
 
 /**
- * Related Products Args.
- *
- * @param array $args related products args.
- * @return array $args related products args.
- */
-function life_woocommerce_related_products_args( $args ) {
-	$defaults = array(
-		'posts_per_page' => 3,
-		'columns'        => 3,
-	);
-
-	$args = wp_parse_args( $defaults, $args );
-
-	return $args;
-}
-add_filter( 'woocommerce_output_related_products_args', 'life_woocommerce_related_products_args' );
-
-/**
  * Remove default WooCommerce wrapper.
  */
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
@@ -191,3 +173,13 @@ if ( ! function_exists( 'life_woocommerce_header_cart' ) ) {
 		<?php
 	}
 }
+
+/**
+ * Remove sidebar.
+ */
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+
+/**
+ * Remove related products output.
+ */
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
