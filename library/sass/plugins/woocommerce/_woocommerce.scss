@@ -1,0 +1,10 @@
+.woocommerce {
+
+	span.onsale {
+		font-family: $font__alt;
+		font-size: $typesize__tiny;
+		letter-spacing: $font__letter-spacing;
+		text-transform: uppercase;
+		z-index: 8;
+	}
+}
