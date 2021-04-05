@@ -40,6 +40,13 @@
 	margin: 0 1.25rem 0 0;
 }
 
+.site-description {
+	font-size: $typesize__tiny;
+	letter-spacing: $font__letter-spacing;
+	margin: 0 1.25rem 0 0;
+	text-transform: uppercase;
+}
+
 .breadcrumb a {
 	color: lighten($mediumdark, 10);
 
@@ -144,6 +151,16 @@
 
 	&.toggled {
 		z-index: 9;
+	}
+
+	.sub-menu {
+		margin-left: 0;
+		padding-left: 0;
+
+		a {
+			color: $medium;
+			padding-left: 4rem;
+		}
 	}
 
 	@media screen and ($large-up) {

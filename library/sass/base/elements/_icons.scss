@@ -66,17 +66,17 @@ $icon-triangle: "\25b4";
 
 [class^="icon-"],
 [class*=" icon-"],
-.menu-icon a::before {
+.menu-icon > a::before {
   @include icon-style;
 }
 
-.menu-icon a:before {
+.menu-icon > a:before {
   margin-right: 0.5em;
   vertical-align: -0.05em;
 }
 
 .icon-arrow-right,
-.menu-icon.arrow-right a {
+.menu-icon.arrow-right > a {
   display: inline-block;
   &:before {
     content: $icon-arrow-right; 
@@ -84,196 +84,196 @@ $icon-triangle: "\25b4";
 }
 
 .icon-arrow-down,
-.menu-icon.arrow-down a {
+.menu-icon.arrow-down > a {
   &:before {
     content: $icon-arrow-down; 
   }
 }
 
 .icon-arrow-left,
-.menu-icon.arrow-left a {
+.menu-icon.arrow-left > a {
   &:before {
     content: $icon-arrow-left; 
   }
 }
 
 .icon-arrow-up,
-.menu-icon.arrow-up a {
+.menu-icon.arrow-up > a {
   &:before {
     content: $icon-arrow-up; 
   }
 }
 
 .icon-arrow-down-double,
-.menu-icon.arrow-down-double a {
+.menu-icon.arrow-down-double > a {
   &:before {
     content: $icon-arrow-down-double;
   }
 }
 
 .icon-arrow-left-double,
-.menu-icon.arrow-left-double a {
+.menu-icon.arrow-left-double > a {
   &:before {
     content: $icon-arrow-left-double;
   }
 }
 
 .icon-arrow-right-double,
-.menu-icon.arrow-right-double a {
+.menu-icon.arrow-right-double > a {
   &:before {
     content: $icon-arrow-right-double;
   }
 }
 
 .icon-arrow-up-double,
-.menu-icon.arrow-up-double a {
+.menu-icon.arrow-up-double > a {
   &:before {
     content: $icon-arrow-up-double;
   }
 }
 
 .icon-bookmark,
-.menu-icon.bookmark a {
+.menu-icon.bookmark > a {
   &:before {
     content: $icon-bookmark; 
   }
 }
 
 .icon-camera,
-.menu-icon.camera a {
+.menu-icon.camera > a {
   &:before {
     content: $icon-camera; 
   }
 }
 
 .icon-clock,
-.menu-icon.clock a {
+.menu-icon.clock > a {
   &:before {
     content: $icon-clock; 
   }
 }
 
 .icon-heart,
-.menu-icon.heart a {
+.menu-icon.heart > a {
   &:before {
     content: $icon-heart; 
   }
 }
 
 .icon-home,
-.menu-icon.home a {
+.menu-icon.home > a {
   &:before {
     content: $icon-home; 
   }
 }
 
 .icon-person,
-.menu-icon.person a {
+.menu-icon.person > a {
   &:before {
     content: $icon-person; 
   }
 }
 
 .icon-project,
-.menu-icon.project a {
+.menu-icon.project > a {
   &:before {
     content: $icon-project; 
   }
 }
 
 .icon-circle,
-.menu-icon.circle a {
+.menu-icon.circle > a {
   &:before {
     content: $icon-circle; 
   }
 }
 
 .icon-exit,
-.menu-icon.exit a {
+.menu-icon.exit > a {
   &:before {
     content: $icon-exit; 
   }
 }
 
 .icon-info,
-.menu-icon.info a {
+.menu-icon.info > a {
   &:before {
     content: $icon-info; 
   }
 }
 
 .icon-moon,
-.menu-icon.moon a {
+.menu-icon.moon > a {
   &:before {
     content: $icon-moon; 
   }
 }
 
 .icon-music,
-.menu-icon.music a {
+.menu-icon.music > a {
   &:before {
     content: $icon-music; 
   }
 }
 
 .icon-rss,
-.menu-icon.rss a {
+.menu-icon.rss > a {
   &:before {
     content: $icon-rss; 
   }
 }
 
 .icon-search,
-.menu-icon.search a {
+.menu-icon.search > a {
   &:before {
     content: $icon-search; 
   }
 }
 
 .icon-star,
-.menu-icon.star a {
+.menu-icon.star > a {
   &:before {
     content: $icon-star; 
   }
 }
 
 .icon-sun,
-.menu-icon.sun a {
+.menu-icon.sun > a {
   &:before {
     content: $icon-sun; 
   }
 }
 
 .icon-talk,
-.menu-icon.talk a {
+.menu-icon.talk > a {
   &:before {
     content: $icon-talk; 
   }
 }
 
 .icon-triangle,
-.menu-icon.triangle a {
+.menu-icon.triangle > a {
   &:before {
     content: $icon-triangle; 
   }
 }
 
 .icon-globe,
-.menu-icon.globe a {
+.menu-icon.globe > a {
   &:before {
     content: $icon-globe; 
   }
 }
 
 .icon-new-window,
-.menu-icon.new-window a {
+.menu-icon.new-window > a {
   &:before {
     content: $icon-new-window; 
   }
 }
 
 .icon-circle-arrow-up,
-.menu-icon.circle-arrow-up a {
+.menu-icon.circle-arrow-up > a {
   &:before {
     content: $icon-circle-arrow-up; 
   }

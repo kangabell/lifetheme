@@ -1,0 +1,40 @@
+.woocommerce {
+
+	span.onsale {
+		font-family: $font__alt;
+		font-size: $typesize__tiny;
+		letter-spacing: $font__letter-spacing;
+		text-transform: uppercase;
+		z-index: 8;
+	}
+
+	a.button {
+		@include button;
+		font-weight: bold;
+		transition: all 0.125s;
+	}
+
+	a.button.alt,
+	button.button.alt {
+		background-color: $mediumdark;
+		font-weight: bold;
+
+		&:hover,
+		&:focus {
+			background-color: $dark
+		}
+	}
+
+	.woocommerce-breadcrumb {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.tabs > li > a {
+		font-family: $font__alt;
+		font-size: $typesize__small;
+		font-weight: normal;
+		letter-spacing: $font__letter-spacing;
+		text-transform: uppercase;
+	}
+} // .woocommerce

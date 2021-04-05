@@ -9,7 +9,7 @@
 
 if ( ! defined( 'LIFE_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'LIFE_VERSION', '1.0' );
+	define( 'LIFE_VERSION', '1.2' );
 }
 
 /**
@@ -75,18 +75,6 @@ function life_setup() {
 			'caption',
 			'style',
 			'script',
-		)
-	);
-
-	// Set up the WordPress core custom background feature.
-	add_theme_support(
-		'custom-background',
-		apply_filters(
-			'life_custom_background_args',
-			array(
-				'default-color' => 'ffffff',
-				'default-image' => '',
-			)
 		)
 	);
 
@@ -393,4 +381,11 @@ require get_template_directory() . '/inc/customizer.php';
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
+}
+
+/**
+ * Load WooCommerce compatibility file.
+ */
+if ( class_exists( 'WooCommerce' ) ) {
+	require get_template_directory() . '/inc/woocommerce.php';
 }
