@@ -6,7 +6,7 @@
 }
 
 // Wrap and center elements
-@mixin wrap($max-width: $size__site-main) {
+@mixin wrap($max-width: $size__site-narrow) {
 
 	@media screen and ($large-up) {
 		margin-left: auto;
@@ -16,7 +16,7 @@
 }
 
 // Full-width element that breaks container
-@mixin full-width($container: $size__site-main, $style: null) {
+@mixin full-width($container: $size__site-narrow, $style: null) {
 
 	margin-left: -1rem;
 	margin-right: -1rem;
