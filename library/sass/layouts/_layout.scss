@@ -10,8 +10,15 @@
 }
 
 .site-main {
-	@include wrap;
+	@include wrap($size__site-main);
 	padding-bottom: 4rem;
+}
+
+.entry-header,
+.entry-content,
+.entry-footer,
+.comments-area {
+	@include wrap;
 }
 
 .wrap,
