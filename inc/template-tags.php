@@ -108,6 +108,42 @@ if ( ! function_exists( 'life_post_thumbnail' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'life_pagination' ) ) :
+	/**
+	 * Custom pagination.
+	 *
+	 * Displays numbered pagination along with previous/next links, with the
+	 * "previous" and "next" swapped from WordPress default to be more intuitive
+	 */
+	function life_pagination( $args = [], $class = 'pagination' ) {
+
+		if ($GLOBALS['wp_query']->max_num_pages <= 1) return;
+
+		$args = wp_parse_args( $args, [
+			'mid_size'           => 3,
+			'prev_next'          => false,
+			'prev_text'          => '<span class="nav-title">Next</span><span class="icon-arrow icon-arrow-right" aria-hidden="true"></span>',
+			'next_text'          => '<span class="icon-arrow icon-arrow-left" aria-hidden="true"></span><span class="nav-title">Previous</span>',
+			'screen_reader_text' => __('Posts Navigation', 'life'),
+		]);
+
+		$links     = paginate_links($args);
+		$next_link = get_previous_posts_link( $args['next_text'] );
+		$prev_link = get_next_posts_link( $args['prev_text'] );
+
+		$template  = apply_filters( 'life_pagination_template', '
+			<nav class="%1$s">
+				<h2 class="screen-reader-text">%2$s</h2>
+				<div class="nav-links">%3$s<div class="pagination-numbers">%4$s</div>%5$s</div>
+			</nav>',
+			$args,
+			$class
+		);
+
+		echo sprintf($template, $class, $args['screen_reader_text'], $next_link, $links, $prev_link);
+	}
+endif;
+
 if ( ! function_exists( 'wp_body_open' ) ) :
 	/**
 	 * Shim for sites older than 5.2.

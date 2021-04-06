@@ -3,7 +3,6 @@
 // note: the nav links are swapped in order from the WP default
 
 .comment-navigation,
-.posts-navigation,
 .post-navigation {
 	margin: 0 0 1.5em;
 
@@ -11,6 +10,41 @@
 		align-items: center;
 		display: flex;
 		flex-direction: row-reverse;
+	}
+}
+
+.pagination {
+	margin: 0 0 1.5em;
+
+	.nav-links {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&-numbers {
+		display: none;
+
+		@media screen and ($medium-up) {
+			display: inline-flex;
+		}
+	}
+}
+
+.page-numbers {
+	border: 1px solid $black;
+	display: inline-block;
+	font-family: $font__alt;
+	font-size: $typesize__base;
+	text-decoration: none;
+	margin-right: 0.25rem;
+	padding: 0.125em 0.5em 0em;
+
+	&.current,
+	&:hover,
+	&:focus {
+		background-color: $black;
+		color: $white;
 	}
 }
 
@@ -48,7 +82,7 @@
 	}
 }
 
-.nav-links a,
+.nav-links > a,
 .return-link a,
 .archive-link a {
 	align-items: center;
@@ -63,7 +97,7 @@
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 
-	a {
+	> a {
 		font-size: $typesize__small;
 	}
 
