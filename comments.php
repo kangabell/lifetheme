@@ -27,7 +27,7 @@ if ( post_password_required() ) {
 	if ( have_comments() ) :
 		?>
 
-		<h2 class="comments-title"><?php esc_html_e( 'Comments', 'life' ); ?></h2>
+		<h2 class="comments-title heading-alt"><?php esc_html_e( 'Comments', 'life' ); ?></h2>
 
 		<?php the_comments_navigation(); ?>
 
