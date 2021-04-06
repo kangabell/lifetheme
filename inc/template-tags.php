@@ -134,7 +134,7 @@ if ( ! function_exists( 'life_pagination' ) ) :
 		$template  = apply_filters( 'life_pagination_template', '
 			<nav class="%1$s">
 				<h2 class="screen-reader-text">%2$s</h2>
-				<div class="nav-links">%3$s<div class="pagination-numbers">%4$s</div>%5$s</div>
+				<div class="nav-links"><div class="nav-next">%3$s</div><div class="pagination-numbers">%4$s</div><div class="nav-previous">%5$s</div></div>
 			</nav>',
 			$args,
 			$class
