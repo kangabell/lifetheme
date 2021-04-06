@@ -6,6 +6,9 @@
 .site-header {
 	background: $white;
 	font-family: $font__alt;
+	position: -webkit-sticky;
+	position: sticky;
+	top: -1px;
 	z-index: 9;
 
 	.wrap {
@@ -13,23 +16,17 @@
 		display: flex;
 		padding-top: 0.25rem;
 		padding-bottom: 0.25rem;
+
+		@media screen and ($medium-up) {
+			padding-top: 0.5rem;
+			padding-bottom: 0.5rem;
+		}
 	}
 
 	a {
 		letter-spacing: $font__letter-spacing;
 		text-decoration: none;
 		text-transform: uppercase;
-	}
-
-	@media screen and ($medium-up) {
-		position: -webkit-sticky;
-		position: sticky;
-		top: -1px;
-
-		.wrap {	
-			padding-top: 0.5rem;
-			padding-bottom: 0.5rem;
-		}
 	}
 } // .site-header
 
