@@ -148,6 +148,15 @@ function life_widgets_init() {
 		'after_widget'  => '</div>',
 	) );
 	register_sidebar( array(
+		'name'          => esc_html__( 'Bookmarks Header', 'life' ),
+		'id'            => 'header-bookmarks',
+		'description'   => esc_html__( 'Add widgets here.', 'life' ),
+		'before_title'  => '<h1 class="page-title">',
+		'after_title'   => '</h1>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+	) );
+	register_sidebar( array(
 		'name'          => esc_html__( 'Favorites Header', 'life' ),
 		'id'            => 'header-favorites',
 		'description'   => esc_html__( 'Add widgets here.', 'life' ),
@@ -190,7 +199,28 @@ function life_custom_taxonomies() {
 
 	register_taxonomy( 'life_favorite_type', 'life_favorite', array(
 		'labels'        => array(
-			'name'              => _x( 'Types', 'taxonomy general name', 'life' ),
+			'name'              => _x( 'Favorite Types', 'taxonomy general name', 'life' ),
+			'singular_name'     => _x( 'Type', 'taxonomy singular name', 'life' ),
+			'search_items'      => __( 'Search Types', 'life' ),
+			'all_items'         => __( 'All Types', 'life' ),
+			'view_item'         => __( 'View Type', 'life' ),
+			'parent_item'       => __( 'Parent Type', 'life' ),
+			'parent_item_colon' => __( 'Parent Type:', 'life' ),
+			'edit_item'         => __( 'Edit Type', 'life' ),
+			'update_item'       => __( 'Update Type', 'life' ),
+			'add_new_item'      => __( 'Add New Type', 'life' ),
+			'new_item_name'     => __( 'New Type Name', 'life' ),
+			'not_found'         => __( 'No Types Found', 'life' ),
+			'back_to_items'     => __( 'Back to Types', 'life' ),
+			'menu_name'         => __( 'Types', 'life' ),
+		),
+		'hierarchical' => true,
+		'show_in_rest' => true,
+	) );
+
+	register_taxonomy( 'life_bookmark_type', 'life_bookmark', array(
+		'labels'        => array(
+			'name'              => _x( 'Bookmark Types', 'taxonomy general name', 'life' ),
 			'singular_name'     => _x( 'Type', 'taxonomy singular name', 'life' ),
 			'search_items'      => __( 'Search Types', 'life' ),
 			'all_items'         => __( 'All Types', 'life' ),
@@ -295,9 +325,37 @@ function life_custom_post_types() {
 			'public'        => true,
 			'has_archive'   => true,
 			'rewrite'		=> array( 'slug' => 'favorites'),
-			'menu_position' => 5,
+			'menu_position' => 6,
 			'menu_icon'     => 'dashicons-star-filled',
 			'supports'	    => array( 'title', 'editor', 'revisions', 'thumbnail' ),
+			'show_in_rest'  => true,
+		)
+	);
+
+	register_post_type('life_bookmark',
+		array(
+			'labels'        => array(
+				'name'                  => _x( 'Bookmarks', 'Post type general name', 'life' ),
+				'singular_name'         => _x( 'Bookmark', 'Post type singular name', 'life' ),
+				'menu_name'             => _x( 'Bookmarks', 'Admin Menu text', 'life' ),
+				'name_admin_bar'        => _x( 'Bookmark', 'Add New on Toolbar', 'life' ),
+				'add_new'               => __( 'Add New', 'life' ),
+				'add_new_item'          => __( 'Add New Bookmark', 'life' ),
+				'new_item'              => __( 'New Bookmark', 'life' ),
+				'edit_item'             => __( 'Edit Bookmark', 'life' ),
+				'view_item'             => __( 'View Bookmark', 'life' ),
+				'all_items'             => __( 'All Bookmarks', 'life' ),
+				'search_items'          => __( 'Search Bookmarks', 'life' ),
+				'parent_item_colon'     => __( 'Parent Bookmarks:', 'life' ),
+				'not_found'             => __( 'No bookmarks found.', 'life' ),
+				'not_found_in_trash'    => __( 'No bookmarks found in Trash.', 'life' ),
+			),
+			'public'        => true,
+			'has_archive'   => true,
+			'rewrite'		=> array( 'slug' => 'bookmarks'),
+			'menu_position' => 7,
+			'menu_icon'     => 'dashicons-external',
+			'supports'	    => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
 			'show_in_rest'  => true,
 		)
 	);

@@ -21,7 +21,7 @@ endif;
 		<?php
 		the_title( '<h3>', '</h3>' );
 
-		if ( ('life_project' === get_post_type()) && (! is_singular('life_character')) ) :
+		if ( (('life_project' === get_post_type()) || ('life_bookmark' === get_post_type())) && (! is_singular('life_character')) ) :
 		?>
 			<div class="excerpt"><?php the_excerpt(); ?></div>
 		<?php
@@ -42,7 +42,7 @@ endif;
 		?>
 	</div>
 
-	<?php if ( 'pinboard-bookmark' === get_post_type() ) : ?>
+	<?php if ( 'life_bookmark' === get_post_type() || 'pinboard-bookmark' === get_post_type() ) : ?>
 		<span class="icon-exit"></span>
 	<?php
 	endif;
