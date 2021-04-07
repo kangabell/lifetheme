@@ -4,3 +4,9 @@ Life Theme
 Minimalist WordPress theme by Kay Belardinelli.
 
 ![Website Branding](screenshot.png)
+
+To take full advantage of this theme, the following plugins are recommended:
+- Advanced Custom Fields
+- Sync Pinboard
+
+There is a json file included here containing the custom field data needed to import into the site.
