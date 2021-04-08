@@ -35,7 +35,8 @@
 }
 
 .page-numbers {
-	border: 1px solid $black;
+	border: 1px solid $dark;
+	border-radius: $radius;
 	display: inline-block;
 	font-family: $font__alt;
 	font-size: $typesize__base;
@@ -47,7 +48,7 @@
 	&.current,
 	&:hover,
 	&:focus {
-		background-color: $black;
+		background-color: $dark;
 		color: $white;
 	}
 }
