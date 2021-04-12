@@ -32,9 +32,9 @@
 					<?php esc_html_e( 'Up', 'life' ); ?>
 				</a>
 			</div>
-			<div class="site-info">
-				<?php echo wp_kses_post( get_theme_mod('life_subfooter') ); ?>
-			</div>
+		</div>
+		<div class="site-info">
+			<?php echo wp_kses_post( get_theme_mod('life_subfooter') ); ?>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

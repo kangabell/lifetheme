@@ -10,22 +10,20 @@
 }
 
 .site-main {
-	@include wrap;
+	@include wrap($size__site-main);
 	padding-bottom: 4rem;
 }
 
 .entry-header,
-.comments-area,
+.entry-content,
 .entry-footer,
-.latest-content,
-.secondary-content {
-	@include wrap($size__site-narrow);
-	margin-left: auto;
-	margin-right: auto;
+.comments-area {
+	@include wrap;
 }
 
-.wrap {
-	@include wrap;
+.wrap,
+.site-info {
+	@include wrap($size__site-main);
 	padding-left: 1rem;
 	padding-right: 1rem;
 }
@@ -38,29 +36,18 @@ html {
 	overflow-x: hidden;
 }
 
+// compensate for <body> having position: relative
+#wpadminbar {
+	transform: translateY(-100%);
+}
+
 
 /*--------------------------------------------------------------
 ## Body Copy
 --------------------------------------------------------------*/
 
-.entry-content {
-	p,
-	ul,
-	ol,
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	[class^='wp-block'],
-	.more-link {
-		@include wrap($size__site-narrow);
-	}
-
-	.more-link {
-		display: block;
-	}
+.entry-content .more-link {
+	display: block;
 }
 
 

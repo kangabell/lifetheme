@@ -3,23 +3,61 @@
 // note: the nav links are swapped in order from the WP default
 
 .comment-navigation,
-.posts-navigation,
 .post-navigation {
 	margin: 0 0 1.5em;
 
 	.nav-links {
-		align-items: center;
-		display: flex;
 		flex-direction: row-reverse;
+	}
+}
+
+.nav-links {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+
+	> * {
+		flex: 1;
+	}
+}
+
+.pagination {
+	margin: 0 0 1.5em;
+
+	&-numbers {
+		display: none;
+
+		@media screen and ($medium-up) {
+			display: flex;
+			justify-content: center;
+		}
+	}
+}
+
+.page-numbers {
+	border: 1px solid $dark;
+	border-radius: $radius;
+	display: inline-block;
+	font-family: $font__alt;
+	font-size: $typesize__base;
+	text-decoration: none;
+	margin-right: 0.125rem;
+	margin-left: 0.125rem;
+	padding: 0.125em 0.5em 0em;
+
+	&.current,
+	&:hover,
+	&:focus {
+		background-color: $dark;
+		color: $white;
 	}
 }
 
 .nav {
 	&-previous,
 	&-next {
-		flex: 1 0 50%;
-		display: flex;
 		align-content: center;
+		display: flex;
 	}
 
 	&-previous {
@@ -48,7 +86,8 @@
 	}
 }
 
-.nav-links a,
+.nav-previous a,
+.nav-next a,
 .return-link a,
 .archive-link a {
 	align-items: center;
@@ -58,7 +97,8 @@
 	text-transform: uppercase;
 }
 
-.nav-links,
+.nav-previous,
+.nav-next,
 .return-link {
 	padding-top: 2rem;
 	padding-bottom: 2rem;

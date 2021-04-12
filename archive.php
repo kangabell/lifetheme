@@ -16,19 +16,7 @@ get_header();
 
 			<header class="page-header">
 				<?php
-				if ( 'life_project' === get_post_type() ) :
-					dynamic_sidebar( 'header-projects' );
-				elseif ( 'life_character' === get_post_type() ) :
-					dynamic_sidebar( 'header-characters' );
-				elseif ( 'pinboard-bookmark' === get_post_type() ) :
-					dynamic_sidebar( 'header-pins' );
-				elseif ( 'life_favorite' === get_post_type() ) :
-					dynamic_sidebar( 'header-favorites' );
-				elseif ( is_tag() ) :
-					single_term_title( '<h1 class="page-title">', '</h1>' );
-				else :
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-				endif;
+				life_archive_header();
 				?>
 			</header><!-- .page-header -->
 
@@ -53,11 +41,8 @@ get_header();
 			</div>
 
 			<?php
-			/* 'Previous' and 'Next' are swapped, to be more intuitive */
-			the_posts_navigation( array(
-				'prev_text' => __( '<span class="nav-title">Next</span><span class="icon-arrow icon-arrow-right" aria-hidden="true"></span>' ),
-				'next_text' => __( '<span class="icon-arrow icon-arrow-left" aria-hidden="true"></span><span class="nav-title">Previous</span>' ),
-			));
+
+			life_pagination();
 
 		else :
 
