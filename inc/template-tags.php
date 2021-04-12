@@ -144,6 +144,28 @@ if ( ! function_exists( 'life_pagination' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'life_archive_header' ) ) :
+	/**
+	 * Custom archive headers.
+	 */
+	function life_archive_header() {
+
+		if ( 'life_project' === get_post_type() ) :
+			dynamic_sidebar( 'header-projects' );
+		elseif ( 'life_character' === get_post_type() ) :
+			dynamic_sidebar( 'header-characters' );
+		elseif ( 'pinboard-bookmark' === get_post_type() ) :
+			dynamic_sidebar( 'header-pins' );
+		elseif ( 'life_favorite' === get_post_type() ) :
+			dynamic_sidebar( 'header-favorites' );
+		elseif ( is_tag() ) :
+			single_term_title( '<h1 class="page-title">', '</h1>' );
+		else :
+			the_archive_title( '<h1 class="page-title">', '</h1>' );
+		endif;
+	}
+endif;
+
 if ( ! function_exists( 'wp_body_open' ) ) :
 	/**
 	 * Shim for sites older than 5.2.
