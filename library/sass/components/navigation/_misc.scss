@@ -35,21 +35,14 @@
 }
 
 .page-numbers {
-	border: 1px solid $dark;
-	border-radius: $radius;
-	display: inline-block;
-	font-family: $font__alt;
-	font-size: $typesize__base;
-	text-decoration: none;
+	@include button('tag');
+	margin-bottom: 0;
 	margin-right: 0.125rem;
 	margin-left: 0.125rem;
-	padding: 0.125em 0.5em 0em;
 
-	&.current,
-	&:hover,
-	&:focus {
-		background-color: $dark;
-		color: $white;
+	&.current {
+		background: $white;
+		border-color: transparent;
 	}
 }
 
