@@ -1,5 +1,5 @@
 <?php
-if ( 'pinboard-bookmark' === get_post_type() ) :
+if ( 'life_bookmark' === get_post_type() || 'pinboard-bookmark' === get_post_type() ) :
 	$url = get_post_meta( get_the_ID(), 'url', true );
 else :
 	$url = get_permalink();
