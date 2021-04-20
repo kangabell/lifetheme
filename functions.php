@@ -363,6 +363,11 @@ function life_custom_post_types() {
 add_action('init', 'life_custom_post_types');
 
 /**
+ * Meta box for Bookmark post type.
+ */
+require get_template_directory() . '/inc/bookmarks-meta.php';
+
+/**
  * Enqueue scripts and styles.
  */
 function life_scripts() {
