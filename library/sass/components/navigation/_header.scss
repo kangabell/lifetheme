@@ -334,6 +334,7 @@ $icon-padding: 0.75rem;
 	.date & .menu-item-type-post_type a, // Photos
 	.tax-life_favorite_type & .menu-item-object-life_favorite a, // Favorites
 	.tax-pinboard-tag & .menu-item-object-pinboard-bookmark a, // Links
+	.tax-pinboard-tag & .menu-item-object-life_bookmark a, // Bookmarks
 	.tax-life_collection & .menu-item-object-life_project a { // Projects
 		color: $dark;
 	}

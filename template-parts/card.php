@@ -1,12 +1,14 @@
 <?php
-if ( 'life_bookmark' === get_post_type() || 'pinboard-bookmark' === get_post_type() ) :
+if ( 'pinboard-bookmark' === get_post_type() ) :
 	$url = get_post_meta( get_the_ID(), 'url', true );
+elseif ( 'life_bookmark' === get_post_type() ) :
+	$url = get_post_meta( get_the_ID(), 'life_url', true );
 else :
 	$url = get_permalink();
 endif;
 ?>
 
-<a class="card" href="<?php echo $url; ?>" <?php if ( 'pinboard-bookmark' === get_post_type() ) { echo 'target="_blank"'; } ?>>
+<a class="card" href="<?php echo $url; ?>" <?php if ( ('pinboard-bookmark' === get_post_type()) || ('life_bookmark' === get_post_type()) ) { echo 'target="_blank"'; } ?>>
 	<?php
 	if ( has_post_thumbnail() ) :
 		the_post_thumbnail( 'medium_square' );
@@ -42,7 +44,7 @@ endif;
 		?>
 	</div>
 
-	<?php if ( 'life_bookmark' === get_post_type() || 'pinboard-bookmark' === get_post_type() ) : ?>
+	<?php if ( ('pinboard-bookmark' === get_post_type()) || ('life_bookmark' === get_post_type()) ) : ?>
 		<span class="icon-exit"></span>
 	<?php
 	endif;
