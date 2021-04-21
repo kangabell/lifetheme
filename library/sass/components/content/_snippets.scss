@@ -27,6 +27,7 @@
 	}
 
 	.excerpt {
+		color: $color__text-main; // reset any custom link color
 		font-family: $font__alt;
 		font-size: $typesize__small;
 		margin-top: 1em;
@@ -46,11 +47,17 @@
 		white-space: nowrap;
 	}
 
+	.post-type-archive-pinboard-bookmark & .meta {
+		padding-right: 1.25rem; // compensate for icon
+	}
+
 	.icon-exit {
 		color: $medium;
+		font-size: 0.75em;
+		padding-bottom: 0.225em;
 		position: absolute;
-		right: 0.5rem;
-		bottom: 0.5rem;
+		right: 1rem;
+		bottom: 1rem;
 	}
 
 	&:hover,

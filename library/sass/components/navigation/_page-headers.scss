@@ -20,6 +20,7 @@
 		}
 
 		.widget_text {
+			align-items: baseline;
 			display: flex;
 		}
 
@@ -49,7 +50,7 @@
 	}
 
 	.current-menu-item a {
-		background: white;
+		background: $white;
 		border-color: transparent;
 	}
 
