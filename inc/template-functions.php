@@ -6,6 +6,14 @@
  */
 
 /**
+ * Shorten the length of the excerpt.
+ */
+function life_shorten_excerpt( $length ) {
+	return 18;
+}
+add_filter( 'excerpt_length', 'life_shorten_excerpt', 999 );
+
+/**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
 function life_pingback_header() {
