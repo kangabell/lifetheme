@@ -154,8 +154,8 @@ if ( ! function_exists( 'life_archive_header' ) ) :
 			dynamic_sidebar( 'header-projects' );
 		elseif ( 'life_character' === get_post_type() ) :
 			dynamic_sidebar( 'header-characters' );
-		elseif ( 'pinboard-bookmark' === get_post_type() ) :
-			dynamic_sidebar( 'header-pins' );
+		elseif ( 'life_bookmark' === get_post_type() ) :
+			dynamic_sidebar( 'header-bookmarks' );
 		elseif ( 'life_favorite' === get_post_type() ) :
 			dynamic_sidebar( 'header-favorites' );
 		elseif ( is_tag() ) :
