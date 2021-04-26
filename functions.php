@@ -148,7 +148,7 @@ function life_widgets_init() {
 		'after_widget'  => '</div>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Bookmarks Header', 'life' ),
+		'name'          => esc_html__( 'Links Header', 'life' ),
 		'id'            => 'header-bookmarks',
 		'description'   => esc_html__( 'Add widgets here.', 'life' ),
 		'before_title'  => '<h1 class="page-title">',
@@ -220,7 +220,7 @@ function life_custom_taxonomies() {
 
 	register_taxonomy( 'life_bookmark_type', 'life_bookmark', array(
 		'labels'        => array(
-			'name'              => _x( 'Bookmark Types', 'taxonomy general name', 'life' ),
+			'name'              => _x( 'Link Types', 'taxonomy general name', 'life' ),
 			'singular_name'     => _x( 'Type', 'taxonomy singular name', 'life' ),
 			'search_items'      => __( 'Search Types', 'life' ),
 			'all_items'         => __( 'All Types', 'life' ),
@@ -335,24 +335,24 @@ function life_custom_post_types() {
 	register_post_type('life_bookmark',
 		array(
 			'labels'        => array(
-				'name'                  => _x( 'Bookmarks', 'Post type general name', 'life' ),
-				'singular_name'         => _x( 'Bookmark', 'Post type singular name', 'life' ),
-				'menu_name'             => _x( 'Bookmarks', 'Admin Menu text', 'life' ),
-				'name_admin_bar'        => _x( 'Bookmark', 'Add New on Toolbar', 'life' ),
+				'name'                  => _x( 'Links', 'Post type general name', 'life' ),
+				'singular_name'         => _x( 'Link', 'Post type singular name', 'life' ),
+				'menu_name'             => _x( 'Links', 'Admin Menu text', 'life' ),
+				'name_admin_bar'        => _x( 'Link', 'Add New on Toolbar', 'life' ),
 				'add_new'               => __( 'Add New', 'life' ),
-				'add_new_item'          => __( 'Add New Bookmark', 'life' ),
-				'new_item'              => __( 'New Bookmark', 'life' ),
-				'edit_item'             => __( 'Edit Bookmark', 'life' ),
-				'view_item'             => __( 'View Bookmark', 'life' ),
-				'all_items'             => __( 'All Bookmarks', 'life' ),
-				'search_items'          => __( 'Search Bookmarks', 'life' ),
-				'parent_item_colon'     => __( 'Parent Bookmarks:', 'life' ),
-				'not_found'             => __( 'No bookmarks found.', 'life' ),
-				'not_found_in_trash'    => __( 'No bookmarks found in Trash.', 'life' ),
+				'add_new_item'          => __( 'Add New Link', 'life' ),
+				'new_item'              => __( 'New Link', 'life' ),
+				'edit_item'             => __( 'Edit Link', 'life' ),
+				'view_item'             => __( 'View Link', 'life' ),
+				'all_items'             => __( 'All Links', 'life' ),
+				'search_items'          => __( 'Search Links', 'life' ),
+				'parent_item_colon'     => __( 'Parent Links:', 'life' ),
+				'not_found'             => __( 'No links found.', 'life' ),
+				'not_found_in_trash'    => __( 'No links found in Trash.', 'life' ),
 			),
 			'public'        => true,
 			'has_archive'   => true,
-			'rewrite'		=> array( 'slug' => 'bookmarks'),
+			'rewrite'		=> array( 'slug' => 'links'),
 			'menu_position' => 7,
 			'menu_icon'     => 'dashicons-external',
 			'supports'	    => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
@@ -363,7 +363,7 @@ function life_custom_post_types() {
 add_action('init', 'life_custom_post_types');
 
 /**
- * Meta box for Bookmark post type.
+ * Meta box for Bookmark/Link post type.
  */
 require get_template_directory() . '/inc/bookmarks-meta.php';
 
