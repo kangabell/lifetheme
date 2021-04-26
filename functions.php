@@ -193,6 +193,7 @@ function life_custom_taxonomies() {
 			'back_to_items'     => __( 'Back to Collections', 'life' ),
 			'menu_name'         => __( 'Collections', 'life' ),
 		),
+		'rewrite'		=> array( 'slug' => 'projects/collection'),
 		'hierarchical' => true,
 		'show_in_rest' => true,
 	) );
@@ -214,6 +215,7 @@ function life_custom_taxonomies() {
 			'back_to_items'     => __( 'Back to Types', 'life' ),
 			'menu_name'         => __( 'Types', 'life' ),
 		),
+		'rewrite'		=> array( 'slug' => 'favorites/type'),
 		'hierarchical' => true,
 		'show_in_rest' => true,
 	) );
@@ -235,6 +237,7 @@ function life_custom_taxonomies() {
 			'back_to_items'     => __( 'Back to Types', 'life' ),
 			'menu_name'         => __( 'Types', 'life' ),
 		),
+		'rewrite'		=> array( 'slug' => 'links/type'),
 		'hierarchical' => true,
 		'show_in_rest' => true,
 	) );
