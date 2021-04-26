@@ -102,6 +102,13 @@
                     "operator": "==",
                     "value": "life_project"
                 }
+            ],
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "life_favorite"
+                }
             ]
         ],
         "menu_order": 0,
@@ -166,11 +173,11 @@
         "description": ""
     },
     {
-        "key": "group_605b803ead796",
+        "key": "group_605b8657516e3",
         "title": "Sticky Note",
         "fields": [
             {
-                "key": "field_605b8043575b4",
+                "key": "field_605b8664f307f",
                 "label": "Sticky Note",
                 "name": "note_sticky",
                 "type": "textarea",
@@ -186,7 +193,7 @@
                 "placeholder": "",
                 "maxlength": 300,
                 "rows": "",
-                "new_lines": "wpautop"
+                "new_lines": "br"
             }
         ],
         "location": [
@@ -195,11 +202,6 @@
                     "param": "post_type",
                     "operator": "!=",
                     "value": "page"
-                },
-                {
-                    "param": "post_type",
-                    "operator": "!=",
-                    "value": "pinboard-bookmark"
                 },
                 {
                     "param": "post_type",

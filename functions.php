@@ -139,15 +139,6 @@ function life_widgets_init() {
 		'after_widget'  => '</div>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Pins Header', 'life' ),
-		'id'            => 'header-pins',
-		'description'   => esc_html__( 'Add widgets here.', 'life' ),
-		'before_title'  => '<h1 class="page-title">',
-		'after_title'   => '</h1>',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-	) );
-	register_sidebar( array(
 		'name'          => esc_html__( 'Links Header', 'life' ),
 		'id'            => 'header-bookmarks',
 		'description'   => esc_html__( 'Add widgets here.', 'life' ),
