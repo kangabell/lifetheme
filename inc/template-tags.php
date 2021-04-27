@@ -41,11 +41,11 @@ if ( ! function_exists( 'life_entry_footer' ) ) :
 			if ( function_exists( 'get_field' ) ) {
 				$artist = get_field('song_artist');
 				$song = get_field('song_link');
-				$song_url = $song['url'];
-				$song_title = $song['title'];
-				$song_target = $song['target'] ? $song['target'] : '_self';
 
 				if ( $song ):
+					$song_url = $song['url'];
+					$song_title = $song['title'];
+					$song_target = $song['target'] ? $song['target'] : '_self';
 					echo '<p class="song-link"><span class="label">' . esc_html__( 'Currently Listening', 'life' ) . ' </span><span class="icon-music" aria-hidden="true"></span><span class="content">“<a class="button" href="' . esc_url( $song_url ) . '" target="' . esc_attr( $song_target ) . '">' . esc_html( $song_title ) . '</a>” ' . $artist . '<span></p>';
 				endif;
 			}
