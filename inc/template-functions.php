@@ -9,7 +9,7 @@
  * Shorten the length of the excerpt.
  */
 function life_shorten_excerpt( $length ) {
-	return 18;
+	return 36;
 }
 add_filter( 'excerpt_length', 'life_shorten_excerpt', 999 );
 

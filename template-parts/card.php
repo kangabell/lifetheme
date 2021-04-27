@@ -21,7 +21,7 @@ endif;
 		<?php
 		the_title( '<h3>', '</h3>' );
 
-		if ( (('life_project' === get_post_type()) || ('life_bookmark' === get_post_type())) && (! is_singular('life_character')) ) :
+		if ( (('life_project' === get_post_type()) || ('life_bookmark' === get_post_type())) && (! is_singular('life_character')) && (! is_front_page()) ) :
 		?>
 			<div class="excerpt"><?php the_excerpt(); ?></div>
 		<?php
