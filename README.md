@@ -64,6 +64,9 @@ Menus
 *   Primary: Drawer/”Hamburger” navigation. Allows up to two levels of depth.
 *   Secondary: Horizontal, desktop only (optional)
 *   Footer (optional)
+*   Projects Submenu (optional): Add links to your Collections here. Works as a filter.
+*   Links Submenu (optional): Add links to your Link Types here. Works as a filter.
+*   Favorites Submenu (optional): Add links to your Favorite Types here. Works as a filter.
 
 ### Adding Website Sections
 
