@@ -58,6 +58,9 @@ function life_setup() {
 			'menu-1' => esc_html__( 'Primary', 'life' ),
 			'menu-2' => esc_html__( 'Secondary', 'life' ),
 			'menu-3' => esc_html__( 'Footer', 'life' ),
+			'menu-projects' => esc_html__( 'Projects Submenu', 'life' ),
+			'menu-bookmarks' => esc_html__( 'Links Submenu', 'life' ),
+			'menu-favorites' => esc_html__( 'Favorites Submenu', 'life' ),
 		)
 	);
 

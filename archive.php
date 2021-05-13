@@ -17,6 +17,7 @@ get_header();
 			<header class="page-header">
 				<?php
 				life_archive_header();
+				life_archive_submenu();
 				?>
 			</header><!-- .page-header -->
 

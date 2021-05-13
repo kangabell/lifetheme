@@ -166,6 +166,34 @@ if ( ! function_exists( 'life_archive_header' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'life_archive_submenu' ) ) :
+	/**
+	 * Archive submenus.
+	 */
+	function life_archive_submenu() {
+
+		if ( 'life_project' === get_post_type() ) :
+			wp_nav_menu( array(
+				'theme_location' => 'menu-projects',
+				'menu_id'        => 'projects-menu',
+				'depth'			 => 1,
+			) );
+		elseif ( 'life_bookmark' === get_post_type() ) :
+			wp_nav_menu( array(
+				'theme_location' => 'menu-bookmarks',
+				'menu_id'        => 'bookmarks-menu',
+				'depth'			 => 1,
+			) );
+		elseif ( 'life_favorite' === get_post_type() ) :
+			wp_nav_menu( array(
+				'theme_location' => 'menu-favorites',
+				'menu_id'        => 'favorites-menu',
+				'depth'			 => 1,
+			) );
+		endif;
+	}
+endif;
+
 if ( ! function_exists( 'wp_body_open' ) ) :
 	/**
 	 * Shim for sites older than 5.2.
