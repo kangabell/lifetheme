@@ -25,14 +25,14 @@ add_action( 'wp_head', 'life_pingback_header' );
 
 
 /**
- * Prepend your WordPress RSS feed content with the featured image
+ * Prepend WordPress RSS feed content with the featured image
  */
 function life_rss_feed_img( $content ) {
 
 	global $post;
 
 	if ( is_feed() ) {
-		if ( has_post_thumbnail( $post->ID ) ){
+		if ( has_post_thumbnail( $post->ID ) ) {
 			$prepend = '<div>' . get_the_post_thumbnail( $post->ID, 'medium', array( 'style' => 'margin-bottom: 1rem;' ) ) . '</div>';
 			$content = $prepend . $content;
 		}
@@ -42,3 +42,14 @@ function life_rss_feed_img( $content ) {
 
 }
 add_filter('the_content', 'life_rss_feed_img');
+
+
+/**
+ * Bookmarks/Links in RSS feed link directly to the referenced URL
+ */
+function life_rss_bookmark_url() {
+	if ( 'life_bookmark' === get_post_type() ) {
+		return get_post_meta( get_the_ID(), 'life_url', true );
+	}
+};
+add_filter('the_permalink_rss', 'life_rss_bookmark_url');
