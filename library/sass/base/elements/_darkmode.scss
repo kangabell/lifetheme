@@ -1,4 +1,4 @@
-.dark {
+@mixin darkMode() {
 	filter: invert(1) hue-rotate(180deg);
 
 	// tweak color on some elements
@@ -30,6 +30,10 @@
 		background: $dark;
 		color: $white;
 	}
+}
+
+.dark {
+	@include darkMode;
 }
 
 // allow transition to be smooth
