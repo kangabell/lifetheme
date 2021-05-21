@@ -132,10 +132,12 @@ jQuery(document).ready( function($) {
 
 		if ( localStorage.toggled != 'dark' ) {
 			$( 'html' ).toggleClass( 'dark', true );
+			$( 'html' ).toggleClass( 'light', false );
 			localStorage.toggled = 'dark';
 		} else {
 			$( 'html' ).toggleClass( 'dark', false );
-			localStorage.toggled = '';
+			$( 'html' ).toggleClass( 'light', true );
+			localStorage.toggled = 'light';
 		}
 	});
 

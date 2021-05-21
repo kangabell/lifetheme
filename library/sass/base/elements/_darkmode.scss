@@ -32,8 +32,17 @@
 	}
 }
 
+// if switcher has added .dark, do Dark Mode
 .dark {
 	@include darkMode;
+}
+
+// if system preference is dark, and switcher hasn't specified .light, do Dark Mode
+@media (prefers-color-scheme: dark) {
+
+	html:not(.light) {
+		@include darkMode;
+	}
 }
 
 // allow transition to be smooth
