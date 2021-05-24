@@ -121,7 +121,7 @@
 } )();
 
 /*--------------------------------------------------------------
-# Dark Mode toggle
+# Dark Mode detection & toggle
 --------------------------------------------------------------*/
 
 jQuery(document).ready( function($) {
@@ -134,14 +134,24 @@ jQuery(document).ready( function($) {
 		$( 'html' ).toggleClass( 'dark', true );
 		$( 'html' ).toggleClass( 'light', false );
 		localStorage.toggled = 'dark';
+		$( '.toggle-mode' ).attr( 'aria-checked', true );
 	}
 
 	function lightMode() {
 		$( 'html' ).toggleClass( 'dark', false );
 		$( 'html' ).toggleClass( 'light', true );
 		localStorage.toggled = 'light';
+		$( '.toggle-mode' ).attr( 'aria-checked', false );
 	}
 
+	// if dark mode system pref is detected, and localStorage preference isn't set to "light",
+	// mark the toggle as checked on load
+	if ( prefersDarkScheme.matches && localStorage.toggled != 'light' ) {
+		$( '.toggle-mode' ).attr( 'aria-checked', true );
+		console.log("prefersDarkScheme.matches && localStorage.toggled != 'light'");
+	}
+
+	// switch to the opposite mode with the toggle is clicked
 	$( '.toggle-mode' ).click( function() {
 
 		if ( !prefersDarkScheme.matches && localStorage.toggled != 'dark' ) {
@@ -155,14 +165,5 @@ jQuery(document).ready( function($) {
 			darkMode();
 		}
 	});
-
-	if ( ( $(' html' ).hasClass( 'dark' ) ) || ( prefersDarkScheme.matches ) ) {
-		$( '.toggle-mode' ).prop( 'aria-checked', true );
-	} else {
-		$( '.toggle-mode' ).prop( 'aria-checked', false );
-	}
-
-	console.log( 'localstorage.toggled: ' + localStorage.toggled);
-	console.log( 'prefersDarkScheme?: ' + prefersDarkScheme.matches);
 
 } );

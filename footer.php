@@ -23,7 +23,7 @@
 				?>
 			</nav>
 			<div class="buttons">
-				<button type="button" data-action="aria-switch" aria-label="Toggle Dark Mode" aria-checked="true" role="switch" class="toggle-mode">
+				<button type="button" data-action="aria-switch" aria-label="Toggle Dark Mode" aria-checked="false" role="switch" class="toggle-mode">
 					<span class="icon-sun"></span>
 					<span class="icon-moon"></span>
 				</button>
