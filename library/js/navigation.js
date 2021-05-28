@@ -121,28 +121,49 @@
 } )();
 
 /*--------------------------------------------------------------
-# Dark Mode toggle
+# Dark Mode detection & toggle
 --------------------------------------------------------------*/
 
 jQuery(document).ready( function($) {
 
 	$( 'html' ).toggleClass( localStorage.toggled );
 
+	const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+	function darkMode() {
+		$( 'html' ).toggleClass( 'dark', true );
+		$( 'html' ).toggleClass( 'light', false );
+		localStorage.toggled = 'dark';
+		$( '.toggle-mode' ).attr( 'aria-checked', true );
+	}
+
+	function lightMode() {
+		$( 'html' ).toggleClass( 'dark', false );
+		$( 'html' ).toggleClass( 'light', true );
+		localStorage.toggled = 'light';
+		$( '.toggle-mode' ).attr( 'aria-checked', false );
+	}
+
+	// if dark mode system pref is detected, and localStorage preference isn't set to "light",
+	// mark the toggle as checked on load
+	if ( prefersDarkScheme.matches && localStorage.toggled != 'light' ) {
+		$( '.toggle-mode' ).attr( 'aria-checked', true );
+		console.log("prefersDarkScheme.matches && localStorage.toggled != 'light'");
+	}
+
+	// switch to the opposite mode with the toggle is clicked
 	$( '.toggle-mode' ).click( function() {
 
-		if ( localStorage.toggled != 'dark' ) {
-			$( 'html' ).toggleClass( 'dark', true );
-			localStorage.toggled = 'dark';
+		if ( !prefersDarkScheme.matches && localStorage.toggled != 'dark' ) {
+			darkMode();
+		}
+		else if ( prefersDarkScheme.matches && localStorage.toggled != 'light' ) {
+			lightMode();
+		} else if ( !prefersDarkScheme.matches && localStorage.toggled == 'dark' ) {
+			lightMode();
 		} else {
-			$( 'html' ).toggleClass( 'dark', false );
-			localStorage.toggled = '';
+			darkMode();
 		}
 	});
-
-	if ( $(' html' ).hasClass( 'dark' ) ) {
-		$( '.toggle-mode' ).prop( 'aria-checked', true );
-	} else {
-		$( '.toggle-mode' ).prop( 'aria-checked', false );
-	}
 
 } );
