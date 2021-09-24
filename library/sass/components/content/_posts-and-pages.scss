@@ -7,6 +7,7 @@
 .featured-image {
 	@include full-width;
 	@extend %square-ish;
+	display: block; // for ones that are <a>
 }
 
 .entry-header {
@@ -17,12 +18,7 @@
 		margin-bottom: 4rem;
 		margin-top: 4rem;
 	}
-	.featured-image {
-		@include full-width;
-		@extend %square-ish;
-	}
 }
-
 
 
 /*--------------------------------------------------------------

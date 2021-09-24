@@ -99,7 +99,7 @@ if ( ! function_exists( 'life_post_thumbnail' ) ) :
 
 		<?php else : ?>
 
-			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+			<a class="featured-image" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php the_post_thumbnail(); ?>
 			</a>
 
