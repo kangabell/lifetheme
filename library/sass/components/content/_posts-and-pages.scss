@@ -4,24 +4,25 @@
 ## Entry Header
 --------------------------------------------------------------*/
 
-.single,
-.page {
+.featured-image {
+	@include full-width;
+	@extend %square-ish;
+}
 
+.entry-header {
+	margin-bottom: 3rem;
+	margin-top: 3rem;
+
+	@media screen and ($large-up) {
+		margin-bottom: 4rem;
+		margin-top: 4rem;
+	}
 	.featured-image {
-		@include full-width($size__site-main);
+		@include full-width;
 		@extend %square-ish;
 	}
-
-	.entry-header {
-		margin-bottom: 3rem;
-		margin-top: 3rem;
-
-		@media screen and ($large-up) {
-			margin-bottom: 4rem;
-			margin-top: 4rem;
-		}
-	}
 }
+
 
 
 /*--------------------------------------------------------------
