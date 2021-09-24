@@ -8,7 +8,7 @@
 .page {
 
 	.featured-image {
-		@include full-width($size__site-main);
+		@include full-width;
 		@extend %square-ish;
 	}
 
