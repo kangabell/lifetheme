@@ -47,7 +47,8 @@
 		white-space: nowrap;
 	}
 
-	.post-type-archive-life_bookmark & .meta {
+	.post-type-archive-life_bookmark & .meta,
+	.life-bookmark & .meta {
 		padding-right: 1.25rem; // compensate for icon
 	}
 

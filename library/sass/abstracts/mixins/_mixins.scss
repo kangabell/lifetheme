@@ -188,7 +188,7 @@
 		grid-gap: 2rem;
 
 		@media screen and ($medium-up) {
-			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-columns: 30% 30% 30%;
 		}
 	} @else {
 		grid-gap: 2rem;
