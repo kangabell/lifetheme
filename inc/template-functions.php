@@ -47,9 +47,11 @@ add_filter('the_content', 'life_rss_feed_img');
 /**
  * Bookmarks/Links in RSS feed link directly to the referenced URL
  */
-function life_rss_bookmark_url() {
+function life_rss_bookmark_url($post_permalink) {
 	if ( 'life_bookmark' === get_post_type() ) {
 		return get_post_meta( get_the_ID(), 'life_url', true );
+	} else {
+		return $post_permalink;
 	}
 };
 add_filter('the_permalink_rss', 'life_rss_bookmark_url');
