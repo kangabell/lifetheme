@@ -18,7 +18,6 @@
 .entry-content,
 .entry-footer,
 .comments-area,
-.latest-content,
 .secondary-content {
 	@include wrap;
 }
@@ -64,8 +63,4 @@ html {
 .post-type-archive-life_character .grid-container,
 .post-type-archive-life_favorite .grid-container {
 	@include grid('mixed');
-}
-
-.latest-content {
-	@include grid('three');
 }
