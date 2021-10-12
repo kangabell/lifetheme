@@ -33,6 +33,12 @@
 	@include full-width;
 }
 
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
 html {
 	overflow-x: hidden;
 }
