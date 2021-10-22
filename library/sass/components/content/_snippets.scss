@@ -54,11 +54,9 @@
 
 	.icon-exit {
 		color: $medium;
-		font-size: 0.75em;
-		padding-bottom: 0.225em;
-		position: absolute;
-		right: 1rem;
-		bottom: 1rem;
+		font-size: 1em;
+		margin-left: 0.5em;
+		vertical-align: -0.05em;
 	}
 
 	&:hover,

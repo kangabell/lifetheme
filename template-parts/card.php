@@ -30,7 +30,7 @@ endif;
 			endif;
 
 			$domain = str_ireplace('www.', '', parse_url($url, PHP_URL_HOST));
-			echo '<p class="meta">' . $domain . '</p>';
+			echo '<p class="meta">' . $domain . '<span class="icon-exit"></span></p>';
 
 		elseif ( ('life_project' === get_post_type()) && (! is_singular('life_character')) && (! is_front_page()) ) :
 		?>
@@ -43,10 +43,4 @@ endif;
 		endif;
 		?>
 	</div>
-
-	<?php if ( 'life_bookmark' === get_post_type() ) : ?>
-		<span class="icon-exit"></span>
-	<?php
-	endif;
-	?>
 </a>
