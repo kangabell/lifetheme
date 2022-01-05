@@ -2,7 +2,7 @@
 @import "abstracts/abstracts";
 
 .editor-styles-wrapper {
-	background-color: $color__background-body;
+	background-color: var(--color__background-body);
 }
 
 .wp-block-group.is-style-memo {

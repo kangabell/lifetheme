@@ -4,7 +4,7 @@
 --------------------------------------------------------------*/
 
 .site-header {
-	background: $white;
+	background: var(--color__background-header);
 	font-family: $font__alt;
 	position: -webkit-sticky;
 	position: sticky;
@@ -45,11 +45,11 @@
 }
 
 .breadcrumb a {
-	color: lighten($mediumdark, 10);
+	color: var(--color__breadcrumb-link);
 
 	&:hover,
 	&:focus {
-		color: $dark;
+		color: var(--color__breadcrumb-link-hover);
 	}
 }
 
@@ -302,7 +302,7 @@ $icon-padding: 0.75rem;
 
 .desktop-navigation {
 	display: none;
-	border-left: 1px solid $color__background-hr;
+	border-left: 1px solid var(--color__background-hr);
 	padding-left: 1rem;
 
 	.menu {
@@ -316,7 +316,7 @@ $icon-padding: 0.75rem;
 	}
 
 	a {
-		color: $mediumdark;
+		color: var(--color__nav-link);
 		display: block;
 		text-decoration: none;
 		font-size: $typesize__small;
@@ -335,7 +335,7 @@ $icon-padding: 0.75rem;
 	.tax-life_favorite_type & .menu-item-object-life_favorite a, // Favorites
 	.tax-life_bookmark_type & .menu-item-object-life_bookmark a, // Bookmarks
 	.tax-life_collection & .menu-item-object-life_project a { // Projects
-		color: $dark;
+		color: var(--color__nav-link-hover);
 	}
 
 	@media screen and ($medium-up) {

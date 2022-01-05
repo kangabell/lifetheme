@@ -27,7 +27,7 @@
 	}
 
 	.excerpt {
-		color: $color__text-main; // reset any custom link color
+		color: var(--color__text-main); // reset any custom link color
 		font-family: $font__alt;
 		font-size: $typesize__small;
 		margin-top: 1em;

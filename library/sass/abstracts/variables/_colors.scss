@@ -24,12 +24,21 @@ $rainbow : (
 	12: #413ACC
 );
 
-$color__background-body: $light;
-$color__background-screen: $mediumlight;
-$color__background-hr: mix($medium, $mediumlight);
-$color__background-button: $light;
-$color__background-pre: $mediumlight;
-$color__background-ins: $light;
+:root {
+	--color__background-body: #{$light};
+	--color__background-header: #{$white};
+	--color__background-screen: #{$mediumlight};
+	--color__background-hr: #{mix($medium, $mediumlight)};
+	--color__background-button: #{$light};
+	--color__background-pre: #{$mediumlight};
+	--color__background-ins: #{$light};
+
+	--color__nav-link: #{$mediumdark};
+	--color__nav-link-hover: #{$dark};
+	--color__breadcrumb-link: #{lighten($mediumdark, 10)};
+	--color__breadcrumb-hover: #{$dark};
+	--color__text-main: #{$dark};
+}
 
 $color__text-screen: #21759b;
 $color__text-input: #666;
@@ -39,7 +48,6 @@ $color__link-hover: $dark;
 $color__link-visited: $mediumdark;
 $color__border-link: $mediumlight;
 $color__border-link-hover: $dark;
-$color__text-main: $dark;
 
 $color__border-button: $mediumlight;
 $color__border-button-hover: transparent;
