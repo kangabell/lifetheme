@@ -16,6 +16,10 @@ a {
 		outline: 0;
 	}
 
+	&:visited {
+		color: $color__link-visited;
+	}
+
 	.entry-content & {
 		font-weight: bold;
 	}
