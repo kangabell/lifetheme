@@ -32,7 +32,7 @@ function life_rss_feed_content( $content ) {
 	global $post;
 
 	$prepend = null;
-	$append = null;
+	$append = '<hr/><p><a href="mailto:csglass@gmail.com?subject=Reply%3A%20' . esc_attr( get_the_title() ) . '">' . esc_html__( 'Reply via email ', 'life' ) . '</a></p>';
 
 	if ( is_feed() ) {
 
@@ -49,7 +49,7 @@ function life_rss_feed_content( $content ) {
 				$song_url = $song['url'];
 				$song_title = $song['title'];
 				$song_target = $song['target'] ? $song['target'] : '_self';
-				$append = '<p class="song-link"><span class="label">' . esc_html__( 'Currently Listening: ', 'life' ) . '“<a class="button" href="' . esc_url( $song_url ) . '" target="' . esc_attr( $song_target ) . '">' . esc_html( $song_title ) . '</a>” ' . $artist . '</p>';
+				$content .= '<p class="song-link"><span class="label">' . esc_html__( 'Currently Listening: ', 'life' ) . '“<a class="button" href="' . esc_url( $song_url ) . '" target="' . esc_attr( $song_target ) . '">' . esc_html( $song_title ) . '</a>” ' . $artist . '</p>';
 			endif;
 		}
 
