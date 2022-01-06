@@ -1,10 +1,6 @@
 p {
 	margin-top: 1em;
 	margin-bottom: 1.5em;
-
-	@media screen and ($medium-up) {
-		font-size: $typesize__normal;
-	}
 }
 
 dfn,
@@ -117,7 +113,7 @@ small,
 .meta {
 	color: $mediumdark;
 	font-family: $font__alt;
-	font-size: $typesize__small;
+	font-size: $typesize__tiny;
 	letter-spacing: $font__letter-spacing;
 	margin-top: 0.5rem;
 	margin-bottom: 0;

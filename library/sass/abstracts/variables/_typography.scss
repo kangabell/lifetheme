@@ -1,45 +1,23 @@
 @font-face {
-	font-family: 'XCharter';
-	src: url('../fonts/xcharter/xcharter-roman-webfont.woff2') format('woff2'),
-		 url('../fonts/xcharter/xcharter-roman-webfont.woff') format('woff');
-	font-weight: normal;
+	font-family: 'Inter var';
 	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('../fonts/inter/Inter-roman.var.woff2?v=3.19') format('woff2');
+	font-named-instance: 'Regular';
 }
 
 @font-face {
-	font-family: 'XCharter';
-	src: url('../fonts/xcharter/xcharter-italic-webfont.woff2') format('woff2'),
-		 url('../fonts/xcharter/xcharter-italic-webfont.woff') format('woff');
-	font-weight: normal;
+	font-family: 'Inter var';
 	font-style: italic;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('../fonts/inter/Inter-italic.var.woff2?v=3.19') format('woff2');
+	font-named-instance: 'Italic';
 }
 
-@font-face {
-	font-family: 'XCharter';
-	src: url('../fonts/xcharter/xcharter-bold-webfont.woff2') format('woff2'),
-		 url('../fonts/xcharter/xcharter-bold-webfont.woff') format('woff');
-	font-weight: bold;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'XCharter';
-	src: url('../fonts/xcharter/xcharter-bolditalic-webfont.woff2') format('woff2'),
-		 url('../fonts/xcharter/xcharter-bolditalic-webfont.woff') format('woff');
-	font-weight: bold;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'Avenir';
-	src: url('../fonts/avenir/avenir-roman-webfont.woff2') format('woff2'),
-		 url('../fonts/avenir/avenir-roman-webfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-
-$font__main: XCharter, serif;
-$font__alt: Avenir, sans-serif;
+$font__main: 'Inter var', sans-serif;
+$font__alt: $font__main;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
@@ -48,7 +26,7 @@ $font__line-height-pre: 1.6;
 $font__letter-spacing: 0.1em;
 
 
-// Type scale = Minor Third
+// Type scale = Perfect Fourth
 
 $typesize__h1: 2.488rem;
 $typesize__h2: 2.074rem;
