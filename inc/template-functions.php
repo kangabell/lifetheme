@@ -38,14 +38,14 @@ function life_rss_feed_content( $content ) {
 
 		if ( has_post_thumbnail( $post->ID ) ) {
 
-			$prepend = '<div>' . get_the_post_thumbnail( $post->ID, 'medium', array( 'style' => 'margin-bottom: 1rem;' ) ) . '</div>';
+			$prepend = '<div>' . get_the_post_thumbnail( $post->ID, 'medium', array( 'style' => 'margin-bottom: 16px;' ) ) . '</div>';
 		}
 
 		if ( function_exists( 'get_field' ) ) {
-			$artist = get_field('song_artist');
 			$song = get_field('song_link');
 
 			if ( $song ):
+				$artist = get_field('song_artist');
 				$song_url = $song['url'];
 				$song_title = $song['title'];
 				$song_target = $song['target'] ? $song['target'] : '_self';
