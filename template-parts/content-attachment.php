@@ -19,14 +19,19 @@
 
 		if ( wp_attachment_is_image( $attachment_id ) ) {
 
-		// use large image size
-		$attachment_image = wp_get_attachment_image($attachment_id, '', '', array('class' => 'post-thumbnail', 'size' => 'large', 'alt' => the_title_attribute(array('post'=>$attachment_id,'echo'=>0)) ) );
+			// use large image size
+			$attachment_image = wp_get_attachment_image($attachment_id, '', '', array('class' => 'post-thumbnail', 'size' => 'large', 'alt' => the_title_attribute(array('post'=>$attachment_id,'echo'=>0)) ) );
 
-		echo '<div class="full-width">' . $attachment_image . '</div>';
+			echo '<div class="full-width">' . $attachment_image . '</div>';
 
-		echo '<div class="caption">' . get_the_excerpt() . '</div>';
+			the_title( '<h1 class="entry-title">', '</h1>' );
+
+			echo '<div class="caption">' . get_the_excerpt() . '</div>';
 
 		} else {
+
+			the_title( '<h1 class="entry-title">', '</h1>' );
+
 			the_content(
 				sprintf(
 					wp_kses(
@@ -50,11 +55,6 @@
 			)
 		);
 
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
 		?>
 
 	</div><!-- .entry-content -->
