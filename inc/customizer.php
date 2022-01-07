@@ -52,6 +52,27 @@ function life_customize_register( $wp_customize ) {
 		)
 	) );
 
+	// add rss email reply-to field
+	$wp_customize->add_setting(
+		'life_rss_email',
+		array(
+			'type'				=> 'theme_mod',
+			'sanitize_callback' => 'wp_kses_post'
+		)
+	);
+	$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'life_rss_email',
+		array(
+			'label'	   => __( 'Reply Email', 'life' ),
+			'description' => __( 'Specify an email address to be added to RSS feed reply-to links. Leave blank to exclude this link.', 'life' ),
+			'settings' => 'life_rss_email',
+			'priority' => 11,
+			'section'  => 'title_tagline',
+			'type'	   => 'email',
+		)
+	) );
+
 	// add custom link color option
 	$wp_customize->add_setting( 'link_color', array(
 		'default' => '#191919',

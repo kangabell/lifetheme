@@ -32,7 +32,13 @@ function life_rss_feed_content( $content ) {
 	global $post;
 
 	$prepend = null;
-	$append = '<hr/><p><a href="mailto:csglass@gmail.com?subject=Reply%3A%20' . esc_attr( get_the_title() ) . '">' . esc_html__( 'Reply via email ', 'life' ) . '</a></p>';
+	$append = null;
+
+	$email = wp_kses_post( get_theme_mod('life_rss_email') );
+
+	if ( $email ) {
+		$append = '<hr/><p><a href="mailto:' . $email . '?subject=Reply%3A%20' . esc_attr( get_the_title() ) . '">' . esc_html__( 'Reply via email ', 'life' ) . '</a></p>';
+	}
 
 	if ( is_feed() ) {
 
