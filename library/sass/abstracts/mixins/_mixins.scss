@@ -209,7 +209,7 @@
 	border: 2px solid;
 	border-color: $color__border-button;
 	border-radius: $radius;
-	color: rgba(0, 0, 0, 0.8);
+	color: var(--color__link);
 	cursor: pointer;
 	display: inline-block;
 	font-family: $font__alt;

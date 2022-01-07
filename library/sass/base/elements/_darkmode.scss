@@ -1,18 +1,62 @@
 @mixin darkMode() {
 
-	--color__background-body: #{$black};
-	--color__background-header: #{$dark};
-	--color__background-screen: #{$mediumdark};
-	--color__background-hr: #{mix($medium, $mediumdark)};
-	--color__background-button: #{$light};
-	--color__background-pre: #{$mediumdark};
-	--color__background-ins: #{$dark};
+	// invert each sass color variable
+	$color__background-body: invert( $color__background-body );
+	$color__background-header: invert( $color__background-header );
+	$color__background-screen: invert( $color__background-screen );
+	$color__background-hr: invert( $color__background-hr );
+	$color__background-button: invert( $color__background-button );
+	$color__background-pre: invert( $color__background-pre );
+	$color__background-ins: invert( $color__background-ins );
 
-	--color__nav-link: #{$medium};
-	--color__nav-link-hover: #{darken($mediumlight, 10)};
-	--color__breadcrumb-link: #{$medium};
-	--color__breadcrumb-hover: #{darken($mediumlight, 10)};
-	--color__text-main: #{$light};
+	$color__nav-link: invert( $color__nav-link );
+	$color__nav-link-hover: invert( $color__nav-link-hover );
+	$color__breadcrumb-link: invert( $color__breadcrumb-link );
+	$color__breadcrumb-hover: invert( $color__breadcrumb-hover );
+	$color__text-main: invert( $color__text-main );
+
+	$color__text-screen: invert( $color__text-screen );
+	$color__text-input: invert( $color__text-input );
+	$color__text-input-focus: invert( $color__text-input-focus );
+	$color__link: invert( $color__link );
+	$color__link-hover: invert( $color__link-hover );
+	$color__link-visited: invert( $color__link-visited );
+	$color__border-link: invert( $color__border-link );
+	$color__border-link-hover: invert( $color__border-link-hover );
+
+	$color__border-button: invert( $color__border-button );
+	$color__border-button-hover: invert( $color__border-button-hover );
+	$color__border-input: invert( $color__border-input );
+	$color__border-abbr: invert( $color__border-abbr );
+
+	// reassign sass color variables to css variables
+	--color__background-body: #{$color__background-body};
+	--color__background-header: #{$color__background-header};
+	--color__background-screen: #{$color__background-screen};
+	--color__background-hr: #{$color__background-hr};
+	--color__background-button: #{$color__background-button};
+	--color__background-pre: #{$color__background-pre};
+	--color__background-ins: #{$color__background-ins};
+
+	--color__nav-link: #{ $color__nav-link };
+	--color__nav-link-hover: #{ $color__nav-link-hover };
+	--color__breadcrumb-link: #{ $color__breadcrumb-link };
+	--color__breadcrumb-hover: #{ $color__breadcrumb-hover };
+	--color__text-main: #{ $color__text-main };
+
+	--color__text-screen: #{ $color__text-screen };
+	--color__text-input: #{ $color__text-input };
+	--color__text-input-focus: #{ $color__text-input-focus };
+	--color__link: #{ $color__link };
+	--color__link-hover: #{ $color__link-hover };
+	--color__link-visited: #{ $color__link-visited };
+	--color__border-link: #{ $color__border-link };
+	--color__border-link-hover: #{ $color__border-link-hover };
+
+	--color__border-button: #{ $color__border-button };
+	--color__border-button-hover: #{ $color__border-button-hover };
+	--color__border-input: #{ $color__border-input };
+	--color__border-abbr: #{ $color__border-abbr };
 
 	// // tweak color on some elements
 	// .site-header,

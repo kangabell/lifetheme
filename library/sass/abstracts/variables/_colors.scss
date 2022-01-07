@@ -24,23 +24,22 @@ $rainbow : (
 	12: #413ACC
 );
 
-:root {
-	--color__background-body: #{$light};
-	--color__background-header: #{$white};
-	--color__background-screen: #{$mediumlight};
-	--color__background-hr: #{mix($medium, $mediumlight)};
-	--color__background-button: #{$light};
-	--color__background-pre: #{$mediumlight};
-	--color__background-ins: #{$light};
+$color__background-body: $light;
+$color__background-header: $white;
+$color__background-screen: $mediumlight;
+$color__background-hr: mix($medium, $mediumlight);
+$color__background-button: $light;
+$color__background-pre: $mediumlight;
+$color__background-ins: $light;
 
-	--color__nav-link: #{$mediumdark};
-	--color__nav-link-hover: #{$dark};
-	--color__breadcrumb-link: #{lighten($mediumdark, 10)};
-	--color__breadcrumb-hover: #{$dark};
-	--color__text-main: #{$dark};
-}
+$color__nav-link: $mediumdark;
+$color__nav-link-hover: $dark;
+$color__breadcrumb-link: lighten($mediumdark, 10);
+$color__breadcrumb-hover: $dark;
+$color__text-main: $dark;
 
 $color__text-screen: #21759b;
+$color__text-button: $dark;
 $color__text-input: #666;
 $color__text-input-focus: #111;
 $color__link: $dark;
@@ -53,3 +52,34 @@ $color__border-button: $mediumlight;
 $color__border-button-hover: transparent;
 $color__border-input: $mediumlight;
 $color__border-abbr: #666;
+
+// map css variables to each of our sass color variables
+:root {
+	--color__background-body: #{$color__background-body};
+	--color__background-header: #{$color__background-header};
+	--color__background-screen: #{$color__background-screen};
+	--color__background-hr: #{$color__background-hr};
+	--color__background-button: #{$color__background-button};
+	--color__background-pre: #{$color__background-pre};
+	--color__background-ins: #{$color__background-ins};
+
+	--color__nav-link: #{ $color__nav-link };
+	--color__nav-link-hover: #{ $color__nav-link-hover };
+	--color__breadcrumb-link: #{ $color__breadcrumb-link };
+	--color__breadcrumb-hover: #{ $color__breadcrumb-hover };
+	--color__text-main: #{ $color__text-main };
+
+	--color__text-screen: #{ $color__text-screen };
+	--color__text-input: #{ $color__text-input };
+	--color__text-input-focus: #{ $color__text-input-focus };
+	--color__link: #{ $color__link };
+	--color__link-hover: #{ $color__link-hover };
+	--color__link-visited: #{ $color__link-visited };
+	--color__border-link: #{ $color__border-link };
+	--color__border-link-hover: #{ $color__border-link-hover };
+
+	--color__border-button: #{ $color__border-button };
+	--color__border-button-hover: #{ $color__border-button-hover };
+	--color__border-input: #{ $color__border-input };
+	--color__border-abbr: #{ $color__border-abbr };
+}
