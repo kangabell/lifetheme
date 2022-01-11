@@ -207,7 +207,7 @@
 @mixin button($type: null) {
 	background: var(--color__background-button);
 	border: 2px solid;
-	border-color: $color__border-button;
+	border-color: var(--color__border-button);
 	border-radius: $radius;
 	color: var(--color__link);
 	cursor: pointer;
@@ -225,7 +225,7 @@
 	}
 
 	&:hover {
-		border-color: $color__border-button-hover;
+		border-color: var(--color__border-button-hover);
 	}
 
 	@if ($type == 'tag') {

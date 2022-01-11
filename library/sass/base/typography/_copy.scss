@@ -53,7 +53,7 @@ var {
 
 abbr,
 acronym {
-	border-bottom: 1px dotted $color__border-abbr;
+	border-bottom: 1px dotted var(--color__border-abbr);
 	cursor: help;
 }
 
