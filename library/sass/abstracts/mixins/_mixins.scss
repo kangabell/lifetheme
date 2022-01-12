@@ -209,7 +209,7 @@
 	border: 2px solid;
 	border-color: var(--color__border-button);
 	border-radius: $radius;
-	color: var(--color__link);
+	color: var(--color__button);
 	cursor: pointer;
 	display: inline-block;
 	font-family: $font__alt;
@@ -221,7 +221,7 @@
 	&:hover,
 	&:active,
 	&:focus {
-		box-shadow: 3px 3px 3px rgba($dark, 0.25), -3px -3px 3px $white;
+		box-shadow: 3px 3px 3px rgba($dark, 0.25), -3px -3px 3px var(--color__background-alt);
 	}
 
 	&:hover {

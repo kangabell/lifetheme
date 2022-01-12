@@ -4,7 +4,7 @@
 --------------------------------------------------------------*/
 
 .site-header {
-	background: var(--color__background-header);
+	background: var(--color__background-alt);
 	font-family: $font__alt;
 	position: -webkit-sticky;
 	position: sticky;
@@ -143,7 +143,7 @@
 	}
 
 	.search-field {
-		background: $white;
+		background: var(--color__background-alt);
 	}
 
 	&.toggled {
@@ -207,7 +207,7 @@ $button-width: 3rem;
 $bar-thickness: $button-width * 0.0375;
 $bar-thickness-large: $bar-thickness;
 $transition-duration: 0.15s;
-$bar-color: $dark;
+$bar-color: var(--color__button);
 $bar-color-open: $light;
 $icon-padding: 0.75rem;
 

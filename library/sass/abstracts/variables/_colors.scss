@@ -25,18 +25,20 @@ $rainbow : (
 );
 
 $color__background-body: $light;
-$color__background-header: $white;
+$color__background-alt: $white;
 $color__background-screen: $mediumlight;
 $color__background-hr: mix($medium, $mediumlight);
 $color__background-button: $light;
 $color__background-pre: $mediumlight;
 $color__background-ins: $light;
 
+$color__button: $dark;
 $color__nav-link: $mediumdark;
 $color__nav-link-hover: $dark;
 $color__breadcrumb-link: lighten($mediumdark, 10);
 $color__breadcrumb-hover: $dark;
 $color__text-main: $dark;
+$color__text-meta: $mediumdark;
 
 $color__text-screen: #21759b;
 $color__text-button: $dark;
@@ -56,18 +58,20 @@ $color__border-abbr: #666;
 // map css variables to each of our sass color variables
 :root {
 	--color__background-body: #{$color__background-body};
-	--color__background-header: #{$color__background-header};
+	--color__background-alt: #{$color__background-alt};
 	--color__background-screen: #{$color__background-screen};
 	--color__background-hr: #{$color__background-hr};
 	--color__background-button: #{$color__background-button};
 	--color__background-pre: #{$color__background-pre};
 	--color__background-ins: #{$color__background-ins};
 
+	--color__button: #{ $color__button };
 	--color__nav-link: #{ $color__nav-link };
 	--color__nav-link-hover: #{ $color__nav-link-hover };
 	--color__breadcrumb-link: #{ $color__breadcrumb-link };
 	--color__breadcrumb-hover: #{ $color__breadcrumb-hover };
 	--color__text-main: #{ $color__text-main };
+	--color__text-meta: #{ $color__text-meta };
 
 	--color__text-screen: #{ $color__text-screen };
 	--color__text-input: #{ $color__text-input };

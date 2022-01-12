@@ -111,7 +111,7 @@ small,
 }
 
 .meta {
-	color: $mediumdark;
+	color: var(--color__text-meta);
 	font-family: $font__alt;
 	font-size: $typesize__tiny;
 	letter-spacing: $font__letter-spacing;
