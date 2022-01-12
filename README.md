@@ -8,7 +8,7 @@ Minimalist WordPress theme by Kay Belardinelli.
 Theme Installation
 ------------
 
-*   download the [zip file here](https://chrisglass.com/wp-content/uploads/2022/01/lifetheme-1.5.3.zip)
+*   download the [zip file here](https://chrisglass.com/wp-content/uploads/2022/01/lifetheme-1.5.4.zip)
 *   in the WP admin, go to Appearance > Themes > Add New, then click “Upload Theme”; upload the zip file
 *   click “activate”
 
