@@ -66,20 +66,26 @@ function life_custom_colors() {
 	$link_color = get_option('link_color');
 	$link_color_dark = get_option('link_color_dark');
 	?>
+
 	<style type="text/css">
-		a {
-			color: <?php echo esc_attr( $link_color ); ?>;
+
+		:root {
+			--color__link: <?php echo esc_attr( $link_color ); ?>;
 		}
-		.dark a {
-			color: <?php echo esc_attr( $link_color_dark ); ?>;
+
+		.dark {
+			--color__link: <?php echo esc_attr( $link_color_dark ); ?>;
 		}
+
 		@media (prefers-color-scheme: dark) {
 
-			html:not(.light) a {
-				color: <?php echo esc_attr( $link_color_dark ); ?>;
+			html:not(.light) {
+				--color__link: <?php echo esc_attr( $link_color_dark ); ?>;
 			}
 		}
+
 	</style>
+
 	<?php
 }
 add_action('wp_head', 'life_custom_colors');
