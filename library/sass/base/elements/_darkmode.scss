@@ -18,8 +18,8 @@
 	$color__text-meta: invert( $color__text-meta );
 
 	$color__text-screen: invert( $color__text-screen );
-	$color__text-input: invert( $color__text-input );
-	$color__text-input-focus: invert( $color__text-input-focus );
+	$color__text-input: $color__text-input;
+	$color__text-input-focus: $color__text-input-focus;
 	$color__link: invert( $color__link );
 	$color__link-hover: invert( $color__link-hover );
 	$color__link-visited: invert( $color__link-visited );
