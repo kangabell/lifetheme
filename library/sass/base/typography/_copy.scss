@@ -17,7 +17,7 @@ cite {
 
 blockquote,
 .wp-blockquote {
-	border-left: 5px solid $color__background-hr;
+	border-left: 5px solid var(--color__background-hr);
 	margin: 2rem 0;
 	padding-left: 1rem;
 
@@ -35,7 +35,7 @@ address {
 }
 
 pre {
-	background: $color__background-pre;
+	background: var(--color__background-pre);
 	font-family: $font__pre;
 	line-height: $font__line-height-pre;
 	margin-bottom: 1.6em;
@@ -53,13 +53,13 @@ var {
 
 abbr,
 acronym {
-	border-bottom: 1px dotted $color__border-abbr;
+	border-bottom: 1px dotted var(--color__border-abbr);
 	cursor: help;
 }
 
 mark,
 ins {
-	background: $color__background-ins;
+	background: var(--color__background-ins);
 	text-decoration: none;
 }
 
@@ -111,7 +111,7 @@ small,
 }
 
 .meta {
-	color: $mediumdark;
+	color: var(--color__text-meta);
 	font-family: $font__alt;
 	font-size: $typesize__tiny;
 	letter-spacing: $font__letter-spacing;

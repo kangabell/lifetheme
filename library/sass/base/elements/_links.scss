@@ -1,6 +1,6 @@
 a {
-	color: $color__link;
-	text-decoration-color: $color__border-link;
+	color: var(--color__link);
+	text-decoration-color: var(--color__border-link);
 	text-decoration-thickness: 0.075em;
 	text-underline-offset: 0.285em;
 	transition: all 0.125s;
@@ -11,13 +11,13 @@ a {
 
 	&:hover,
 	&:active {
-		color: $color__link-hover;
-		text-decoration-color: $color__border-link-hover;
+		color: var(--color__link-hover);
+		text-decoration-color: var(--color__border-link-hover);
 		outline: 0;
 	}
 
 	&:visited {
-		color: $color__link-visited;
+		color: var(--color__link-visited);
 	}
 
 	.entry-content & {
