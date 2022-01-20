@@ -21,12 +21,12 @@ textarea {
 	border: 0;
 	border-radius: $radius;
 	box-shadow: inset 0px 1px 4px rgba($medium, 0.8);
-	color: $color__text-input;
+	color: var(--color__text-input);
 	max-width: 100%;
 	padding: 0.5rem;
 
 	&:focus {
-		color: $color__text-input-focus;
+		color: var(--color__text-input-focus);
 	}
 }
 
@@ -57,7 +57,7 @@ label {
 
 input[type="search"],
 .wp-block-search__input {
-	border: 1px solid $color__border-input;
+	border: 1px solid var(--color__border-input);
 }
 
 .wp-block-search {

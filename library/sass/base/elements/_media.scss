@@ -6,8 +6,9 @@ object {
 	max-width: 100%;
 }
 
-// responsive embed
-.wp-block-embed__wrapper {
+// responsive youtube & vimeo embeds
+.is-provider-youtube .wp-block-embed__wrapper,
+.is-provider-vimeo .wp-block-embed__wrapper {
 	overflow: hidden;
 	padding-top: 56.25%;
 	position: relative;

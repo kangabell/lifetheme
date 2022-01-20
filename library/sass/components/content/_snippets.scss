@@ -9,9 +9,9 @@
 }
 
 .card {
-	background: $white;
+	background: var(--color__background-alt);
 	border-radius: $radius;
-	box-shadow: 0 0.25rem 1rem rgba($mediumlight, 0.3);
+	box-shadow: 0 0.25rem 1rem rgba($black, 0.03);
 	display: block;
 	overflow: hidden;
 	position: relative;
@@ -22,12 +22,12 @@
 	}
 
 	h3 {
-		font-size: $typesize__h5;
+		font-size: $typesize__h6;
 		margin: 0;
 	}
 
 	.excerpt {
-		color: $color__text-main; // reset any custom link color
+		color: var(--color__text-main); // reset any custom link color
 		font-family: $font__alt;
 		font-size: $typesize__small;
 		margin-top: 1em;
@@ -61,7 +61,7 @@
 
 	&:hover,
 	&:focus {
-		box-shadow: 0 0.25rem 1rem rgba($mediumlight, 1);
+		box-shadow: 0 0.25rem 1rem rgba($black, 0.1);
 		transform: scale(1.04);
 	}
 } // .card

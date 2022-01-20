@@ -2,13 +2,6 @@ ul,
 ol {
 	margin: 0;
 	padding-left: 1.125rem;
-
-	@media screen and ($medium-up) {
-
-		.entry-content & {
-			font-size: $typesize__normal;
-		}
-	}
 }
 
 ul {

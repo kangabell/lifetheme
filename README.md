@@ -8,7 +8,7 @@ Minimalist WordPress theme by Kay Belardinelli.
 Theme Installation
 ------------
 
-*   download the [zip file here](https://chrisglass.com/wp-content/uploads/2021/05/lifetheme.zip)
+*   download the [zip file here](https://chrisglass.com/wp-content/uploads/2022/01/lifetheme-1.5.4.zip)
 *   in the WP admin, go to Appearance > Themes > Add New, then click “Upload Theme”; upload the zip file
 *   click “activate”
 
@@ -22,7 +22,7 @@ Setting Up Homepage & Posts Page
 Widget Areas
 ------------
 
-### Headers (Posts, Projects, Characters, Links, Pins, Favorites)
+### Headers (Posts, Projects, Characters, Links, Favorites)
 
 These allow you to customize what appears in the header of the different sections of the website. Add a “Text” widget, and the title will appear as the page heading, along with a paragraph of text in the content of the widget (optional).
 
@@ -42,6 +42,7 @@ Appearance > Customize
 *   Subfooter: add copyright, privacy, and other info here
 *   Display Site Title and Tagline: this toggles the Tagline in the site header
 *   Site Icon: add a custom icon to appear in your browser tab/bookmarks
+*	Reply Email: add a contact email to display a reply link in RSS feeds
 
 ### Colors
 
@@ -83,11 +84,17 @@ Custom Fields
 
 ### Installation
 
-*   install Advanced Custom Fields plugin
+*   Install Advanced Custom Fields plugin
 *   Go to Custom Fields > Tools; import the json file included in the theme folder
+*   If using the Related Characters / Related Posts feature, the add-on plugin "ACF Post-2-Post" is recommended.
 
 WooCommerce
 -----------
 
 This theme offers basic support for WooCommerce.
 
+Development
+-----------
+
+*   Clone this git repository.
+*	The repository does not track css, so the sass must be compiled to css for the theme to work. `cd library` and run `sass --watch sass:css` or something similar.

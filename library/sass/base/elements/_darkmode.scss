@@ -1,24 +1,79 @@
 @mixin darkMode() {
-	filter: invert(1) hue-rotate(180deg);
 
-	// tweak color on some elements
-	.site-header,
-	.card {
-		background-color: $mediumlight;
+	// invert each sass color variable
+	$color__background-body: invert( $color__background-body );
+	$color__background-alt: lighten( $color__background-body, 8 );
+	$color__background-screen: invert( $color__background-screen );
+	$color__background-hr: invert( $color__background-hr );
+	$color__background-button: invert( $color__background-button );
+	$color__background-pre: invert( $color__background-pre );
+	$color__background-ins: invert( $color__background-ins );
+
+	$color__button: invert( $color__button );
+	$color__nav-link: invert( $color__nav-link );
+	$color__nav-link-hover: invert( $color__nav-link-hover );
+	$color__breadcrumb-link: invert( $color__breadcrumb-link );
+	$color__breadcrumb-hover: invert( $color__breadcrumb-hover );
+	$color__text-main: invert( $color__text-main );
+	$color__text-meta: invert( $color__text-meta );
+
+	$color__text-screen: invert( $color__text-screen );
+	$color__text-input: $color__text-input;
+	$color__text-input-focus: $color__text-input-focus;
+	$color__link: invert( $color__link );
+	$color__link-hover: invert( $color__link-hover );
+	$color__link-visited: invert( $color__link-visited );
+	$color__border-link: invert( $color__border-link );
+	$color__border-link-hover: invert( $color__border-link-hover );
+
+	$color__border-button: invert( $color__border-button );
+	$color__border-button-hover: lighten( $color__border-button, 5 );
+	$color__border-input: invert( $color__border-input );
+	$color__border-abbr: invert( $color__border-abbr );
+
+	// reassign sass color variables to css variables
+	--color__background-body: #{$color__background-body};
+	--color__background-alt: #{$color__background-alt};
+	--color__background-screen: #{$color__background-screen};
+	--color__background-hr: #{$color__background-hr};
+	--color__background-button: #{$color__background-button};
+	--color__background-pre: #{$color__background-pre};
+	--color__background-ins: #{$color__background-ins};
+
+	--color__button: #{ $color__button };
+	--color__nav-link: #{ $color__nav-link };
+	--color__nav-link-hover: #{ $color__nav-link-hover };
+	--color__breadcrumb-link: #{ $color__breadcrumb-link };
+	--color__breadcrumb-hover: #{ $color__breadcrumb-hover };
+	--color__text-main: #{ $color__text-main };
+	--color__text-meta: #{ $color__text-meta };
+
+	--color__text-screen: #{ $color__text-screen };
+	--color__text-input: #{ $color__text-input };
+	--color__text-input-focus: #{ $color__text-input-focus };
+	--color__link: #{ $color__link };
+	--color__link-hover: #{ $color__link-hover };
+	--color__link-visited: #{ $color__link-visited };
+	--color__border-link: #{ $color__border-link };
+	--color__border-link-hover: #{ $color__border-link-hover };
+
+	--color__border-button: #{ $color__border-button };
+	--color__border-button-hover: #{ $color__border-button-hover };
+	--color__border-input: #{ $color__border-input };
+	--color__border-abbr: #{ $color__border-abbr };
+
+	// // tweak color on some elements
+	.site-header .search-field {
+		background-color: $black;
+		border-color: $black;
+
+		&:focus-visible {
+			border-color: $medium;
+		}
 	}
 
 	::selection {
-		background-color: $medium;
-	}
-
-	// flip some elements back to normal
-	.site-footer,
-	.main-nav-container,
-	.toggled .menu-toggle,
-	img,
-	iframe,
-	video {
-		filter: invert(1) hue-rotate(180deg);
+		background-color: $mediumdark;
 	}
 
 	.toggle-mode .icon-sun {
@@ -43,23 +98,4 @@
 	html:not(.light) {
 		@include darkMode;
 	}
-}
-
-// allow transition to be smooth
-body,
-.site-footer,
-.main-nav-container,
-.toggled .menu-toggle,
-img,
-iframe,
-video {
-	transition: filter 0.125s;
-}
-
-// improve performance on large areas
-// (excluding img in particular, which caused a weird bug in Safari)
-body,
-.site-footer,
-.main-nav-container {
-	will-change: filter;
 }

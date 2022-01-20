@@ -52,7 +52,28 @@ function life_customize_register( $wp_customize ) {
 		)
 	) );
 
-	// add custom link color option
+	// add rss email reply-to field
+	$wp_customize->add_setting(
+		'life_rss_email',
+		array(
+			'type'				=> 'theme_mod',
+			'sanitize_callback' => 'wp_kses_post'
+		)
+	);
+	$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'life_rss_email',
+		array(
+			'label'	   => __( 'Reply Email', 'life' ),
+			'description' => __( 'Specify an email address to be added to RSS feed reply-to links. Leave blank to exclude this link.', 'life' ),
+			'settings' => 'life_rss_email',
+			'priority' => 11,
+			'section'  => 'title_tagline',
+			'type'	   => 'email',
+		)
+	) );
+
+	// add custom link color options
 	$wp_customize->add_setting( 'link_color', array(
 		'default' => '#191919',
 		'type' => 'option',
@@ -60,9 +81,20 @@ function life_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'sanitize_hex_color'
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
-		'label' => __( 'Link Color', 'life' ),
+		'label' => __( 'Default Link Color', 'life' ),
 		'section' => 'colors',
 		'settings' => 'link_color'
+	)));
+	$wp_customize->add_setting( 'link_color_dark', array(
+		'default' => '#e6e6e6',
+		'type' => 'option',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_hex_color'
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color_dark', array(
+		'label' => __( 'Dark Mode Link Color', 'life' ),
+		'section' => 'colors',
+		'settings' => 'link_color_dark'
 	)));
 }
 add_action( 'customize_register', 'life_customize_register' );
