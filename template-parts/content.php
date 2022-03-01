@@ -57,6 +57,14 @@
 			)
 		);
 
+		if ( 'life_bookmark' === get_post_type() ) {
+
+			$url = get_post_meta( get_the_ID(), 'life_url', true );
+			echo '<p class="meta">' . esc_html__( 'External Link', 'life' ) . '</p>';
+			echo '<a href="' . $url . '" target="_blank">' . $url . '</a>';
+
+		}
+
 		wp_link_pages(
 			array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'life' ),
