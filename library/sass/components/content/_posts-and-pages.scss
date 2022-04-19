@@ -119,12 +119,6 @@
 ## Front Page
 --------------------------------------------------------------*/
 
-// when an image is first, it behaves like a featured image
-.home .wp-block-image:first-child {
-	@extend %square-ish;
-	margin-top: 0;
-}
-
 .home .site-main {
 	padding-bottom: 0;
 }
