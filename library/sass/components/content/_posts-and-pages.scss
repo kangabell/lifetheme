@@ -119,48 +119,8 @@
 ## Front Page
 --------------------------------------------------------------*/
 
-.home .site-main {
-	padding-bottom: 0;
-}
-
 .secondary-content {
 	margin-top: 3rem;
-
-	.widget {
-		margin-bottom: 0;
-	}
-
-	p {
-		margin-bottom: 1em;
-	}
-
-	.widget_media_image {
-		margin-right: -1rem; // compensate for container padding
-		overflow: hidden;
-	}
-
-	.image {
-		display: block;
-		margin-left: auto;
-		margin-right: -5rem;
-	}
-
-	@media screen and ($medium-up) {
-		display: flex;
-		flex-direction: row-reverse;
-
-		.widget_text {
-			flex: 1;
-		}
-
-		.widget_media_image {
-			margin-right: 0;
-		}
-
-		.image {
-			margin-right: 0;
-		}
-	}
 }
 
 

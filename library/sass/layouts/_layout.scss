@@ -17,8 +17,7 @@
 .entry-header,
 .entry-content,
 .entry-footer,
-.comments-area,
-.secondary-content {
+.comments-area {
 	@include wrap;
 }
 
