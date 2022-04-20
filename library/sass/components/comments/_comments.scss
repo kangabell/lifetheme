@@ -1,5 +1,5 @@
 .comments-title {
-	font-family: $font__alt;
+	font-family: var(--font__alt);
 	font-size: $typesize__h4;
 	letter-spacing: $font__letter-spacing;
 	margin-bottom: 2rem;
@@ -23,7 +23,7 @@
 	}
 
 	&-content {
-		font-family: $font__alt;
+		font-family: var(--font__alt);
 
 		p {
 			font-size: $typesize__small;
@@ -35,7 +35,7 @@
 	}
 
 	&-metadata {
-		font-family: $font__alt;
+		font-family: var(--font__alt);
 		font-size: $typesize__tiny;
 		letter-spacing: $font__letter-spacing;
 		margin-top: 0.25rem;

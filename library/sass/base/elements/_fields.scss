@@ -1,6 +1,6 @@
 input,
 textarea {
-	font-family: $font__alt;
+	font-family: var(--font__alt);
 }
 
 input[type="text"],
@@ -39,7 +39,7 @@ textarea {
 }
 
 label {
-	font-family: $font__alt;
+	font-family: var(--font__alt);
 	font-size: $typesize__small;
 	letter-spacing: $font__letter-spacing;
 	text-transform: uppercase;

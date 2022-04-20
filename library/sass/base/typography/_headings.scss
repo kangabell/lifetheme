@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5, h6 {
 
 	.site-footer & {
 		font-size: $typesize__small;
-		font-family: $font__alt;
+		font-family: var(--font__alt);
 		letter-spacing: 0.075em;
 		text-transform: uppercase;
 	}
@@ -22,7 +22,7 @@ h1 {
 
 h2.heading-alt,
 h3.heading-alt {
-	font-family: $font__alt;
+	font-family: var(--font__alt);
 	font-size: $typesize__small;
 	letter-spacing: $font__letter-spacing;
 	margin-bottom: 1rem;
@@ -47,7 +47,7 @@ h3 {
 
 h4 {
 	font-size: $typesize__h5;
-	font-family: $font__alt;
+	font-family: var(--font__alt);
 	letter-spacing: $font__letter-spacing;
 	text-transform: uppercase;
 
@@ -62,7 +62,7 @@ h5 {
 
 h6 {
 	font-size: $typesize__h6;
-	font-family: $font__alt;
+	font-family: var(--font__alt);
 	letter-spacing: $font__letter-spacing;
 	text-transform: uppercase;
 }

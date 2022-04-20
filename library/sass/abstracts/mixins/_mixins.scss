@@ -212,7 +212,7 @@
 	color: var(--color__button);
 	cursor: pointer;
 	display: inline-block;
-	font-family: $font__alt;
+	font-family: var(--font__alt);
 	font-weight: normal;
 	line-height: 1;
 	text-decoration: none;
