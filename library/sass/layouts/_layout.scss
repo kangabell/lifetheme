@@ -42,11 +42,6 @@ html {
 	overflow-x: hidden;
 }
 
-// compensate for <body> having position: relative
-#wpadminbar {
-	transform: translateY(-100%);
-}
-
 
 /*--------------------------------------------------------------
 ## Body Copy
