@@ -124,6 +124,15 @@ function life_widgets_init() {
 		'after_widget'  => '</div>',
 	) );
 	register_sidebar( array(
+		'name'          => esc_html__( 'Posts Secondary Content', 'life' ),
+		'id'            => 'post-secondary',
+		'description'   => esc_html__( 'Add widgets here.', 'life' ),
+		'before_title'  => '',
+		'after_title'   => '',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+	) );
+	register_sidebar( array(
 		'name'          => esc_html__( 'Projects Header', 'life' ),
 		'id'            => 'header-projects',
 		'description'   => esc_html__( 'Add widgets here.', 'life' ),
