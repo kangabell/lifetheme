@@ -406,15 +406,6 @@ function life_gutenberg_scripts() {
 add_action( 'enqueue_block_editor_assets', 'life_gutenberg_scripts' );
 
 /**
- * Remove block editor css.
- * src: https://stackoverflow.com/a/52280110
- */
-function life_deregister_styles() {
-	wp_dequeue_style( 'wp-block-library' );
-}
-add_action( 'wp_print_styles', 'life_deregister_styles', 100 );
-
-/**
  * Show only 12 posts for the blog page
  */
 function life_home_pagesize( $query ) {
