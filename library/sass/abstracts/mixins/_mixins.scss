@@ -17,7 +17,6 @@
 
 // Full-width element that breaks container
 @mixin full-width($container: $size__site-narrow) {
-
 	margin-left: -1rem;
 	margin-right: -1rem;
 	width: auto; // reset
@@ -40,7 +39,6 @@
 		margin-left: -($size__site-wide - $container) / 2;
 		margin-right: -($size__site-wide - $container) / 2;
 		max-width: $size__site-wide;
-		text-align: center;
 	}
 }
 

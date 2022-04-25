@@ -52,6 +52,13 @@ function life_setup() {
 	add_image_size( 'medium_square', 570, 570, true );
 	add_image_size( 'small_square', 345, 345, true );
 
+	/*
+	* Add theme support for wide alignment blocks
+	*
+	* @link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#wide-alignment
+	*/
+	add_theme_support( 'align-wide' );
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
