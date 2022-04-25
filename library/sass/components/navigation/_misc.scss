@@ -1,14 +1,8 @@
 
 
-// note: the nav links are swapped in order from the WP default
-
 .comment-navigation,
 .post-navigation {
 	margin: 0 0 1.5em;
-
-	.nav-links {
-		flex-direction: row-reverse;
-	}
 }
 
 .nav-links {
@@ -46,33 +40,22 @@
 	}
 }
 
-.nav {
-	&-previous,
-	&-next {
-		align-content: center;
-		display: flex;
-	}
 
-	&-previous {
-		justify-content: end;
-
-		a {
-			margin-left: auto; // safari
-		}
-	}
-}
+/*--------------------------------------------------------------
+## Prev/Next & Return Links
+--------------------------------------------------------------*/
 
 .nav-title {
-	border-bottom: 2px solid transparent;
-	font-family: var(--font__alt);
-	margin: 0 0.5rem;
-	padding-top: 0.25em;
-	transition: all 0.125s;
+	font-weight: bold;
+}
 
-	a &:hover,
-	a &:focus {
-		border-color: $medium;
-	}
+.nav-label {
+	font-family: var(--font__alt);
+	font-size: $typesize__small;
+	letter-spacing: $font__letter-spacing;
+	padding-top: 0.25em;
+	text-transform: uppercase;
+	transition: all 0.125s;
 
 	@media screen and ($small-down) {
 		font-size: $typesize__tiny;
@@ -83,11 +66,8 @@
 .nav-next a,
 .return-link a,
 .archive-link a {
-	align-items: center;
 	display: inline-flex;
-	letter-spacing: $font__letter-spacing;
 	text-decoration: none;
-	text-transform: uppercase;
 }
 
 .nav-previous,
@@ -96,10 +76,6 @@
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 
-	a {
-		font-size: $typesize__small;
-	}
-
 	.icon-arrow {
 		font-size: 1.25rem;
 	}
@@ -107,6 +83,85 @@
 
 .post-navigation + .return-link {
 	border-top: 1px solid var(--color__background-hr);
+}
+
+
+/*--------------------------------------------------------------
+## Prev/Next
+--------------------------------------------------------------*/
+
+.nav-previous,
+.nav-next {
+	align-content: center;
+	display: flex;
+}
+
+.nav-previous a,
+.nav-next a {
+	flex-direction: column;
+	position: relative;
+
+	&::before {
+		@include icon-style;
+		font-size: 1.25rem;
+		position: absolute;
+		transition: all 0.125s;
+		transform: translateX(0) translateY(50%);
+	}
+}
+
+.nav-previous a {
+	align-items: flex-start;
+	padding-left: 1.75rem; // make space for icon
+
+	&::before {
+		content: $icon-arrow-left;
+		left: 0;
+		padding-right: 0.5em;
+	}
+
+	&:hover::before,
+	&:focus::before {
+		transform: translateX(-0.25rem) translateY(50%);
+	}
+}
+
+.nav-next {
+	justify-content: end;
+
+	a {
+		margin-left: auto; // safari
+		padding-right: 1.75rem; // make space for icon
+		text-align: right;
+
+		&::before {
+			content: $icon-arrow-right;
+			padding-left: 0.5em;
+			right: 0;
+		}
+
+		&:hover::before,
+		&:focus::before {
+			transform: translateX(0.25rem) translateY(50%);
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+## Return Links
+--------------------------------------------------------------*/
+
+.return-link,
+.archive-link {
+
+	a {
+		align-items: center;
+	}
+
+	.nav-label {
+		margin: 0 0.5rem;
+	}
 }
 
 .archive-link {
