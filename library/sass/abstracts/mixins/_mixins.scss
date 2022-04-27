@@ -202,11 +202,8 @@
 }
 
 // Button
-@mixin button($type: null) {
-	background: var(--color__background-button);
-	border-color: var(--color__border-button);
+@mixin button($type: null, $style: null) {
 	border-radius: $radius;
-	color: var(--color__button);
 	cursor: pointer;
 	display: inline-block;
 	font-family: var(--font__alt);
@@ -223,6 +220,17 @@
 
 	&:hover {
 		border-color: var(--color__border-button-hover);
+	}
+
+	@if ($style == 'fill') {
+		background-color: var(--color__background-button-fill);
+		border-color: var(--color__border-button); // color must be set *after* other border stuff, I think
+		color: var(--color__button-fill);
+	} @else {
+		background: var(--color__background-button);
+		border: 2px solid;
+		border-color: var(--color__border-button);
+		color: var(--color__button);
 	}
 
 	@if ($type == 'tag') {

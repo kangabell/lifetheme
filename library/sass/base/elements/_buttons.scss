@@ -2,7 +2,6 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 2px solid;
 	@include button;
 	transition: all 0.125s;
 }
@@ -19,9 +18,7 @@ input[type="submit"] {
 
 // note: default button block is "fill" style
 .wp-block-button__link {
-	@include button;
-	background-color: var(--color__background-button-fill);
-	color: var(--color__button-fill);
+	@include button($style: 'fill');
 }
 
 .wp-block-buttons .wp-block-button {
