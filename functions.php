@@ -115,7 +115,7 @@ function life_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Homepage Secondary Content', 'life' ),
 		'id'            => 'home-secondary',
-		'description'   => esc_html__( 'Add widgets here.', 'life' ),
+		'description'   => esc_html__( 'Add blocks to the bottom of the homepage.', 'life' ),
 		'before_title'  => '',
 		'after_title'   => '',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -124,7 +124,7 @@ function life_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Posts Header', 'life' ),
 		'id'            => 'header-posts',
-		'description'   => esc_html__( 'Add widgets here.', 'life' ),
+		'description'   => esc_html__( 'Add blocks to the top of the blog page.', 'life' ),
 		'before_title'  => '<h1 class="page-title">',
 		'after_title'   => '</h1>',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -133,7 +133,7 @@ function life_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Posts Secondary Content', 'life' ),
 		'id'            => 'post-secondary',
-		'description'   => esc_html__( 'Add widgets here.', 'life' ),
+		'description'   => esc_html__( 'Add blocks to the bottom of the Posts page.', 'life' ),
 		'before_title'  => '',
 		'after_title'   => '',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -142,7 +142,7 @@ function life_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Projects Header', 'life' ),
 		'id'            => 'header-projects',
-		'description'   => esc_html__( 'Add widgets here.', 'life' ),
+		'description'   => esc_html__( 'Add blocks to the top of the Projects page.', 'life' ),
 		'before_title'  => '<h1 class="page-title">',
 		'after_title'   => '</h1>',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -151,7 +151,7 @@ function life_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Characters Header', 'life' ),
 		'id'            => 'header-characters',
-		'description'   => esc_html__( 'Add widgets here.', 'life' ),
+		'description'   => esc_html__( 'Add blocks to the top of the Characters page.', 'life' ),
 		'before_title'  => '<h1 class="page-title">',
 		'after_title'   => '</h1>',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -160,7 +160,7 @@ function life_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Links Header', 'life' ),
 		'id'            => 'header-bookmarks',
-		'description'   => esc_html__( 'Add widgets here.', 'life' ),
+		'description'   => esc_html__( 'Add blocks to the top of the Links page.', 'life' ),
 		'before_title'  => '<h1 class="page-title">',
 		'after_title'   => '</h1>',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -169,7 +169,7 @@ function life_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Favorites Header', 'life' ),
 		'id'            => 'header-favorites',
-		'description'   => esc_html__( 'Add widgets here.', 'life' ),
+		'description'   => esc_html__( 'Add blocks to the top of the Favorites page.', 'life' ),
 		'before_title'  => '<h1 class="page-title">',
 		'after_title'   => '</h1>',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
