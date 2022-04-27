@@ -18,14 +18,14 @@ a {
 
 	&:visited {
 		color: var(--color__link-visited);
-
-		&:hover,
-		&:active {
-			color: var(--color__link-hover);
-		}
 	}
 
 	.entry-content & {
 		font-weight: bold;
+
+		&:visited:hover,
+		&:visited:active {
+			color: var(--color__link-hover);
+		}
 	}
 }
