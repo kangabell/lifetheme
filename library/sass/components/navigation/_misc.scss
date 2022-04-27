@@ -68,8 +68,7 @@
 
 .nav-previous a,
 .nav-next a,
-.return-link a,
-.archive-link a {
+.return-link a {
 	display: inline-flex;
 	text-decoration: none;
 }
@@ -161,8 +160,7 @@
 ## Return Links
 --------------------------------------------------------------*/
 
-.return-link,
-.archive-link {
+.return-link {
 
 	a {
 		align-items: center;
@@ -171,11 +169,6 @@
 	.nav-label {
 		margin: 0 0.5rem;
 	}
-}
-
-.archive-link {
-	font-size: $typesize__tiny;
-	margin-top: 1rem;
 }
 
 
