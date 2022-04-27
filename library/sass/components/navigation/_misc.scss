@@ -13,6 +13,10 @@
 	> * {
 		flex: 1;
 	}
+
+	.single & {
+		flex-direction: row-reverse;
+	}
 }
 
 .pagination {
@@ -105,12 +109,17 @@
 		@include icon-style;
 		font-size: 1.25rem;
 		position: absolute;
+		top: 0;
 		transition: all 0.125s;
-		transform: translateX(0) translateY(50%);
+		transform: translateX(0);
+
+		@media screen and ($medium-up) {
+			top: 0.125em;
+		}
 	}
 }
 
-.nav-previous a {
+.nav-next a {
 	align-items: flex-start;
 	padding-left: 1.75rem; // make space for icon
 
@@ -122,11 +131,11 @@
 
 	&:hover::before,
 	&:focus::before {
-		transform: translateX(-0.25rem) translateY(50%);
+		transform: translateX(-0.25rem);
 	}
 }
 
-.nav-next {
+.nav-previous {
 	justify-content: end;
 
 	a {
@@ -142,7 +151,7 @@
 
 		&:hover::before,
 		&:focus::before {
-			transform: translateX(0.25rem) translateY(50%);
+			transform: translateX(0.25rem);
 		}
 	}
 }

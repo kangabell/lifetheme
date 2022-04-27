@@ -35,10 +35,6 @@ get_header();
 			endif;
 
 			the_post_navigation(
-				// array(
-				// 	'prev_text' => '<span>%title</span>' . esc_html__( 'Older', 'life' ) . '<span class="icon-arrow icon-arrow-right" aria-hidden="true"></span>',
-				// 	'next_text' => '<span class="icon-arrow icon-arrow-left" aria-hidden="true"></span>' . esc_html__( 'Newer', 'life' ) . '<span>%title</span>',
-				// )
 				array(
 					'prev_text' => '<span class="nav-label">' . esc_html__( 'Older', 'life' ) . '</span>' . '<span class="nav-title">%title</span>',
 					'next_text' => '<span class="nav-label">' . esc_html__( 'Newer', 'life' ) . '</span>' . '<span class="nav-title">%title</span>',
