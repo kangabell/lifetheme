@@ -6,10 +6,12 @@
 	$color__background-screen: invert( $color__background-screen );
 	$color__background-hr: invert( $color__background-hr );
 	$color__background-button: invert( $color__background-button );
+	$color__background-button-fill: $color__background-button-fill; // don't change
 	$color__background-pre: invert( $color__background-pre );
 	$color__background-ins: invert( $color__background-ins );
 
 	$color__button: invert( $color__button );
+	$color__button-fill: $color__button-fill; // don't change
 	$color__nav-link: invert( $color__nav-link );
 	$color__nav-link-hover: invert( $color__nav-link-hover );
 	$color__breadcrumb-link: invert( $color__breadcrumb-link );
@@ -37,10 +39,12 @@
 	--color__background-screen: #{$color__background-screen};
 	--color__background-hr: #{$color__background-hr};
 	--color__background-button: #{$color__background-button};
+	--color__background-button-fill: #{$color__background-button-fill};
 	--color__background-pre: #{$color__background-pre};
 	--color__background-ins: #{$color__background-ins};
 
 	--color__button: #{ $color__button };
+	--color__button-fill: #{ $color__button-fill };
 	--color__nav-link: #{ $color__nav-link };
 	--color__nav-link-hover: #{ $color__nav-link-hover };
 	--color__breadcrumb-link: #{ $color__breadcrumb-link };
