@@ -125,8 +125,8 @@ if ( ! function_exists( 'life_pagination' ) ) :
 		$args = wp_parse_args( $args, [
 			'mid_size'           => 3,
 			'prev_next'          => false,
-			'next_text'          => '<span class="nav-label">' . esc_html__( 'Older', 'life' ) . ' ' . $post_type_name . '</span>',
-			'prev_text'          => '<span class="nav-label">' . esc_html__( 'Newer', 'life' ) . ' ' . $post_type_name . '</span>',
+			'next_text'          => '<span class="nav-label">' . esc_html__( 'Newer', 'life' ) . ' ' . $post_type_name . '</span>',
+			'prev_text'          => '<span class="nav-label">' . esc_html__( 'Older', 'life' ) . ' ' . $post_type_name . '</span>',
 			'screen_reader_text' => __('Posts Navigation', 'life'),
 		]);
 
