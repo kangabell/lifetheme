@@ -1,7 +1,7 @@
 .site-footer {
 	background: $dark;
 	color: $medium;
-	font-family: $font__alt;
+	font-family: var(--font__alt);
 	font-size: $typesize__small;
 	padding-top: 3rem;
 	padding-bottom: 4rem;

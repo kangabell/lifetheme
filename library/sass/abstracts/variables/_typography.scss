@@ -25,6 +25,12 @@ $font__line-height-heading: 1.125;
 $font__line-height-pre: 1.6;
 $font__letter-spacing: 0.1em;
 
+// map css variables to each of our sass font variables
+:root {
+	--font__main: #{$font__main};
+	--font__alt: #{$font__alt};
+}
+
 
 // Type scale = Perfect Fourth
 

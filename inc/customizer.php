@@ -121,6 +121,6 @@ function life_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function life_customize_preview_js() {
-	wp_enqueue_script( 'life-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), life_VERSION, true );
+	wp_enqueue_script( 'life-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), LIFE_VERSION, true );
 }
 add_action( 'customize_preview_init', 'life_customize_preview_js' );

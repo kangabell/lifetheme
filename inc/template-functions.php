@@ -14,6 +14,15 @@ function life_shorten_excerpt( $length ) {
 add_filter( 'excerpt_length', 'life_shorten_excerpt', 999 );
 
 /**
+ * Change "[...]more>>" to "...".
+ */
+function life_excerpt_more($more) {
+	global $post;
+	return '...';
+}
+add_filter('excerpt_more', 'life_excerpt_more');
+
+/**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
 function life_pingback_header() {

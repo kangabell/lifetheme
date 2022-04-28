@@ -8,6 +8,10 @@
 	@include full-width;
 	@extend %square-ish;
 	display: block; // for ones that are <a>
+
+	@media screen and ($xlarge-up) {
+		text-align: center;
+	}
 }
 
 .entry-header {
@@ -36,7 +40,7 @@
 	background: $yellowlight;
 	box-shadow: 0 0.25rem 1rem rgba($black, 0.08);
 	color: $dark;
-	font-family: $font__alt;
+	font-family: var(--font__alt);
 	margin-left: auto;
 	margin-right: auto;
 	order: 1;
@@ -72,7 +76,7 @@
 }
 
 .song-link {
-	font-family: $font__alt;
+	font-family: var(--font__alt);
 	margin-top: 2rem;
 	margin-bottom: 3rem;
 
@@ -119,54 +123,8 @@
 ## Front Page
 --------------------------------------------------------------*/
 
-// when an image is first, it behaves like a featured image
-.home .wp-block-image:first-child {
-	@extend %square-ish;
-	margin-top: 0;
-}
-
-.home .site-main {
-	padding-bottom: 0;
-}
-
 .secondary-content {
 	margin-top: 3rem;
-
-	.widget {
-		margin-bottom: 0;
-	}
-
-	p {
-		margin-bottom: 1em;
-	}
-
-	.widget_media_image {
-		margin-right: -1rem; // compensate for container padding
-		overflow: hidden;
-	}
-
-	.image {
-		display: block;
-		margin-left: auto;
-		margin-right: -5rem;
-	}
-
-	@media screen and ($medium-up) {
-		display: flex;
-		flex-direction: row-reverse;
-
-		.widget_text {
-			flex: 1;
-		}
-
-		.widget_media_image {
-			margin-right: 0;
-		}
-
-		.image {
-			margin-right: 0;
-		}
-	}
 }
 
 

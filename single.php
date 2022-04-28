@@ -14,6 +14,9 @@ get_header();
 
 		<?php
 		while ( have_posts() ) :
+			$post_type = get_post_type();
+			$post_type_name = get_post_type_object( $post_type )->labels->name;
+
 			the_post();
 
 			get_template_part( 'template-parts/content', get_post_type() );
@@ -23,17 +26,22 @@ get_header();
 				comments_template();
 			endif;
 
-			/* 'Previous' and 'Next' are swapped, to be more intuitive */
+			if ( $post_type == 'post') :
+			?>
+				<div class="secondary-content">
+					<?php dynamic_sidebar( 'post-secondary' ); ?>
+				</div>
+			<?php
+			endif;
+
 			the_post_navigation(
 				array(
-					'prev_text' => '<span class="nav-title">%title</span> <span class="icon-arrow icon-arrow-right" aria-hidden="true"></span>',
-					'next_text' => '<span class="icon-arrow icon-arrow-left" aria-hidden="true"></span> <span class="nav-title">%title</span>',
+					'prev_text' => '<span class="nav-label">' . esc_html__( 'Older', 'life' ) . '</span>' . '<span class="nav-title">%title</span>',
+					'next_text' => '<span class="nav-label">' . esc_html__( 'Newer', 'life' ) . '</span>' . '<span class="nav-title">%title</span>',
 				)
 			);
 
-			$post_type = get_post_type();
-			$post_type_name = get_post_type_object( $post_type )->labels->name;
-			echo '<nav class="navigation return-link"><a href="' . get_post_type_archive_link( $post_type ) . '"><span class="icon-arrow icon-arrow-left-double" aria-hidden="true"></span> <span class="nav-title">' . esc_html__( 'View All ', 'life' ) . $post_type_name . '</span></a></nav>';
+			echo '<nav class="navigation return-link"><a href="' . get_post_type_archive_link( $post_type ) . '"><span class="icon-arrow icon-arrow-left-double" aria-hidden="true"></span> <span class="nav-label">' . esc_html__( 'View All ', 'life' ) . $post_type_name . '</span></a></nav>';
 
 		endwhile; // End of the loop.
 		?>

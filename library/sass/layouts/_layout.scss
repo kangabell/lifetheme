@@ -17,8 +17,7 @@
 .entry-header,
 .entry-content,
 .entry-footer,
-.comments-area,
-.secondary-content {
+.comments-area {
 	@include wrap;
 }
 
@@ -29,7 +28,8 @@
 	padding-right: 1rem;
 }
 
-.full-width {
+.alignwide,
+.alignfull {
 	@include full-width;
 }
 
@@ -41,11 +41,6 @@
 
 html {
 	overflow-x: hidden;
-}
-
-// compensate for <body> having position: relative
-#wpadminbar {
-	transform: translateY(-100%);
 }
 
 

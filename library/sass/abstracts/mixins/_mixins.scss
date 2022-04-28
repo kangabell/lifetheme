@@ -17,7 +17,6 @@
 
 // Full-width element that breaks container
 @mixin full-width($container: $size__site-narrow) {
-
 	margin-left: -1rem;
 	margin-right: -1rem;
 	width: auto; // reset
@@ -40,7 +39,6 @@
 		margin-left: -($size__site-wide - $container) / 2;
 		margin-right: -($size__site-wide - $container) / 2;
 		max-width: $size__site-wide;
-		text-align: center;
 	}
 }
 
@@ -204,15 +202,11 @@
 }
 
 // Button
-@mixin button($type: null) {
-	background: var(--color__background-button);
-	border: 2px solid;
-	border-color: var(--color__border-button);
+@mixin button($type: null, $style: null) {
 	border-radius: $radius;
-	color: var(--color__button);
 	cursor: pointer;
 	display: inline-block;
-	font-family: $font__alt;
+	font-family: var(--font__alt);
 	font-weight: normal;
 	line-height: 1;
 	text-decoration: none;
@@ -226,6 +220,17 @@
 
 	&:hover {
 		border-color: var(--color__border-button-hover);
+	}
+
+	@if ($style == 'fill') {
+		background-color: var(--color__background-button-fill);
+		border-color: var(--color__border-button); // color must be set *after* other border stuff, I think
+		color: var(--color__button-fill);
+	} @else {
+		background: var(--color__background-button);
+		border: 2px solid;
+		border-color: var(--color__border-button);
+		color: var(--color__button);
 	}
 
 	@if ($type == 'tag') {

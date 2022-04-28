@@ -1,14 +1,14 @@
 Life Theme
 ===
 
-Minimalist WordPress theme by Kay Belardinelli.
+Minimalist WordPress theme designed by Chris Glass and built by Kay Belardinelli.
 
 ![Website Branding](screenshot.png)
 
 Theme Installation
 ------------
 
-*   download the [zip file here](https://chrisglass.com/wp-content/uploads/2022/01/lifetheme-1.5.4.zip)
+*   download the [zip file here](https://chrisglass.com/wp-content/uploads/2022/04/lifetheme-1.5.8.zip)
 *   in the WP admin, go to Appearance > Themes > Add New, then click “Upload Theme”; upload the zip file
 *   click “activate”
 
@@ -26,9 +26,9 @@ Widget Areas
 
 These allow you to customize what appears in the header of the different sections of the website. Add a “Text” widget, and the title will appear as the page heading, along with a paragraph of text in the content of the widget (optional).
 
-### Homepage Secondary Content Area
+### Secondary Content Areas (Homepage, Posts)
 
-Add any content here that you wish, and each widget will appear side-by-side on larger screens. It is suggested to use this area as a mini “About” section, with an image of the website owner next to a Text widget with a paragraph or two.
+Add any content here that you wish, and it will appear below the main content.
 
 Theme Options
 -------------
@@ -46,8 +46,8 @@ Appearance > Customize
 
 ### Colors
 
-*   Link Color: Select any color for text links throughout the site; Default is black.
-*   Header Text Color: This is a deprecated option that is appearing here as a bug. Please ignore.
+*   Link Color: Select any color for text links throughout the site.
+*   Dark Mode Link Color: Same as above, but for Dark Mode.
 
 Post Types
 ----------
@@ -63,11 +63,11 @@ Menus
 ### Locations
 
 *   Primary: Drawer/”Hamburger” navigation. Allows up to two levels of depth.
-*   Secondary: Horizontal, desktop only (optional)
+*   Secondary: Horizontal in site header, desktop only (optional)
 *   Footer (optional)
-*   Projects Submenu (optional): Add links to your Collections here. Works as a filter.
-*   Links Submenu (optional): Add links to your Link Types here. Works as a filter.
-*   Favorites Submenu (optional): Add links to your Favorite Types here. Works as a filter.
+*   Projects Submenu (optional): Add links to your Collections here. Can work as a filter.
+*   Links Submenu (optional): Add links to your Link Types here. Can work as a filter.
+*   Favorites Submenu (optional): Add links to your Favorite Types here. Can work as a filter.
 
 ### Adding Website Sections
 
@@ -79,7 +79,8 @@ Custom Fields
 -------------
 
 *   “Currently Listening”: Link to an external song or album.
-*   Related Characters / Related Posts: Allows you to link Characters to posts and vice versa. These automatically correlate with each other, creating a recipricol relationship.
+*   Related Characters / Related Posts: Allows you to link Characters to posts and vice versa. These automatically correlate with each other, creating a recipricol relationship. Note: the "	
+ACF Post-2-Post" plugin may required for this feature to fully work (to be tested).
 *   Sticky Note: Add a little sticky note to any post.
 
 ### Installation

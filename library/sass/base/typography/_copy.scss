@@ -1,6 +1,6 @@
 p {
 	margin-top: 1em;
-	margin-bottom: 1.5em;
+	margin-bottom: 1.25em;
 }
 
 dfn,
@@ -23,10 +23,6 @@ blockquote,
 
 	p {
 		margin-bottom: 0;
-	}
-
-	&.is-style-large p {
-		font-size: $typesize__large;
 	}
 }
 

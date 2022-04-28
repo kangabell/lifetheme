@@ -119,11 +119,14 @@ if ( ! function_exists( 'life_pagination' ) ) :
 
 		if ($GLOBALS['wp_query']->max_num_pages <= 1) return;
 
+		$post_type = get_post_type();
+		$post_type_name = get_post_type_object( $post_type )->labels->name;
+
 		$args = wp_parse_args( $args, [
 			'mid_size'           => 3,
 			'prev_next'          => false,
-			'prev_text'          => '<span class="nav-title">Next</span><span class="icon-arrow icon-arrow-right" aria-hidden="true"></span>',
-			'next_text'          => '<span class="icon-arrow icon-arrow-left" aria-hidden="true"></span><span class="nav-title">Previous</span>',
+			'next_text'          => '<span class="nav-label">' . esc_html__( 'Newer', 'life' ) . ' ' . $post_type_name . '</span>',
+			'prev_text'          => '<span class="nav-label">' . esc_html__( 'Older', 'life' ) . ' ' . $post_type_name . '</span>',
 			'screen_reader_text' => __('Posts Navigation', 'life'),
 		]);
 

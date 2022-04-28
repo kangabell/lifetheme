@@ -22,7 +22,7 @@
 			// use large image size
 			$attachment_image = wp_get_attachment_image($attachment_id, '', '', array('class' => 'post-thumbnail', 'size' => 'large', 'alt' => the_title_attribute(array('post'=>$attachment_id,'echo'=>0)) ) );
 
-			echo '<div class="full-width">' . $attachment_image . '</div>';
+			echo '<div class="alignfull">' . $attachment_image . '</div>';
 
 			the_title( '<h1 class="entry-title">', '</h1>' );
 

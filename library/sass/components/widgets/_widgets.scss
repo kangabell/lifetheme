@@ -6,3 +6,37 @@
 		max-width: 100%;
 	}
 }
+
+
+/*--------------------------------------------------------------
+## Latest Posts Block / Query Loop
+--------------------------------------------------------------*/
+
+.wp-block-latest-posts {
+	list-style: none;
+	padding-left: 0;
+
+	li {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__post-date,
+	&__post-author {
+		@extend .meta;
+	}
+
+	&__post-author {
+		order: 3;
+	}
+
+	a {
+		order: 2;
+		margin-top: 0.25em;
+	}
+
+	&__post-excerpt {
+		margin-top: 0.5em;
+		order: 4;
+	}
+}

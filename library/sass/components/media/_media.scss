@@ -1,10 +1,6 @@
 .wp-block-image {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
-
-	&.size-full {
-		@include full-width;
-	}
 }
 
 .page-content .wp-smiley,

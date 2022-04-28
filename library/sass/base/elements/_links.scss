@@ -22,5 +22,10 @@ a {
 
 	.entry-content & {
 		font-weight: bold;
+
+		&:visited:hover,
+		&:visited:active {
+			color: var(--color__link-hover);
+		}
 	}
 }

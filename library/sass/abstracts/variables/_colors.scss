@@ -29,10 +29,12 @@ $color__background-alt: $white;
 $color__background-screen: $mediumlight;
 $color__background-hr: mix($medium, $mediumlight);
 $color__background-button: $light;
+$color__background-button-fill: $dark;
 $color__background-pre: $mediumlight;
 $color__background-ins: $light;
 
 $color__button: $dark;
+$color__button-fill: $white;
 $color__nav-link: $mediumdark;
 $color__nav-link-hover: $dark;
 $color__breadcrumb-link: lighten($mediumdark, 10);
@@ -62,10 +64,12 @@ $color__border-abbr: #666;
 	--color__background-screen: #{$color__background-screen};
 	--color__background-hr: #{$color__background-hr};
 	--color__background-button: #{$color__background-button};
+	--color__background-button-fill: #{$color__background-button-fill};
 	--color__background-pre: #{$color__background-pre};
 	--color__background-ins: #{$color__background-ins};
 
 	--color__button: #{ $color__button };
+	--color__button-fill: #{ $color__button-fill };
 	--color__nav-link: #{ $color__nav-link };
 	--color__nav-link-hover: #{ $color__nav-link-hover };
 	--color__breadcrumb-link: #{ $color__breadcrumb-link };

@@ -5,7 +5,7 @@
 
 .site-header {
 	background: var(--color__background-alt);
-	font-family: $font__alt;
+	font-family: var(--font__alt);
 	position: -webkit-sticky;
 	position: sticky;
 	top: -1px;
