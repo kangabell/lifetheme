@@ -26,30 +26,34 @@
 				},
 				{
 					"name": "Purple",
-					"slug": "dunno0",
+					"slug": "purple",
 					"color": "#9E23A5"
 				},
 				{
 					"name": "Red",
-					"slug": "dunno2",
+					"slug": "red",
 					"color": "#C23F23"
 				},
 				{
 					"name": "Gold",
-					"slug": "dunno5",
+					"slug": "gold",
 					"color": "#E4B83E"
 				},
 				{
 					"name": "Grass",
-					"slug": "dunno7",
+					"slug": "grass",
 					"color": "#A0B438"
 				},
 				{
 					"name": "Teal",
-					"slug": "dunno9",
+					"slug": "teal",
 					"color": "#4DA698"
 				}
 			]
+		},
+		"layout": {
+			"contentSize": "60rem;",
+			"wideSize": "72rem"
 		}
 	}
 }
