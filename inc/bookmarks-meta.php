@@ -8,7 +8,7 @@
  */
 
 class Life_Bookmark_Meta_Boxes {
-	private $config = '{"title":"Source URL","description":"The web address to link to.","prefix":"life_","domain":"life","class_name":"Life_Bookmark_Meta_Boxes","post-type":["post"],"context":"normal","priority":"high","cpt":"life_bookmark","fields":[{"type":"url","label":"URL","id":"life_url"}]}';
+	private $config = '{"title":"Source URL","description":"The web address to link to.","prefix":"life_","domain":"life","class_name":"Life_Bookmark_Meta_Boxes","post-type":["life_bookmark"],"context":"normal","priority":"high","cpt":"life_bookmark","fields":[{"type":"url","label":"URL","id":"life_url"}]}';
 
 	public function __construct() {
 		$this->config = json_decode( $this->config, true );
