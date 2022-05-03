@@ -12,12 +12,13 @@ Theme Installation
 *   in the WP admin, go to Appearance > Themes > Add New, then click “Upload Theme”; upload the zip file
 *   click “activate”
 
-Setting Up Homepage & Posts Page
+Recommended Setup
 --------------------------------
 
 *   create a page for homepage, put whatever you want in it
 *   create a page for posts/blog, put nothing in it
 *   Settings > Reading, under “Your homepage displays” select “A static page”, then set “Homepage” and “Posts page” to the corresponding pages you just made.
+*	Settings > Reading, under “Blog pages show at most”, choose a number divisible by 15 (e.g. 15, 30, 60). This will create the optimal grid layout for Favorites and Characters archive pages. Note this settings does not apply to the Posts page, which is set by the theme to 12.
 
 Widget Areas
 ------------
