@@ -77,6 +77,8 @@
 
 .song-link {
 	font-family: var(--font__alt);
+	display: flex;
+	flex-direction: column;
 	margin-top: 2rem;
 	margin-bottom: 3rem;
 
@@ -89,12 +91,13 @@
 	.label {
 		font-size: $typesize__tiny;
 		letter-spacing: $font__letter-spacing;
+		margin-top: 1em;
+		margin-bottom: 0.5em;
 		text-transform: uppercase;
 	}
 
 	.content {
 		font-size: $typesize__small;
-		font-style: italic;
 	}
 }
 
