@@ -25,7 +25,7 @@
 	$color__link: invert( $color__link );
 	$color__link-hover: invert( $color__link-hover );
 	$color__link-visited: invert( $color__link-visited );
-	$color__border-link: invert( $color__border-link );
+	$color__border-link: lighten( invert( $color__border-link ), 12);
 	$color__border-link-hover: invert( $color__border-link-hover );
 
 	$color__border-button: invert( $color__border-button );
