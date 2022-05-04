@@ -64,6 +64,10 @@ get_header();
 		endif;
 		?>
 
+		<div class="secondary-content">
+			<?php dynamic_sidebar( 'bookmark-secondary' ); ?>
+		</div>
+
 	</main><!-- #main -->
 
 <?php

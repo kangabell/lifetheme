@@ -167,6 +167,15 @@ function life_widgets_init() {
 		'after_widget'  => '</div>',
 	) );
 	register_sidebar( array(
+		'name'          => esc_html__( 'Links Secondary Content', 'life' ),
+		'id'            => 'bookmark-secondary',
+		'description'   => esc_html__( 'Add blocks to the bottom of the Links page.', 'life' ),
+		'before_title'  => '',
+		'after_title'   => '',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+	) );
+	register_sidebar( array(
 		'name'          => esc_html__( 'Favorites Header', 'life' ),
 		'id'            => 'header-favorites',
 		'description'   => esc_html__( 'Add blocks to the top of the Favorites page.', 'life' ),

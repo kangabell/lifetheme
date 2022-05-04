@@ -43,6 +43,10 @@
 	@include wrap($size__site-narrow);
 }
 
+.secondary-content {
+	margin-top: 3rem;
+}
+
 html {
 	overflow-x: hidden;
 }
