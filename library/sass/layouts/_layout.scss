@@ -28,15 +28,26 @@
 	padding-right: 1rem;
 }
 
-.alignwide,
-.alignfull {
+.alignwide {
 	@include full-width;
+}
+
+.alignfull {
+	@include full-width($wider: true);
 }
 
 .flex-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+}
+
+.narrow-container {
+	@include wrap($size__site-narrow);
+}
+
+.secondary-content {
+	margin-top: 3rem;
 }
 
 html {

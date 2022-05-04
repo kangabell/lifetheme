@@ -64,7 +64,7 @@ function life_rss_feed_content( $content ) {
 				$song_url = $song['url'];
 				$song_title = $song['title'];
 				$song_target = $song['target'] ? $song['target'] : '_self';
-				$content .= '<p class="song-link"><span class="label">' . esc_html__( 'Currently Listening: ', 'life' ) . '“<a class="button" href="' . esc_url( $song_url ) . '" target="' . esc_attr( $song_target ) . '">' . esc_html( $song_title ) . '</a>” ' . $artist . '</p>';
+				$content .= '<p class="song-link"><span class="label">' . esc_html__( 'Currently Listening: ', 'life' ) . $artist . ' “<a class="button" href="' . esc_url( $song_url ) . '" target="' . esc_attr( $song_target ) . '">' . esc_html( $song_title ) . '</a>”</p>';
 			endif;
 		}
 

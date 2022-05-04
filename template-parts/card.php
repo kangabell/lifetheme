@@ -1,4 +1,6 @@
 <?php
+$thumbnail_url = get_the_post_thumbnail_url();
+
 if ( 'life_bookmark' === get_post_type() ) :
 	$url = get_post_meta( get_the_ID(), 'life_url', true );
 else :
@@ -6,10 +8,16 @@ else :
 endif;
 ?>
 
-<a class="card" href="<?php echo $url; ?>" <?php if ( 'life_bookmark' === get_post_type() ) { echo 'target="_blank"'; } ?>>
+<a class="card card_default" href="<?php echo $url; ?>" <?php if ( 'life_bookmark' === get_post_type() ) { echo 'target="_blank"'; } ?>>
 	<?php
-	if ( has_post_thumbnail() ) :
-		the_post_thumbnail( 'medium_square' );
+	if ( $thumbnail_url ) :
+
+		// don't resize gif's, so we retain their animations
+		if ( str_ends_with( $thumbnail_url, '.gif' ) ) {
+			the_post_thumbnail( 'full' );
+		} else {
+			the_post_thumbnail( 'medium_square' );
+		}
 	else :
 	?>
 		<img src="<?php echo get_template_directory_uri() . '/library/missing.png'; ?>" alt="<?php esc_html__( 'Image Missing', 'life' ); ?>" />

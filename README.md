@@ -12,21 +12,22 @@ Theme Installation
 *   in the WP admin, go to Appearance > Themes > Add New, then click “Upload Theme”; upload the zip file
 *   click “activate”
 
-Setting Up Homepage & Posts Page
+Recommended Setup
 --------------------------------
 
 *   create a page for homepage, put whatever you want in it
 *   create a page for posts/blog, put nothing in it
 *   Settings > Reading, under “Your homepage displays” select “A static page”, then set “Homepage” and “Posts page” to the corresponding pages you just made.
+*	Settings > Reading, under “Blog pages show at most”, choose a number divisible by 15 (e.g. 15, 30, 60). This will create the optimal grid layout for Favorites and Characters archive pages. Note this settings does not apply to the Posts page, which is set by the theme to 12.
 
 Widget Areas
 ------------
 
-### Headers (Posts, Projects, Characters, Links, Favorites)
+### Headers (Blog, Projects, Characters, Links, Favorites)
 
 These allow you to customize what appears in the header of the different sections of the website. Add a “Text” widget, and the title will appear as the page heading, along with a paragraph of text in the content of the widget (optional).
 
-### Secondary Content Areas (Homepage, Posts)
+### Secondary Content Areas (Homepage, Posts, Links Archives)
 
 Add any content here that you wish, and it will appear below the main content.
 
@@ -65,9 +66,9 @@ Menus
 *   Primary: Drawer/”Hamburger” navigation. Allows up to two levels of depth.
 *   Secondary: Horizontal in site header, desktop only (optional)
 *   Footer (optional)
-*   Projects Submenu (optional): Add links to your Collections here. Can work as a filter.
-*   Links Submenu (optional): Add links to your Link Types here. Can work as a filter.
-*   Favorites Submenu (optional): Add links to your Favorite Types here. Can work as a filter.
+*   Projects Submenu (optional): Add links to your Collections here. Can work as a filter for Collections.
+*   Links Submenu (optional): Add links to your Link Types here. Can work as a filter for Link Types.
+*   Favorites Submenu (optional): Add links to your Favorite Types here. Can work as a filter for Favorite Types.
 
 ### Adding Website Sections
 

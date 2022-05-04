@@ -9,7 +9,7 @@
 
 if ( ! defined( 'LIFE_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'LIFE_VERSION', '1.5.8' );
+	define( 'LIFE_VERSION', '1.6.4' );
 }
 
 /**
@@ -122,7 +122,7 @@ function life_widgets_init() {
 		'after_widget'  => '</div>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Posts Header', 'life' ),
+		'name'          => esc_html__( 'Blog Header', 'life' ),
 		'id'            => 'header-posts',
 		'description'   => esc_html__( 'Add blocks to the top of the blog page.', 'life' ),
 		'before_title'  => '<h1 class="page-title">',
@@ -163,6 +163,15 @@ function life_widgets_init() {
 		'description'   => esc_html__( 'Add blocks to the top of the Links page.', 'life' ),
 		'before_title'  => '<h1 class="page-title">',
 		'after_title'   => '</h1>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Links Archive Secondary Content', 'life' ),
+		'id'            => 'bookmarks-secondary',
+		'description'   => esc_html__( 'Add blocks to the bottom of the Links and Link Type archive pages.', 'life' ),
+		'before_title'  => '',
+		'after_title'   => '',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 	) );
