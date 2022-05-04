@@ -58,6 +58,46 @@
 	}
 } // .card
 
+
+.card_landscape {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-top:  0.75rem;
+	padding-bottom:  0.75rem;
+	position: relative;
+
+	.text {
+		flex:  1;
+		order: 2;
+		padding: 0;
+		width: 66%;
+	}
+
+	.wp-post-image {
+		align-self: baseline;
+		border-radius: 0.25rem;
+		margin-right: 1rem;
+		width: 5rem;
+	}
+
+	// spread clickable area over entire card
+	.link::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	// any links within the excerpt will be on top of card so they can be clicked too
+	.excerpt a {
+		position: relative;
+		z-index: 1;
+	}
+} // .card_landscape
+
 .thumbnail {
 	border-radius: $radius;
 	display: -webkit-flex; // Safari

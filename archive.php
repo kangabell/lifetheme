@@ -37,6 +37,8 @@ get_header();
 						endif;
 
 						get_template_part( 'template-parts/thumbnail' );
+					elseif ( 'life_bookmark' === get_post_type() ) :
+						get_template_part( 'template-parts/card-landscape' );
 					else :
 						get_template_part( 'template-parts/card' );
 					endif;
