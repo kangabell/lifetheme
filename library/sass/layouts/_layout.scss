@@ -28,9 +28,12 @@
 	padding-right: 1rem;
 }
 
-.alignwide,
-.alignfull {
+.alignwide {
 	@include full-width;
+}
+
+.alignfull {
+	@include full-width($wider: true);
 }
 
 .flex-container {

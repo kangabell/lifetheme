@@ -16,7 +16,7 @@
 }
 
 // Full-width element that breaks container
-@mixin full-width($container: $size__site-narrow) {
+@mixin full-width($container: $size__site-narrow, $wider: false) {
 	margin-left: -1rem;
 	margin-right: -1rem;
 	width: auto; // reset
@@ -39,6 +39,15 @@
 		margin-left: -($size__site-wide - $container) / 2;
 		margin-right: -($size__site-wide - $container) / 2;
 		max-width: $size__site-wide;
+	}
+
+	@if ($wider == true) {
+
+		@media screen and ($xxlarge-up) {
+			margin-left: -($size__site-wider - $container) / 2;
+			margin-right: -($size__site-wider - $container) / 2;
+			max-width: $size__site-wider;
+		}
 	}
 }
 
