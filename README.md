@@ -8,7 +8,7 @@ Minimalist WordPress theme designed by Chris Glass and built by Kay Belardinelli
 Theme Installation
 ------------
 
-*   download the [zip file here](https://chrisglass.com/wp-content/uploads/2022/04/lifetheme-1.5.8.zip)
+*   download the [zip file here](https://chrisglass.com/wp-content/uploads/2022/05/lifetheme-1.6.5.zip)
 *   in the WP admin, go to Appearance > Themes > Add New, then click “Upload Theme”; upload the zip file
 *   click “activate”
 
