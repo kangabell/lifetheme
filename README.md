@@ -27,7 +27,7 @@ Widget Areas
 
 These allow you to customize what appears in the header of the different sections of the website. Add a “Text” widget, and the title will appear as the page heading, along with a paragraph of text in the content of the widget (optional).
 
-### Secondary Content Areas (Homepage, Posts)
+### Secondary Content Areas (Homepage, Posts, Links)
 
 Add any content here that you wish, and it will appear below the main content.
 
@@ -66,9 +66,9 @@ Menus
 *   Primary: Drawer/”Hamburger” navigation. Allows up to two levels of depth.
 *   Secondary: Horizontal in site header, desktop only (optional)
 *   Footer (optional)
-*   Projects Submenu (optional): Add links to your Collections here. Can work as a filter.
-*   Links Submenu (optional): Add links to your Link Types here. Can work as a filter.
-*   Favorites Submenu (optional): Add links to your Favorite Types here. Can work as a filter.
+*   Projects Submenu (optional): Add links to your Collections here. Can work as a filter for Collections.
+*   Links Submenu (optional): Add links to your Link Types here. Can work as a filter for Link Types.
+*   Favorites Submenu (optional): Add links to your Favorite Types here. Can work as a filter for Favorite Types.
 
 ### Adding Website Sections
 
