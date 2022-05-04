@@ -7,12 +7,20 @@
  * @package Life
  */
 
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
+$query = new WP_Query( array(
+	'post_type' => 'life_bookmark',
+	'posts_per_page' => 20,
+	'paged' => $paged,
+) );
+
 get_header();
 ?>
 
 	<main id="primary" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+		<?php if ( $query->have_posts() ) : ?>
 
 			<header class="page-header">
 				<?php
@@ -24,9 +32,7 @@ get_header();
 			<div class="narrow-container">
 
 				<?php
-				/* Start the Loop */
-				while ( have_posts() ) :
-					the_post();
+				while ( $query->have_posts() ) : $query->the_post();
 					get_template_part( 'template-parts/card-landscape' );
 				endwhile;
 				?>
@@ -36,6 +42,8 @@ get_header();
 			<?php
 
 			life_pagination();
+
+			wp_reset_query();
 
 		else :
 
