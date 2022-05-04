@@ -21,7 +21,7 @@ get_header();
 				?>
 			</header><!-- .page-header -->
 
-			<div>
+			<div class="narrow-container">
 
 				<?php
 				/* Start the Loop */

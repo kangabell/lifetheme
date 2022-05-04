@@ -8,6 +8,12 @@
  */
 
 get_header();
+
+if ( is_tax( 'life_bookmark_type' ) ) :
+	$container_class = 'narrow-container';
+else :
+	$container_class = 'grid-container';
+endif;
 ?>
 
 	<main id="primary" class="site-main">
@@ -21,7 +27,7 @@ get_header();
 				?>
 			</header><!-- .page-header -->
 
-			<div class="grid-container">
+			<div class="<?php echo $container_class; ?>">
 
 				<?php
 				/* Start the Loop */
@@ -33,10 +39,12 @@ get_header();
 
 						// create a new .grid-container every 15 items
 						if ( ( 0 !== $wp_query->current_post ) && ( 0 === $wp_query->current_post % 15 ) ) :
-							echo '</div><div class="grid-container">';
+							echo '</div><div class="' . $container_class . '">';
 						endif;
 
 						get_template_part( 'template-parts/thumbnail' );
+					elseif ( is_tax( 'life_bookmark_type' ) ) :
+						get_template_part( 'template-parts/card-landscape' );
 					else :
 						get_template_part( 'template-parts/card' );
 					endif;
