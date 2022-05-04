@@ -122,7 +122,7 @@ function life_widgets_init() {
 		'after_widget'  => '</div>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Posts Header', 'life' ),
+		'name'          => esc_html__( 'Blog Header', 'life' ),
 		'id'            => 'header-posts',
 		'description'   => esc_html__( 'Add blocks to the top of the blog page.', 'life' ),
 		'before_title'  => '<h1 class="page-title">',
@@ -167,9 +167,9 @@ function life_widgets_init() {
 		'after_widget'  => '</div>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Links Secondary Content', 'life' ),
-		'id'            => 'bookmark-secondary',
-		'description'   => esc_html__( 'Add blocks to the bottom of the Links page.', 'life' ),
+		'name'          => esc_html__( 'Links Archive Secondary Content', 'life' ),
+		'id'            => 'bookmarks-secondary',
+		'description'   => esc_html__( 'Add blocks to the bottom of the Links and Link Type archive pages.', 'life' ),
 		'before_title'  => '',
 		'after_title'   => '',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',

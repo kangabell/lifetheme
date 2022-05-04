@@ -23,11 +23,11 @@ Recommended Setup
 Widget Areas
 ------------
 
-### Headers (Posts, Projects, Characters, Links, Favorites)
+### Headers (Blog, Projects, Characters, Links, Favorites)
 
 These allow you to customize what appears in the header of the different sections of the website. Add a “Text” widget, and the title will appear as the page heading, along with a paragraph of text in the content of the widget (optional).
 
-### Secondary Content Areas (Homepage, Posts, Links)
+### Secondary Content Areas (Homepage, Posts, Links Archives)
 
 Add any content here that you wish, and it will appear below the main content.
 

@@ -65,7 +65,7 @@ get_header();
 		?>
 
 		<div class="secondary-content">
-			<?php dynamic_sidebar( 'bookmark-secondary' ); ?>
+			<?php dynamic_sidebar( 'bookmarks-secondary' ); ?>
 		</div>
 
 	</main><!-- #main -->

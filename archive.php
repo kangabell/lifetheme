@@ -63,6 +63,14 @@ endif;
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
+
+		if ( is_tax( 'life_bookmark_type' ) ) :
+		?>
+			<div class="secondary-content">
+				<?php dynamic_sidebar( 'bookmarks-secondary' ); ?>
+			</div>
+		<?php
+		endif;
 		?>
 
 	</main><!-- #main -->
