@@ -6,7 +6,7 @@ else :
 endif;
 ?>
 
-<a class="card" href="<?php echo $url; ?>" <?php if ( 'life_bookmark' === get_post_type() ) { echo 'target="_blank"'; } ?>>
+<a class="card card_default" href="<?php echo $url; ?>" <?php if ( 'life_bookmark' === get_post_type() ) { echo 'target="_blank"'; } ?>>
 	<?php
 	if ( has_post_thumbnail() ) :
 

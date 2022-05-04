@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages
+ * The template for displaying the Bookmark archive page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -21,26 +21,13 @@ get_header();
 				?>
 			</header><!-- .page-header -->
 
-			<div class="grid-container">
+			<div>
 
 				<?php
 				/* Start the Loop */
 				while ( have_posts() ) :
 					the_post();
-					if ( is_home() ) :
-						get_template_part( 'template-parts/content' );
-					elseif ( ( 'life_character' === get_post_type() ) || ( 'life_favorite' === get_post_type() ) ) :
-
-						// create a new .grid-container every 15 items
-						if ( ( 0 !== $wp_query->current_post ) && ( 0 === $wp_query->current_post % 15 ) ) :
-							echo '</div><div class="grid-container">';
-						endif;
-
-						get_template_part( 'template-parts/thumbnail' );
-					else :
-						get_template_part( 'template-parts/card' );
-					endif;
-
+					get_template_part( 'template-parts/card-landscape' );
 				endwhile;
 				?>
 
