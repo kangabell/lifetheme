@@ -132,7 +132,7 @@
 
 
 /*--------------------------------------------------------------
-## Blog Page
+## Archive Pages
 --------------------------------------------------------------*/
 
 .blog {
@@ -145,6 +145,11 @@
 	.entry-title a {
 		text-decoration: none;
 	}
+}
+
+.post-type-archive-life_bookmark .narrow-container .heading-alt {
+	color: var(--color__text-meta);
+	margin-top: 2rem;
 }
 
 

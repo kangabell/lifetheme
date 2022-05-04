@@ -15,6 +15,8 @@ $query = new WP_Query( array(
 	'paged' => $paged,
 ) );
 
+$date_check = '';
+
 get_header();
 ?>
 
@@ -33,7 +35,17 @@ get_header();
 
 				<?php
 				while ( $query->have_posts() ) : $query->the_post();
+
+					$date = get_the_date();
+
+					if ( $date != $date_check ) {
+						echo '<h2 class="heading-alt">' . $date . '</h2>';
+					}
+
 					get_template_part( 'template-parts/card-landscape' );
+
+					$date_check = $date;
+
 				endwhile;
 				?>
 
