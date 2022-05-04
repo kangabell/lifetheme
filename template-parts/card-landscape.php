@@ -3,6 +3,7 @@
  * Alternate card style, used for Links
  */
 
+$thumbnail_url = get_the_post_thumbnail_url();
 $url = get_post_meta( get_the_ID(), 'life_url', true );
 
 ?>
@@ -20,13 +21,13 @@ $url = get_post_meta( get_the_ID(), 'life_url', true );
 	</div>
 
 	<?php
-	if ( has_post_thumbnail() ) :
+	if ( $thumbnail_url ) :
 
 		// don't resize gif's, so we retain their animations
-		if ( str_ends_with( get_the_post_thumbnail_url(), '.gif' ) ) {
+		if ( str_ends_with( $thumbnail_url, '.gif' ) ) {
 			the_post_thumbnail( 'full' );
 		} else {
-			the_post_thumbnail( 'small_square' );
+			the_post_thumbnail( 'medium_square' );
 		}
 	else :
 	?>
