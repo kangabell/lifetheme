@@ -6,6 +6,24 @@
  */
 
 /**
+ * Remove prefix from some archive titles
+ */
+function life_remove_title_prefixes($title) {
+	if ( is_year() ) {
+		$title  = get_the_date( _x( 'Y', 'yearly archives date format' ) );
+		$prefix = '';
+	} elseif ( is_month() ) {
+		$title  = get_the_date( _x( 'F Y', 'monthly archives date format' ) );
+		$prefix = '';
+	} elseif ( is_day() ) {
+		$title  = get_the_date( _x( 'F j, Y', 'daily archives date format' ) );
+		$prefix = '';
+	}
+  return $title;
+}
+add_filter( 'get_the_archive_title', 'life_remove_title_prefixes' );
+
+/**
  * Shorten the length of the excerpt.
  */
 function life_shorten_excerpt( $length ) {
