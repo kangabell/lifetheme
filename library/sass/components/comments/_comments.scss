@@ -18,8 +18,19 @@
 	margin-bottom: 2rem;
 	padding-bottom: 1rem;
 
-	&-author .says {
-		display: none;
+	&-author {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		.avatar {
+			border-radius: 50%;
+			margin-right: 0.5rem;
+		}
+
+		.says {
+			display: none;
+		}
 	}
 
 	&-content {
