@@ -62,3 +62,16 @@
 .comment-reply-title {
 	font-size: $typesize__h5;
 }
+
+
+// all form inputs the same width
+.comment-form {
+
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	textarea {
+		width: 24rem;
+	}
+}
