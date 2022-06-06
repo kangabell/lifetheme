@@ -107,12 +107,3 @@ function life_rss_bookmark_url($post_permalink) {
 	}
 };
 add_filter('the_permalink_rss', 'life_rss_bookmark_url');
-
-
-/**
- * Make attachment page image larger
- */
-function modify_attachment_link($markup) {
-    return preg_replace('/^<a([^>]+)>(.*)$/', '<a\\1 target="_blank">\\2', $markup);
-}
-add_filter( 'wp_get_attachment_link', 'modify_attachment_link', 10, 6 );
