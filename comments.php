@@ -53,12 +53,15 @@ if ( post_password_required() ) {
 
 	endif; // Check for have_comments().
 
-	$custom_comment_field = '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>';  //label removed for cleaner layout
+	$custom_comment_field = '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="2" aria-required="true"></textarea></p>'; // label removed for cleaner layout
 
 	comment_form( array(
 		'comment_field'			=> $custom_comment_field,
 		'logged_in_as' 			=> '',
 		'comment_notes_before' 	=> '',
+		'title_reply_before' 	=> '<details><summary class="comment-reply-title">',
+		'title_reply_after' 	=> '</summary>',
+		'cancel_reply_after' 	=> '</details>',
 		'label_submit'			=> esc_html__('Submit Reply', 'life')
 	));
 	?>

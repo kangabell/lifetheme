@@ -66,12 +66,22 @@
 --------------------------------------------------------------*/
 
 .entry-footer {
-	margin-top: 4rem;
-	margin-bottom: 4rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 	text-align: center;
 
 	.tags-links {
 		margin-bottom: 2rem;
+	}
+
+	@media screen and ($medium-up) {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	@media screen and ($large-up) {
+		margin-top: 4rem;
+		margin-bottom: 4rem;
 	}
 }
 
@@ -147,6 +157,11 @@
 /*--------------------------------------------------------------
 ## Miscellaneous
 --------------------------------------------------------------*/
+
+.error-404 {
+	@include wrap;
+
+}
 
 .updated:not(.published) {
 	display: none;

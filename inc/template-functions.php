@@ -6,6 +6,24 @@
  */
 
 /**
+ * Remove prefix from some archive titles
+ */
+function life_remove_title_prefixes($title) {
+	if ( is_year() ) {
+		$title  = get_the_date( _x( 'Y', 'yearly archives date format' ) );
+		$prefix = '';
+	} elseif ( is_month() ) {
+		$title  = get_the_date( _x( 'F Y', 'monthly archives date format' ) );
+		$prefix = '';
+	} elseif ( is_day() ) {
+		$title  = get_the_date( _x( 'F j, Y', 'daily archives date format' ) );
+		$prefix = '';
+	}
+  return $title;
+}
+add_filter( 'get_the_archive_title', 'life_remove_title_prefixes' );
+
+/**
  * Shorten the length of the excerpt.
  */
 function life_shorten_excerpt( $length ) {
@@ -89,12 +107,3 @@ function life_rss_bookmark_url($post_permalink) {
 	}
 };
 add_filter('the_permalink_rss', 'life_rss_bookmark_url');
-
-
-/**
- * Make attachment page image larger
- */
-function modify_attachment_link($markup) {
-    return preg_replace('/^<a([^>]+)>(.*)$/', '<a\\1 target="_blank">\\2', $markup);
-}
-add_filter( 'wp_get_attachment_link', 'modify_attachment_link', 10, 6 );

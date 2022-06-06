@@ -9,7 +9,7 @@
 
 if ( ! defined( 'LIFE_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'LIFE_VERSION', '1.6.5' );
+	define( 'LIFE_VERSION', '1.6.7' );
 }
 
 /**
@@ -431,6 +431,22 @@ function life_home_pagesize( $query ) {
 	}
 }
 add_action( 'pre_get_posts', 'life_home_pagesize', 1 );
+
+
+/**
+ * Order date archives (year, month, day) chronologically (not reverse chronological)
+ */
+function life_date_archives_order( $query ) {
+	if ( !is_admin() && $query->is_main_query() ) {
+
+		if ( is_date() ) {
+			$query->set( 'order', 'ASC' );
+		}
+
+		return;
+	}
+}
+add_action( 'pre_get_posts', 'life_date_archives_order', 1 );
 
 /**
  * Implement the Custom Header feature.
