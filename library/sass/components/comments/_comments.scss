@@ -1,3 +1,9 @@
+.comments-area {
+	border-top: 1px solid var(--color__background-hr);
+	padding-top: 2rem;
+	margin-top: 2rem;
+}
+
 .comments-title {
 	font-family: var(--font__alt);
 	font-size: $typesize__h4;
