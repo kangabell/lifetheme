@@ -35,7 +35,7 @@ function life_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'life_subfooter',
 		array(
-			'default' 			=> 'Copyright 2021',
+			'default' 			=> 'Copyright 2022',
 			'type'				=> 'theme_mod',
 			'sanitize_callback' => 'wp_kses_post'
 		)
