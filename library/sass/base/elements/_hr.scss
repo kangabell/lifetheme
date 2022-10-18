@@ -7,4 +7,5 @@ hr {
 
 .wp-block-separator {
 	border: none; // reset
+	width: 100%; // fixes unexplained invisibility at mobile sizes
 }
