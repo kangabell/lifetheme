@@ -26,7 +26,7 @@
 
 			the_title( '<h1 class="entry-title">', '</h1>' );
 
-			echo '<div class="caption">' . get_the_excerpt() . '</div>';
+			echo '<div class="caption">' . get_the_content() . '</div>';
 
 		} else {
 
