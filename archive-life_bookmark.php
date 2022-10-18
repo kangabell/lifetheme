@@ -11,7 +11,7 @@ $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
 $query = new WP_Query( array(
 	'post_type' => 'life_bookmark',
-	'posts_per_page' => 20,
+	'posts_per_page' => 60, // must be 60, but I'm not sure why
 	'paged' => $paged,
 ) );
 
