@@ -2,8 +2,21 @@ figcaption {
 	color: var(--color__text-meta);
 	font-family: var(--font__alt);
 	font-size: $typesize__small;
+	line-height: $font__line-height-body;
 	margin-top: 0.5rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
 	text-align: center;
+
+	.wp-block-gallery.has-nested-images figure.wp-block-image & {
+		background: var(--color__background-translucent);
+		color: var(--color__text-main);
+		font-size: $typesize__tiny;
+		padding: 0.5em 1rem;
+		text-align: revert;
+
+		@media screen and ($large-up) {
+			font-size: $typesize__small;
+		}
+	}
 }

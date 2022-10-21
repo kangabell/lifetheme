@@ -3,6 +3,7 @@
 	// invert each sass color variable
 	$color__background-body: invert( $color__background-body );
 	$color__background-alt: lighten( $color__background-body, 8 );
+	$color__background-translucent: rgba($color__background-body, 0.6);
 	$color__background-screen: invert( $color__background-screen );
 	$color__background-hr: invert( $color__background-hr );
 	$color__background-button: invert( $color__background-button );
@@ -36,6 +37,7 @@
 	// reassign sass color variables to css variables
 	--color__background-body: #{$color__background-body};
 	--color__background-alt: #{$color__background-alt};
+	--color__background-translucent: #{$color__background-translucent};
 	--color__background-screen: #{$color__background-screen};
 	--color__background-hr: #{$color__background-hr};
 	--color__background-button: #{$color__background-button};

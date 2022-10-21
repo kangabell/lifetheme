@@ -26,6 +26,7 @@ $rainbow : (
 
 $color__background-body: $light;
 $color__background-alt: $white;
+$color__background-translucent: rgba($color__background-body, 0.8);
 $color__background-screen: $mediumlight;
 $color__background-hr: mix($medium, $mediumlight);
 $color__background-button: $light;
@@ -61,6 +62,7 @@ $color__border-abbr: #666;
 :root {
 	--color__background-body: #{$color__background-body};
 	--color__background-alt: #{$color__background-alt};
+	--color__background-translucent: #{$color__background-translucent};
 	--color__background-screen: #{$color__background-screen};
 	--color__background-hr: #{$color__background-hr};
 	--color__background-button: #{$color__background-button};
