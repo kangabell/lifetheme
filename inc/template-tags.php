@@ -30,6 +30,27 @@ if ( ! function_exists( 'life_posted_on' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'life_listening' ) ) :
+	/**
+	 * Returns "Currently Listening" info, if it exists. For use in life_entry_footer()
+	 */
+	function life_listening() {
+
+		if ( function_exists( 'get_field' ) ) {
+			$artist = get_field('song_artist');
+			$song = get_field('song_link');
+
+			if ( $song ):
+				$song_url = $song['url'];
+				$song_title = $song['title'];
+				$song_target = $song['target'] ? $song['target'] : '_self';
+				echo '<p class="song-link"><span class="icon-music" aria-hidden="true"></span><span class="label">' . esc_html__( 'Currently Listening', 'life' ) . ' </span><span class="content">' . $artist . ' <em>“<a class="button" href="' . esc_url( $song_url ) . '" target="' . esc_attr( $song_target ) . '">' . esc_html( $song_title ) . '</a>”</em></span></p>';
+			endif;
+		}
+
+	}
+endif;
+
 if ( ! function_exists( 'life_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
@@ -38,17 +59,7 @@ if ( ! function_exists( 'life_entry_footer' ) ) :
 
 		if ( 'post' === get_post_type() ) {
 
-			if ( function_exists( 'get_field' ) ) {
-				$artist = get_field('song_artist');
-				$song = get_field('song_link');
-
-				if ( $song ):
-					$song_url = $song['url'];
-					$song_title = $song['title'];
-					$song_target = $song['target'] ? $song['target'] : '_self';
-					echo '<p class="song-link"><span class="icon-music" aria-hidden="true"></span><span class="label">' . esc_html__( 'Currently Listening', 'life' ) . ' </span><span class="content">' . $artist . ' <em>“<a class="button" href="' . esc_url( $song_url ) . '" target="' . esc_attr( $song_target ) . '">' . esc_html( $song_title ) . '</a>”</em></span></p>';
-				endif;
-			}
+			life_listening();
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list();
