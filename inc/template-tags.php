@@ -41,10 +41,16 @@ if ( ! function_exists( 'life_listening' ) ) :
 			$song = get_field('song_link');
 
 			if ( $song ):
+
 				$song_url = $song['url'];
 				$song_title = $song['title'];
 				$song_target = $song['target'] ? $song['target'] : '_self';
-				echo '<p class="song-link"><span class="icon-music" aria-hidden="true"></span><span class="label">' . esc_html__( 'Currently Listening', 'life' ) . ' </span><span class="content">' . $artist . ' <em>“<a class="button" href="' . esc_url( $song_url ) . '" target="' . esc_attr( $song_target ) . '">' . esc_html( $song_title ) . '</a>”</em></span></p>';
+				$icon = '<span class="icon-music" aria-hidden="true"></span>';
+				$label = '<span class="label">' . esc_html__( 'Currently Listening', 'life' ) . ' </span>';
+				$content = '<span class="content">' . $artist . ' <em>“<a class="button" href="' . esc_url( $song_url ) . '" target="' . esc_attr( $song_target ) . '">' . esc_html( $song_title ) . '</a>”</em></span>';
+
+				echo '<p class="song-link">' . $icon . $label . $content . '</p>';
+
 			endif;
 		}
 
