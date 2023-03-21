@@ -22,13 +22,19 @@ endif;
 
 			<header class="page-header">
 				<?php
-				life_archive_header();
-
-				if ( is_category() ) {
-					the_archive_description();
-				} else {
+				if ( is_category() ) :
+				?>
+					<div class="widget">
+						<?php
+						life_archive_header();
+						the_archive_description( '<div class="archive-description">', '</div>' );
+						?>
+					</div>
+				<?php
+				else :
+					life_archive_header();
 					life_archive_submenu();
-				}
+				endif;
 				?>
 			</header><!-- .page-header -->
 
