@@ -23,7 +23,12 @@ endif;
 			<header class="page-header">
 				<?php
 				life_archive_header();
-				life_archive_submenu();
+
+				if ( is_category() ) {
+					the_archive_description();
+				} else {
+					life_archive_submenu();
+				}
 				?>
 			</header><!-- .page-header -->
 
