@@ -21,7 +21,9 @@ h1 {
 }
 
 h2.heading-alt,
-h3.heading-alt {
+h3.heading-alt,
+h2.is-style-alt,
+h3.is-style-alt {
 	font-family: var(--font__alt);
 	font-size: $typesize__small;
 	letter-spacing: $font__letter-spacing;
