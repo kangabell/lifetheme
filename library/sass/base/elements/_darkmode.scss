@@ -91,6 +91,10 @@
 		background: $dark;
 		color: $white;
 	}
+
+	select {
+		color: $black;
+	}
 }
 
 // if switcher has added .dark, do Dark Mode
