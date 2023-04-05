@@ -21,6 +21,11 @@ input[type="submit"] {
 	@include button($style: 'fill');
 }
 
+// outline style has silve border
+.wp-block-button.is-style-outline > .wp-block-button__link {
+	border-color: var(--color__border-button);
+}
+
 .wp-block-buttons .wp-block-button {
 	display: inline-block;
 	margin-right: 0.5rem;
