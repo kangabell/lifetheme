@@ -181,6 +181,10 @@
 		background-color: var(--color__background-button-fill);
 		border-color: var(--color__border-button); // color must be set *after* other border stuff, I think
 		color: var(--color__button-fill);
+
+		&:hover {
+			color: var(--color__button-fill);
+		}
 	} @else {
 		background: var(--color__background-button);
 		border: 2px solid;
