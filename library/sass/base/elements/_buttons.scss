@@ -21,9 +21,14 @@ input[type="submit"] {
 	@include button($style: 'fill');
 }
 
-// outline style has silve border
+// outline style has silver border
 .wp-block-button.is-style-outline > .wp-block-button__link {
 	border-color: var(--color__border-button);
+
+	&:hover,
+	&:focus {
+		border-color: transparent;
+	}
 }
 
 .wp-block-buttons .wp-block-button {
