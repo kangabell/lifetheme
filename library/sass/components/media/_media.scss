@@ -1,6 +1,10 @@
 .wp-block-image {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
+
+	&.aligncenter {
+		width: 100%;
+	}
 }
 
 .page-content .wp-smiley,
