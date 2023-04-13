@@ -20,6 +20,11 @@
 	@media screen and ($large-up) {
 		margin-bottom: 3rem;
 	}
+
+	@media screen and ($xlarge-up) {
+		padding-top: 1rem;
+		margin-bottom: 3rem;
+	}
 }
 
 
