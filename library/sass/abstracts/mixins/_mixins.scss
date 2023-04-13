@@ -28,6 +28,7 @@
 
 	@media screen and ($large-down) {
 
+		// remove any rounded corners, which hit the edges of the viewport and look weird
 		img {
 			border-radius: 0 !important;
 		}
