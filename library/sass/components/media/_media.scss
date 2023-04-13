@@ -1,3 +1,11 @@
+.wp-block-image,
+.wp-block-post-featured-image {
+
+	img {
+		border-radius: $radius;
+	}
+}
+
 .wp-block-image {
 	margin-top: 2rem;
 	margin-bottom: 2rem;

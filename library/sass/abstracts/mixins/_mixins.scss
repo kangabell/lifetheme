@@ -25,6 +25,14 @@
 		width: 100%;
 	}
 
+
+	@media screen and ($large-down) {
+
+		img {
+			border-radius: 0 !important;
+		}
+	}
+
 	@media screen and ($medium-up) and ($large-down) {
 		left: 50%;
 		margin-left: -50vw;
@@ -158,7 +166,7 @@
 
 // Button
 @mixin button($type: null, $style: null) {
-	border-radius: $radius;
+	border-radius: $radius-sm;
 	cursor: pointer;
 	display: inline-block;
 	font-family: var(--font__alt);
