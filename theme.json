@@ -54,6 +54,9 @@
 		"layout": {
 			"contentSize": "60rem;",
 			"wideSize": "72rem"
+		},
+		"spacing": {
+			"padding": true
 		}
 	}
 }
