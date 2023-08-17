@@ -22,7 +22,7 @@ endif;
 
 			<header class="page-header">
 				<?php
-				if ( is_category() ) :
+				if ( is_category() || is_tag() ) :
 				?>
 					<div class="widget">
 						<?php
