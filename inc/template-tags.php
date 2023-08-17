@@ -69,7 +69,7 @@ if ( ! function_exists( 'life_entry_footer' ) ) :
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list();
-			if ( $tags_list ) {
+			if ( $tags_list && is_single() ) {
 				/* translators: 1: list of tags. */
 				printf( '<span class="tags-links">' . esc_html__( '%1$s', 'life' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
@@ -180,8 +180,6 @@ if ( ! function_exists( 'life_archive_header' ) ) :
 			dynamic_sidebar( 'header-favorites' );
 		elseif ( is_tag() ) :
 			single_term_title( '<h1 class="page-title">', '</h1>' );
-		elseif ( is_category() ) :
-			echo '<h1 class="page-title">' . single_cat_title( '', false ) . '</h1>';
 		else :
 			the_archive_title( '<h1 class="page-title">', '</h1>' );
 		endif;
