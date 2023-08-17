@@ -140,7 +140,6 @@
 		}
 	} @else if ($style == 'three')  {
 		grid-gap: 2rem;
-		margin-bottom: 2rem;
 
 		@media screen and ($medium-up) {
 			grid-template-columns: 30% 30% 30%;
