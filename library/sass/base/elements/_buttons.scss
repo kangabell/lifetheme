@@ -24,6 +24,7 @@ input[type="submit"] {
 // outline style has silver border
 .wp-block-button.is-style-outline > .wp-block-button__link {
 	border-color: var(--color__border-button);
+	color: var(--color__link);
 
 	&:hover,
 	&:focus {
