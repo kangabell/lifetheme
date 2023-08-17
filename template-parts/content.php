@@ -36,11 +36,11 @@
 
 		if ( function_exists( 'get_field' ) ) {
 			$note_sticky = get_field('note_sticky');
-		}
 
-		if ( $note_sticky ) :
-			echo '<div class="note-sticky">' . $note_sticky . '</div>';
-		endif;
+			if ( $note_sticky ) :
+				echo '<div class="note-sticky">' . $note_sticky . '</div>';
+			endif;
+		}
 
 		the_content(
 			sprintf(
@@ -78,53 +78,54 @@
 		<?php
 		life_entry_footer();
 
-		if ( function_exists( 'get_field' ) ) {
+		if ( is_single() && function_exists( 'get_field' ) ) :
 			$related_posts = get_field('characters_posts');
-		}
 
-		if ( $related_posts ) :
-		?>
-			<div class="related-posts">
+			if ( $related_posts ) :
+			?>
+				<div class="related-posts">
 
-				<?php
-				if ( 'life_character' === get_post_type() ) :
-					echo '<h2 class="heading-alt">' . esc_html__( 'Posts with ', 'life' ) . get_the_title() . '</h2>';
-				?>
+					<?php
+					if ( 'life_character' === get_post_type() ) :
+						echo '<h2 class="heading-alt">' . esc_html__( 'Posts with ', 'life' ) . get_the_title() . '</h2>';
+					?>
 
-					<div class="grid-container">
-						<?php
-						foreach( $related_posts as $post ):
-							setup_postdata($post);
-							get_template_part( 'template-parts/card' );
-						endforeach;
-						?>
-					</div>
+						<div class="grid-container">
+							<?php
+							foreach( $related_posts as $post ):
+								setup_postdata($post);
+								get_template_part( 'template-parts/card' );
+							endforeach;
+							?>
+						</div>
 
-				<?php
-				else :
-
-					if ( 'life_project' === get_post_type() ) :
-						echo '<h2 class="heading-alt">' . esc_html__( 'Cohorts', 'life' ) . '</h2>';
+					<?php
 					else :
-						echo '<h2 class="heading-alt">' . esc_html__( 'Cast of Characters', 'life' ) . '</h2>';
+
+						if ( 'life_project' === get_post_type() ) :
+							echo '<h2 class="heading-alt">' . esc_html__( 'Cohorts', 'life' ) . '</h2>';
+						else :
+							echo '<h2 class="heading-alt">' . esc_html__( 'Cast of Characters', 'life' ) . '</h2>';
+						endif;
+					?>
+						<div class="flex-container">
+							<?php
+							foreach( $related_posts as $post ):
+								setup_postdata($post);
+								get_template_part( 'template-parts/thumbnail' );
+							endforeach;
+							?>
+						</div>
+					<?php
 					endif;
-				?>
-					<div class="flex-container">
-						<?php
-						foreach( $related_posts as $post ):
-							setup_postdata($post);
-							get_template_part( 'template-parts/thumbnail' );
-						endforeach;
-						?>
-					</div>
+					?>
+
+				</div> <!-- .related-posts -->
+
 				<?php
-				endif;
-				?>
+				wp_reset_postdata();
 
-			</div> <!-- .related-posts -->
-
-			<?php
-			wp_reset_postdata();
+			endif;
 
 		endif;
 		?>
