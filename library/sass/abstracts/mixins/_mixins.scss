@@ -26,10 +26,11 @@
 	}
 
 	@media screen and ($medium-up) and ($large-down) {
+		$padding: 1rem;
 		left: 50%;
-		margin-left: -50vw;
-		margin-right: -50vw;
-		max-width: 100vw;
+		margin-left: calc(-50vw + ($padding * 0.5) - 1px ); // not sure why 1px
+		margin-right: calc(-50vw + ($padding * 0.5) );
+		max-width: calc(100vw - $padding);
 		position: relative;
 		right: 50%;
 		width: 100vw;
