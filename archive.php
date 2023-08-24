@@ -11,6 +11,8 @@ get_header();
 
 if ( is_tax( 'life_bookmark_type' ) ) :
 	$container_class = 'narrow-container';
+elseif ( ( 'life_character' === get_post_type() ) || ( !is_tax() && 'life_favorite' === get_post_type() ) ) :
+	$container_class = 'grid-container-mixed';
 else :
 	$container_class = 'grid-container';
 endif;
@@ -22,8 +24,19 @@ endif;
 
 			<header class="page-header">
 				<?php
-				life_archive_header();
-				life_archive_submenu();
+				if ( is_category() || is_tag() ) :
+				?>
+					<div class="widget">
+						<?php
+						life_archive_header();
+						the_archive_description( '<div class="archive-description">', '</div>' );
+						?>
+					</div>
+				<?php
+				else :
+					life_archive_header();
+					life_archive_submenu();
+				endif;
 				?>
 			</header><!-- .page-header -->
 
@@ -35,6 +48,8 @@ endif;
 					the_post();
 					if ( is_home() ) :
 						get_template_part( 'template-parts/content' );
+					elseif ( is_tax() && 'life_favorite' === get_post_type() ) :
+						get_template_part( 'template-parts/thumbnail' );
 					elseif ( ( 'life_character' === get_post_type() ) || ( 'life_favorite' === get_post_type() ) ) :
 
 						// create a new .grid-container every 15 items

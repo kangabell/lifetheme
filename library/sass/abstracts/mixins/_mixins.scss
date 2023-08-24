@@ -26,10 +26,11 @@
 	}
 
 	@media screen and ($medium-up) and ($large-down) {
+		$padding: 1rem;
 		left: 50%;
-		margin-left: -50vw;
-		margin-right: -50vw;
-		max-width: 100vw;
+		margin-left: calc(-50vw + ($padding * 0.5) - 1px ); // not sure why 1px
+		margin-right: calc(-50vw + ($padding * 0.5) );
+		max-width: calc(100vw - $padding);
 		position: relative;
 		right: 50%;
 		width: 100vw;
@@ -145,6 +146,7 @@
 		}
 	} @else {
 		grid-gap: 2rem;
+		margin-bottom: 2rem;
 
 		@media screen and ($small-up) {
 			grid-template-columns: 1fr 1fr;
@@ -158,7 +160,7 @@
 
 // Button
 @mixin button($type: null, $style: null) {
-	border-radius: $radius;
+	border-radius: $radius-sm;
 	cursor: pointer;
 	display: inline-block;
 	font-family: var(--font__alt);
@@ -181,6 +183,10 @@
 		background-color: var(--color__background-button-fill);
 		border-color: var(--color__border-button); // color must be set *after* other border stuff, I think
 		color: var(--color__button-fill);
+
+		&:hover {
+			color: var(--color__button-fill);
+		}
 	} @else {
 		background: var(--color__background-button);
 		border: 2px solid;

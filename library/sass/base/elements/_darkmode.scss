@@ -78,6 +78,10 @@
 		}
 	}
 
+	.wp-block-table.is-style-stripes tbody tr:nth-child(2n+1) {
+		background-color: var(--color__background-alt);
+	}
+
 	::selection {
 		background-color: $mediumdark;
 	}
@@ -90,6 +94,10 @@
 	.toggle-mode .icon-moon {
 		background: $dark;
 		color: $white;
+	}
+
+	select {
+		color: $black;
 	}
 }
 

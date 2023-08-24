@@ -19,12 +19,13 @@
 			margin-right: 2rem;
 		}
 
-		.widget_text {
+		> .widget {
 			align-items: baseline;
 			display: flex;
 		}
 
-		.textwidget {
+		.textwidget,
+		.archive-description {
 			flex: 1;
 		}
 	}

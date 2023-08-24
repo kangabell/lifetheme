@@ -20,6 +20,11 @@
 	@media screen and ($large-up) {
 		margin-bottom: 3rem;
 	}
+
+	@media screen and ($xlarge-up) {
+		padding-top: 1rem;
+		margin-bottom: 3rem;
+	}
 }
 
 
@@ -66,8 +71,8 @@
 --------------------------------------------------------------*/
 
 .entry-footer {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+	margin-top: 2rem;
+	margin-bottom: 3rem;
 	text-align: center;
 
 	.tags-links {
@@ -89,8 +94,8 @@
 	font-family: var(--font__alt);
 	display: flex;
 	flex-direction: column;
-	margin-top: 2rem;
-	margin-bottom: 3rem;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
 
 	.icon-music {
 		margin-left: 0.25em;
@@ -120,10 +125,10 @@
 
 	.thumbnail {
 		border-radius: 50%;
-		height: 4rem;
+		height: 3rem;
 		margin: 0.5rem;
 		overflow: hidden;
-		width: 4rem;
+		width: 3rem;
 	}
 
 	.grid-container {

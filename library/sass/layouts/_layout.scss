@@ -16,7 +16,6 @@
 
 .entry-header,
 .entry-content,
-.entry-footer,
 .comments-area {
 	@include wrap;
 }
@@ -68,11 +67,14 @@ html {
 ## Grids
 --------------------------------------------------------------*/
 
-.grid-container {
+body:not(.post-type-archive-life_character):not(.post-type-archive-life_favorite) .grid-container {
 	@include grid;
 }
 
-.post-type-archive-life_character .grid-container,
-.post-type-archive-life_favorite .grid-container {
-	@include grid('mixed');
+.grid-container {
+	@include grid;
+
+	&-mixed {
+		@include grid('mixed');
+	}
 }

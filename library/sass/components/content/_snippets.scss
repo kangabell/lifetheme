@@ -39,13 +39,13 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
-	}
 
-	.icon-exit {
-		color: $medium;
-		font-size: 1em;
-		margin-left: 0.5em;
-		vertical-align: -0.05em;
+		.icon-exit {
+			color: $medium;
+			font-size: 1em;
+			margin-left: 0.5em;
+			vertical-align: -0.05em;
+		}
 	}
 } // .card
 
@@ -80,7 +80,7 @@
 
 	.wp-post-image {
 		align-self: baseline;
-		border-radius: 0.25rem;
+		border-radius: $radius;
 		margin-right: 1rem;
 		width: 5rem;
 

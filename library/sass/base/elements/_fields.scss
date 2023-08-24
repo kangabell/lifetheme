@@ -19,7 +19,7 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	border: 0;
-	border-radius: $radius;
+	border-radius: $radius-sm;
 	box-shadow: inset 0px 1px 4px rgba($medium, 0.8);
 	color: var(--color__text-input);
 	max-width: 100%;
@@ -36,7 +36,7 @@ select {
 
 label {
 	font-family: var(--font__alt);
-	font-size: $typesize__small;
+	font-size: $typesize__tiny;
 	letter-spacing: $font__letter-spacing;
 	text-transform: uppercase;
 	margin-bottom: 0.25rem;
