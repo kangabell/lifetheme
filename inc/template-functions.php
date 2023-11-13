@@ -50,13 +50,12 @@ function life_pingback_header() {
 }
 add_action( 'wp_head', 'life_pingback_header' );
 
-
 /**
- * Add featured image and "currently listening" to RSS feed content
+ * Add featured image and "currently listening" to RSS feed content or excerpt
  */
-function life_rss_feed_content( $content ) {
+function life_rss_feed_excerpt( $content ) {
 
-	global $post;
+	global $post, $wp_query;
 
 	$prepend = null;
 	$append = null;
@@ -67,7 +66,7 @@ function life_rss_feed_content( $content ) {
 		$append = '<hr/><p><a href="mailto:' . $email . '?subject=Reply%3A%20' . esc_attr( get_the_title() ) . '">' . esc_html__( 'Reply via email ', 'life' ) . '</a></p>';
 	}
 
-	if ( is_feed() ) {
+	if ( ! $wp_query->is_comment_feed() ) {
 
 		if ( has_post_thumbnail( $post->ID ) ) {
 
@@ -93,7 +92,8 @@ function life_rss_feed_content( $content ) {
 	return $content;
 
 }
-add_filter('the_content', 'life_rss_feed_content');
+add_filter('the_content_feed', 'life_rss_feed_excerpt');
+add_filter('the_excerpt_rss', 'life_rss_feed_excerpt');
 
 
 /**
