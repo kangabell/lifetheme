@@ -107,3 +107,38 @@ function life_rss_bookmark_url($post_permalink) {
 	}
 };
 add_filter('the_permalink_rss', 'life_rss_bookmark_url');
+
+
+/**
+ * Display featured image in admin columns
+ * src: https://wordpress.stackexchange.com/a/114651
+ */
+function life_add_img_column( $columns ) {
+
+	$columns['img'] = 'Image';
+	$array = array();
+	$img = $columns['img']; // save the img column
+	unset($columns['img']); // remove it from the columns list
+
+	foreach( $columns as $key=>$value ) {
+		if ( $key=='title' ) { // when we find the title column
+			$array['img'] = $img; // put the img column before it
+		}
+		$array[$key] = $value;
+	}
+
+	return $array;
+
+}
+add_filter('manage_posts_columns', 'life_add_img_column');
+
+function life_manage_img_column( $column_name, $post_id ) {
+
+	if ( $column_name == 'img' ) {
+		echo get_the_post_thumbnail($post_id, 'small_square');
+	}
+
+	return $column_name;
+
+}
+add_filter('manage_posts_custom_column', 'life_manage_img_column', 10, 2);
