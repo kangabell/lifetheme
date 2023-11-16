@@ -25,10 +25,10 @@
 		width: 100%;
 	}
 
-	@media screen and ($medium-up) and ($large-down) {
+	@media screen and ($medium-up) {
 		$padding: 1rem;
 		left: 50%;
-		margin-left: calc(-50vw + ($padding * 0.5) - 1px ); // not sure why 1px
+		margin-left: calc(-50vw + ($padding * 0.5) );
 		margin-right: calc(-50vw + ($padding * 0.5) );
 		max-width: calc(100vw - $padding);
 		position: relative;
@@ -36,18 +36,31 @@
 		width: 100vw;
 	}
 
-	@media screen and ($xlarge-up) {
-		margin-left: -($size__site-wide - $container) / 2;
-		margin-right: -($size__site-wide - $container) / 2;
-		max-width: $size__site-wide;
-	}
-
 	@if ($wider == true) {
 
-		@media screen and ($xxlarge-up) {
+		// stay full-width until we get to "wider" size
+		@media screen and (min-width: $size__site-wider) {
 			margin-left: -($size__site-wider - $container) / 2;
 			margin-right: -($size__site-wider - $container) / 2;
 			max-width: $size__site-wider;
+
+			// reset
+			left: initial;
+			right: initial;
+			width: initial;
+		}
+	} @else {
+
+		// max out here
+		@media screen and ($xlarge-up) {
+			margin-left: -($size__site-wide - $container) / 2;
+			margin-right: -($size__site-wide - $container) / 2;
+			max-width: $size__site-wide;
+
+			// reset
+			left: initial;
+			right: initial;
+			width: initial;
 		}
 	}
 }
