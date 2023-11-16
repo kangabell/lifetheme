@@ -27,7 +27,12 @@ add_filter( 'get_the_archive_title', 'life_remove_title_prefixes' );
  * Shorten the length of the excerpt.
  */
 function life_shorten_excerpt( $length ) {
-	return 36;
+
+	if ( is_feed() ) {
+		return 100;
+	} else {
+		return 36;
+	}
 }
 add_filter( 'excerpt_length', 'life_shorten_excerpt', 999 );
 
