@@ -9,7 +9,7 @@
 
 if ( ! defined( 'LIFE_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'LIFE_VERSION', '1.8.2' );
+	define( 'LIFE_VERSION', '1.8.3' );
 }
 
 /**
@@ -403,6 +403,15 @@ function life_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'life_scripts' );
+
+/**
+ * Enqueue custom admin styles.
+ */
+function life_admin_scripts() {
+	wp_enqueue_style( 'life-admin-style', get_template_directory_uri() . '/library/css/admin.css', array(), LIFE_VERSION );
+}
+add_action( 'admin_enqueue_scripts', 'life_admin_scripts' );
+
 
 /**
  * Add block editor scripts and styles

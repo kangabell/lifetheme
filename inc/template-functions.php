@@ -27,7 +27,12 @@ add_filter( 'get_the_archive_title', 'life_remove_title_prefixes' );
  * Shorten the length of the excerpt.
  */
 function life_shorten_excerpt( $length ) {
-	return 36;
+
+	if ( is_feed() ) {
+		return 100;
+	} else {
+		return 36;
+	}
 }
 add_filter( 'excerpt_length', 'life_shorten_excerpt', 999 );
 
@@ -50,13 +55,12 @@ function life_pingback_header() {
 }
 add_action( 'wp_head', 'life_pingback_header' );
 
-
 /**
- * Add featured image and "currently listening" to RSS feed content
+ * Add featured image and "currently listening" to RSS feed content or excerpt
  */
-function life_rss_feed_content( $content ) {
+function life_rss_feed_excerpt( $content ) {
 
-	global $post;
+	global $post, $wp_query;
 
 	$prepend = null;
 	$append = null;
@@ -67,7 +71,7 @@ function life_rss_feed_content( $content ) {
 		$append = '<hr/><p><a href="mailto:' . $email . '?subject=Reply%3A%20' . esc_attr( get_the_title() ) . '">' . esc_html__( 'Reply via email ', 'life' ) . '</a></p>';
 	}
 
-	if ( is_feed() ) {
+	if ( ! $wp_query->is_comment_feed() ) {
 
 		if ( has_post_thumbnail( $post->ID ) ) {
 
@@ -93,7 +97,8 @@ function life_rss_feed_content( $content ) {
 	return $content;
 
 }
-add_filter('the_content', 'life_rss_feed_content');
+add_filter('the_content_feed', 'life_rss_feed_excerpt');
+add_filter('the_excerpt_rss', 'life_rss_feed_excerpt');
 
 
 /**
@@ -107,3 +112,38 @@ function life_rss_bookmark_url($post_permalink) {
 	}
 };
 add_filter('the_permalink_rss', 'life_rss_bookmark_url');
+
+
+/**
+ * Display featured image in admin columns
+ * src: https://wordpress.stackexchange.com/a/114651
+ */
+function life_add_img_column( $columns ) {
+
+	$columns['img'] = 'Image';
+	$array = array();
+	$img = $columns['img']; // save the img column
+	unset($columns['img']); // remove it from the columns list
+
+	foreach( $columns as $key=>$value ) {
+		if ( $key=='title' ) { // when we find the title column
+			$array['img'] = $img; // put the img column before it
+		}
+		$array[$key] = $value;
+	}
+
+	return $array;
+
+}
+add_filter('manage_posts_columns', 'life_add_img_column');
+
+function life_manage_img_column( $column_name, $post_id ) {
+
+	if ( $column_name == 'img' ) {
+		echo get_the_post_thumbnail($post_id, 'small_square');
+	}
+
+	return $column_name;
+
+}
+add_filter('manage_posts_custom_column', 'life_manage_img_column', 10, 2);
